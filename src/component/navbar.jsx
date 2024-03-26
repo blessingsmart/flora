@@ -46,7 +46,7 @@ export const Navbar = () => {
   return (
     <div className="flex justify-between drop-shadow-md sm:px-10 items-center w-screen h-32 text-black bg-white/70 fixed z-50">
       <RouterLink to="/" className="flex items-center">
-        <h1 className="text-lg font-signature md:text-5xl ">Casade Floral</h1>
+        <h1 className="text-4xl font-signature md:text-5xl ">Casade Floral</h1>
       </RouterLink>
       <ul className="hidden md:flex md:gap-4">
         {links.map(({ id, link, title, to }) => (
@@ -72,16 +72,16 @@ export const Navbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-white md:hidden"
+        className="cursor-pointer pr-4 z-10 text-black md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-green-600 to-lime-600">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white">
           {links.map(({ id, link, title, to }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer text-white capitalize py-6 text-4xl"
+              className="px-4 cursor-pointer text-black capitalize py-6 text-4xl"
             >
               {to ? (
                 <ScrollLink
