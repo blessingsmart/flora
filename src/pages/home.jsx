@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Modal from "../component/modal";
 import Navbar from "../component/navbar";
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/css";
@@ -8,6 +9,12 @@ import rose from "../assets/rose.jpg";
 import purple from "../assets/purple.jpg";
 
 const Home = () => {
+const [isOpen, setIsOpen] = useState(false);
+
+const toggleModal = () => {
+  setIsOpen(!isOpen);
+};
+
   useEffect(() => {
     const splide1 = new Splide("#splide1", {
       type: "loop",
@@ -31,7 +38,8 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+      <Navbar toggleModal={toggleModal} />
       <div name="hero" id="splide1" className="splide">
         <div className="splide__track">
           <ul className="splide__list ">
