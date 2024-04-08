@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { BsBasket } from "react-icons/bs";
+import { FaSearch } from "react-icons/fa";
 // import logo from "../assets/logo.png";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
@@ -94,7 +97,13 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between drop-shadow-md sm:px-10 px-5 items-center w-screen h-32 text-white bg-black fixed z-50">
+    <div className="flex justify-between drop-shadow-md sm:px-20 px-5 items-center w-screen h-32 text-white bg-black fixed z-50">
+      <IoReorderThreeOutline size={35} />
+      <h1>LOGO</h1>
+      <div className="flex gap-4">
+        <FaSearch size={25} />
+        <BsBasket size={25} />
+      </div>
       {/* <RouterLink to="/" className="flex items-center">
         <h1 className="text-4xl font-signature md:text-5xl "></h1>
       </RouterLink> */}
