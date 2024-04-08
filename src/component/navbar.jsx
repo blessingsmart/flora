@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Modal from "./modal";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { BsBasket } from "react-icons/bs";
@@ -9,6 +10,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollTo = (to) => {
     setNav(false); // Close the mobile menu when clicking a link
@@ -101,9 +103,12 @@ export const Navbar = () => {
       <IoReorderThreeOutline size={35} />
       <h1>LOGO</h1>
       <div className="flex gap-4">
-        <FaSearch size={25} />
+        <button onClick={()=> setIsOpen(true)}>
+          <FaSearch size={25} />
+        </button>
         <BsBasket size={25} />
       </div>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)} />
       {/* <RouterLink to="/" className="flex items-center">
         <h1 className="text-4xl font-signature md:text-5xl "></h1>
       </RouterLink> */}
