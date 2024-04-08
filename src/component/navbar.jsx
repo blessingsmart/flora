@@ -94,11 +94,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between drop-shadow-md sm:px-10 px-5 items-center w-screen h-32 text-black bg-white/70 fixed z-50">
+    <div className="flex justify-between drop-shadow-md sm:px-10 px-5 items-center w-screen h-32 text-white bg-black fixed z-50">
       {/* <RouterLink to="/" className="flex items-center">
         <h1 className="text-4xl font-signature md:text-5xl "></h1>
       </RouterLink> */}
-      <ul className="hidden md:flex md:gap-4">
+      {/* <ul className="hidden md:flex md:flex-col md:gap-4">
         {links.map(({ id, link, title, to }) => (
           <li
             key={id}
@@ -118,7 +118,7 @@ export const Navbar = () => {
             )}
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       <div
         onClick={() => setNav(!nav)}
