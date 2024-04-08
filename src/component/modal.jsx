@@ -11,7 +11,7 @@ const Modal = ({ open, onClose }) => {
                 <div className='p-4'>
                     <input type="text"
                            label="search"
-                           className='bg-white/20  rounded-full p-3 w-96'
+                           className='bg-white/20  rounded-full p-3 w-96 focus:outline-none'
                            placeholder="Search ..."/>
                     <FaSearch size={25} />
                 </div>
