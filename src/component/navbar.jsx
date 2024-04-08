@@ -42,12 +42,62 @@ export const Navbar = () => {
       title: "CONTACT",
     },
   ];
+  const links1 = [
+    {
+      id: 1,
+      link: "/",
+      title: "HOME PAGE",
+    },
+    {
+      id: 2,
+      title: "FALL FLOWERS",
+    },
+    {
+      id: 3,
+      title: "FRESH FLOWER BOUQUETS",
+    },
+    {
+      id: 4,
+      link: "/about",
+      title: "FRUIT BASKETS",
+    },
+    {
+      id: 5,
+      link: "Shop",
+      title: "BALLONS",
+    },
+    {
+      id: 6,
+      link: "Contact",
+      title: "TEDDY BEARS",
+    },
+    {
+      id: 7,
+      link: "Contact",
+      title: "CHOCOLATES",
+    },
+    {
+      id: 8,
+      link: "Contact",
+      title: "CARDS",
+    },
+    {
+      id: 9,
+      link: "Contact",
+      title: "PLANTS",
+    },
+    {
+      id: 9,
+      link: "Contact",
+      title: "ABOUT US",
+    },
+  ];
 
   return (
-    <div className="flex justify-between drop-shadow-md sm:px-10 items-center w-screen h-32 text-black bg-white/70 fixed z-50">
-      <RouterLink to="/" className="flex items-center">
-        <h1 className="text-4xl font-signature md:text-5xl ">Casade Floral</h1>
-      </RouterLink>
+    <div className="flex justify-between drop-shadow-md sm:px-10 px-5 items-center w-screen h-32 text-black bg-white/70 fixed z-50">
+      {/* <RouterLink to="/" className="flex items-center">
+        <h1 className="text-4xl font-signature md:text-5xl "></h1>
+      </RouterLink> */}
       <ul className="hidden md:flex md:gap-4">
         {links.map(({ id, link, title, to }) => (
           <li
@@ -77,25 +127,13 @@ export const Navbar = () => {
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white">
-          {links.map(({ id, link, title, to }) => (
+        <ul className="flex flex-col justify-center items-center py-20 fixed top-0 left-0 bg-gray-100 w-screen ease-in-out duration-500">
+          {links1.map(({ id, link, title}) => (
             <li
               key={id}
-              className="px-4 cursor-pointer text-black capitalize py-6 text-4xl"
+              className="px-4 cursor-pointer text-gray-700 capitalize py-3 text-xl"
             >
-              {to ? (
-                <ScrollLink
-                  to={to}
-                  smooth="true"
-                  duration={500}
-                  className="cursor-pointer"
-                  onClick={() => scrollTo(to)}
-                >
-                  {title}
-                </ScrollLink>
-              ) : (
-                <RouterLink to={link}>{title}</RouterLink>
-              )}
+              <RouterLink to={link}>{title}</RouterLink>
             </li>
           ))}
         </ul>

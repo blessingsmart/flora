@@ -5,6 +5,7 @@ export default {
     extend: {},
     fontFamily: {
       signature: ["Great Vibes"],
+      new: ["Raleway"],
     },
   },
   plugins: [],
