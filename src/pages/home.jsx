@@ -8,6 +8,7 @@ import pink from '../assets/pink1.jpg';
 import redrose from '../assets/redrose.jpg';
 import rose from '../assets/rose.jpg';
 import purple from '../assets/purple.jpg';
+import Occassion from '../component/occassion';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -81,6 +82,7 @@ const Home = () => {
           <img src={redrose} alt="rose" className='size-52 drop-shadow-2xl' />
         </div>
       </div>
+      <Occassion />
     </>
   );
 };
