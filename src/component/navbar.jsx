@@ -7,57 +7,6 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ openModal }) => {
 
-  const links = [
-    {
-      id: 1,
-      link: "/",
-      title: "HOME PAGE",
-    },
-    {
-      id: 2,
-      title: "FALL FLOWERS",
-    },
-    {
-      id: 3,
-      title: "FRESH FLOWER BOUQUETS",
-    },
-    {
-      id: 4,
-      link: "/about",
-      title: "FRUIT BASKETS",
-    },
-    {
-      id: 5,
-      link: "Shop",
-      title: "BALLONS",
-    },
-    {
-      id: 6,
-      link: "Contact",
-      title: "TEDDY BEARS",
-    },
-    {
-      id: 7,
-      link: "Contact",
-      title: "CHOCOLATES",
-    },
-    {
-      id: 8,
-      link: "Contact",
-      title: "CARDS",
-    },
-    {
-      id: 9,
-      link: "Contact",
-      title: "PLANTS",
-    },
-    {
-      id: 9,
-      link: "Contact",
-      title: "ABOUT US",
-    },
-  ];
-
 
   return (
     <>

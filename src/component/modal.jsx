@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
+import { Link as RouterLink } from "react-router-dom";
 
 const Modal = ({onClose, iconClicked, isModalOpen }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -7,6 +8,57 @@ const Modal = ({onClose, iconClicked, isModalOpen }) => {
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
   };
+
+  const links = [
+    {
+      id: 1,
+      link: "/",
+      title: "HOME PAGE",
+    },
+    {
+      id: 2,
+      title: "FALL FLOWERS",
+    },
+    {
+      id: 3,
+      title: "FRESH FLOWER BOUQUETS",
+    },
+    {
+      id: 4,
+      link: "/about",
+      title: "FRUIT BASKETS",
+    },
+    {
+      id: 5,
+      link: "/Shop",
+      title: "BALLONS",
+    },
+    {
+      id: 6,
+      link: "/Contact",
+      title: "TEDDY BEARS",
+    },
+    {
+      id: 7,
+      link: "/Contact",
+      title: "CHOCOLATES",
+    },
+    {
+      id: 8,
+      link: "CARD",
+      title: "CARDS",
+    },
+    {
+      id: 9,
+      link: "PLANTS",
+      title: "PLANTS",
+    },
+    {
+      id: 9,
+      link: "ABOUT",
+      title: "ABOUT US",
+    },
+  ];
 
 
   return (
@@ -25,7 +77,16 @@ const Modal = ({onClose, iconClicked, isModalOpen }) => {
           </div>
         ) : iconClicked === 'nav' ? (
           <div className="p-4">
-            this part is working
+            <ul className="flex flex-col gap-4">
+              {links.map(({ id, link, title, to }) => (
+                <li
+                  key={id}
+                  className="px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200"
+                >
+                    <RouterLink to={link}>{title}</RouterLink>
+                </li>
+              ))}
+            </ul> 
           </div>
         ) : (
           <div className="p-4">
