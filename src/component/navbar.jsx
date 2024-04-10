@@ -9,7 +9,7 @@ const Navbar = ({ openModal }) => {
 
   return (
     <>
-      <div className="flex justify-between drop-shadow-md sm:px-20 px-5 items-center w-screen h-32 text-white bg-black z-30">
+      <div className="flex justify-between drop-shadow-md sm:px-20 px-5 items-center  h-32 text-white bg-black z-30">
         <button onClick={() => openModal("nav")}>
           <IoReorderThreeOutline size={35} />
         </button>

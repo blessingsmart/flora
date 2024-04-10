@@ -67,7 +67,7 @@ const Modal = ({onClose, iconClicked }) => {
 
 
   return (
-    <div className="absolute inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center ">
       <div className="text-white text-sm">
         {iconClicked === 'search' ? (
           <div className="p-4 relative">
@@ -81,7 +81,7 @@ const Modal = ({onClose, iconClicked }) => {
             />
           </div>
         ) : iconClicked === 'nav' ? (
-          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 h-fit">
+          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
             <div className="p-4 relative">
               <input
                 type="text"
@@ -96,7 +96,7 @@ const Modal = ({onClose, iconClicked }) => {
               {links.map(({ id, link, title }) => (
                 <li
                   key={id}
-                  className="px-4 py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200"
+                  className="px-4 py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200 text-white/70 hover:text-white"
                 >
                     <RouterLink to={link}>{title}</RouterLink>
                 </li>
@@ -108,7 +108,7 @@ const Modal = ({onClose, iconClicked }) => {
             This is why nothing is showing
           </div>
         )}
-        <button onClick={onClose} className="absolute top-0 right-0 m-4">
+        <button onClick={onClose} className="absolute top-0 right-0 m-4 text-white/70 hover:text-white">
           <FaTimes size={30} />
         </button>
       </div>
