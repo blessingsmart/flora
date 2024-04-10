@@ -3,14 +3,13 @@ import { FaBars, FaSearch } from 'react-icons/fa';
 import { IoReorderThreeOutline } from 'react-icons/io5';
 import { BsBasket } from 'react-icons/bs';
 import { Link as RouterLink } from "react-router-dom";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ openModal }) => {
 
 
   return (
     <>
-      <div className="flex justify-between drop-shadow-md sm:px-20 px-5 items-center w-screen h-32 text-white bg-black fixed z-30">
+      <div className="flex justify-between drop-shadow-md sm:px-20 px-5 items-center w-screen h-32 text-white bg-black z-30">
         <button onClick={() => openModal("nav")}>
           <IoReorderThreeOutline size={35} />
         </button>

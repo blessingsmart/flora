@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { Link as RouterLink } from "react-router-dom";
 
-const Modal = ({onClose, iconClicked, isModalOpen }) => {
+const Modal = ({onClose, iconClicked }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchChange = (e) => {
@@ -36,25 +36,30 @@ const Modal = ({onClose, iconClicked, isModalOpen }) => {
     {
       id: 6,
       link: "/Contact",
-      title: "TEDDY BEARS",
+      title: "WINES",
     },
     {
       id: 7,
       link: "/Contact",
-      title: "CHOCOLATES",
+      title: "TEDDY BEARS",
     },
     {
       id: 8,
+      link: "/Contact",
+      title: "CHOCOLATES",
+    },
+    {
+      id: 9,
       link: "CARD",
       title: "CARDS",
     },
     {
-      id: 9,
+      id: 10,
       link: "PLANTS",
       title: "PLANTS",
     },
     {
-      id: 9,
+      id: 11,
       link: "ABOUT",
       title: "ABOUT US",
     },
@@ -62,8 +67,8 @@ const Modal = ({onClose, iconClicked, isModalOpen }) => {
 
 
   return (
-    <div className="absolute inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="text-white text-3xl">
+    <div className="absolute inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
+      <div className="text-white text-sm">
         {iconClicked === 'search' ? (
           <div className="p-4 relative">
             <input
@@ -76,12 +81,22 @@ const Modal = ({onClose, iconClicked, isModalOpen }) => {
             />
           </div>
         ) : iconClicked === 'nav' ? (
-          <div className="p-4">
+          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 h-fit">
+            <div className="p-4 relative">
+              <input
+                type="text"
+                label="search"
+                className="bg-white/20 rounded-full py-2 px-3 w-52 focus:outline-none text-sm"
+                placeholder="Search ..."
+                value={searchValue}
+                onChange={handleSearchChange}
+              />
+            </div>
             <ul className="flex flex-col gap-4">
-              {links.map(({ id, link, title, to }) => (
+              {links.map(({ id, link, title }) => (
                 <li
                   key={id}
-                  className="px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200"
+                  className="px-4 py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200"
                 >
                     <RouterLink to={link}>{title}</RouterLink>
                 </li>

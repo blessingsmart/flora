@@ -19,7 +19,7 @@ const Home = () => {
       drag: 'free',
       focus: 'center',
       autoplay: true,
-      perPage: 1,
+      perPage: 3,
     }).mount();
 
     return () => {
@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <>
       <Navbar openModal={openModal} />
-      <div name="hero" id="splide1" className="splide">
+      <div name="hero" id="splide1" className="splide px-16">
         <div className="splide__track">
           <ul className="splide__list ">
             <li className="splide__slide">
