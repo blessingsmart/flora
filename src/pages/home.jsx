@@ -72,13 +72,13 @@ const Home = () => {
         <Modal onClose={closeModal} iconClicked={iconClicked}>
         </Modal>
       )}
-      <div className='flex justify-between gap-5 p-16 text-xl'>
-        <div className='pt-16'>
+      <div className='lg:flex justify-between gap-5 p-16 text-xl'>
+        <div className='pt-16 text-center lg:text-start'>
           <h1 className='font-signature py-6 text-4xl text-center'>Introducing Love Bug Florist</h1>
           <p className='leading-relaxed'>Lovebug Florist is the leading online Flower Shop in Lagos, <br/>Nigeria that specializes in premium Fresh flowers and gifts  <br/> for all occasions such as birthdays, anniversaries, Romance,<br/> Get well soon, Funerals and so much more.</p>
           <p className='leading-relaxed'>We are the top fresh flowers company with a wide array of<br/> flowers including roses, Lilies, Carnations, Alstromerias, <br/>Peonies, hydrangeas, potted plants and so much more.<br/> Buy online or Call/WhatsApp: +234 8131883002 <br/>or +2349064514150. Buy flowers in Lagos, <br/>Nigeria online – Shop from our Fresh Flower & <br/>Rose Bouquets today! <button> read more… </button></p>
         </div>
-        <div className='flex gap-10'>
+        <div className='lg:flex gap-10 hidden '>
           <img src={redrose} alt="rose"  className='size-72 drop-shadow-2xl'/>
           <img src={redrose} alt="rose" className='size-72 drop-shadow-2xl' />
         </div>
