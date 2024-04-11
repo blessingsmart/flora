@@ -78,8 +78,8 @@ const Home = () => {
           <p className='leading-relaxed'>We are the top fresh flowers company with a wide array of<br/> flowers including roses, Lilies, Carnations, Alstromerias, <br/>Peonies, hydrangeas, potted plants and so much more.<br/> Buy online or Call/WhatsApp: +234 8131883002 <br/>or +2349064514150. Buy flowers in Lagos, <br/>Nigeria online – Shop from our Fresh Flower & <br/>Rose Bouquets today! <button> read more… </button></p>
         </div>
         <div className='flex gap-10'>
-          <img src={redrose} alt="rose"  className='size-52 drop-shadow-2xl'/>
-          <img src={redrose} alt="rose" className='size-52 drop-shadow-2xl' />
+          <img src={redrose} alt="rose"  className='size-72 drop-shadow-2xl'/>
+          <img src={redrose} alt="rose" className='size-72 drop-shadow-2xl' />
         </div>
       </div>
       <Occassion />
