@@ -9,6 +9,7 @@ import redrose from '../assets/redrose.jpg';
 import rose from '../assets/rose.jpg';
 import purple from '../assets/purple.jpg';
 import Occassion from '../component/occassion';
+import Gift from '../component/gift';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -83,6 +84,7 @@ const Home = () => {
         </div>
       </div>
       <Occassion />
+      < Gift />
     </>
   );
 };

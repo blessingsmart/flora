@@ -4,7 +4,7 @@ import  food1 from "..//assets/food1.jpg";
 
 
 
-const Occassion = () => {
+const Gift = () => {
 
     
     const links = [
@@ -87,7 +87,7 @@ const Occassion = () => {
   return (
     <>
     <div name="menu" className='flex flex-col items-center gap-12 p-16'>
-        <h1 className='font-signature text-5xl text-center'>Shop For Occassion</h1>
+        <h1 className='font-signature text-5xl text-center'>Shop For Gifts</h1>
         <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-8 sm:px-0'>
             {
             links.map(({ id, src, title, price}) => (
@@ -109,8 +109,8 @@ const Occassion = () => {
         <img src={food1} alt=""
                 className='' />
         <div className=' absolute md:top-20 md:right-20 top-10 right-0 flex flex-col gap-5'>
-            <p className='text-lg md:text-3xl px-10 items-center text-white font-bold text-center' >For Your Occasions</p>
-            <p className='text-lg text-white'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
+            <p className='text-lg md:text-3xl px-10 items-center text-white font-bold text-center' >Perfect Flower Plants</p>
+            <p className='text-lg text-white'>Buy indoor and outdoor plants in Lagos, Nigeria for your home or office space</p>
             <a href=""
                 className='place-self-center'>
                 <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
@@ -123,4 +123,4 @@ const Occassion = () => {
   )
 }
 
-export default Occassion
+export default Gift
