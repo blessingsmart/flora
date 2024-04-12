@@ -10,6 +10,8 @@ import rose from '../assets/rose.jpg';
 import purple from '../assets/purple.jpg';
 import Occassion from '../component/occassion';
 import Gift from '../component/gift';
+import Contact from "../component/contact"
+import Footer from '../component/footer';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -85,6 +87,8 @@ const Home = () => {
       </div>
       <Occassion />
       < Gift />
+      < Contact />
+      < Footer />
     </>
   );
 };

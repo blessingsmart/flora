@@ -74,7 +74,7 @@ const Modal = ({onClose, iconClicked }) => {
             <input
               type="text"
               label="search"
-              className="bg-white/20 rounded-full p-3 w-96 focus:outline-none"
+              className="bg-white/20 rounded-full p-3 sm:w-96 focus:outline-none"
               placeholder="Search ..."
               value={searchValue}
               onChange={handleSearchChange}
