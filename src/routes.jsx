@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
+const Details = lazy(() => import("./pages/details"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -19,6 +20,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Cart />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/details",
+    element: (
+      <React.Suspense>
+        <Details />
       </React.Suspense>
     ),
   },
