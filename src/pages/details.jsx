@@ -28,7 +28,7 @@ function Details() {
         </Modal>
       )}
         <div className='pt-[140px] text-center mx-5'>
-            <div className='flex flex justify-center items-center'>
+            <div className='flex justify-center items-center'>
                 <a href="/cart"className='flex justify-center hidden md:flex pt-2 font-normal text-3xl pr-4'><span className='pr-2'>SHOPPING CART</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
                 <a href="/details"className='flex justify-center pt-2 font-normal text-3xl'><span className='pr-2'>CHECKOUT DETAILS</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
             </div>

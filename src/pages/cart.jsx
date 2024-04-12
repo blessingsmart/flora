@@ -24,7 +24,7 @@ const Cart = () => {
         </Modal>
       )}
       <div className='pt-[140px] text-center mx-5'>
-        <div className='flex flex justify-center items-center'>
+        <div className='flex justify-center items-center'>
           <a href="/cart"className='flex justify-center pt-2 font-normal text-3xl pr-4'><span className='pr-2'>SHOPPING CART</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
           <a href="/details"className='flex justify-center pt-2 hidden md:flex font-normal text-3xl'><span className='pr-2'>CHECKOUT DETAILS</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
         </div>
@@ -93,7 +93,7 @@ const Cart = () => {
                 <hr className='h-px my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
               </ul>
           </div>
-          <div className='bg-[#c7889d] ml-2 border mt-5 bg-white hover:bg-[#b06981]'>
+          <div className='bg-[#c7889d] ml-2 border mt-5 hover:bg-[#b06981]'>
             <button className='text-white py-2 font-bold'>PROCEED TO CHECKOUT</button>
           </div>
           <div className='bg-[#0aad66] ml-2 border mt-5 hover:bg-[#0c985b]'>
