@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaTimes, FaArrowLeft, FaWhatsapp, FaTag, FaGreaterThan } from "react-icons/fa";
 import Navbar from '..//component/navbar'
+import Modal from '../component/modal';
 import purple from '../assets/purple.jpg'
+import Footer from '../component/footer';
 
 const Cart = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [iconClicked, setIconClicked] = useState(null);
+  const openModal = (clickedIcon) => {
+    setShowModal(true);
+    setIconClicked(clickedIcon);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
     <>
-      <Navbar/>
+      <Navbar openModal={openModal} />
+      {showModal && (
+        <Modal onClose={closeModal} iconClicked={iconClicked}>
+        </Modal>
+      )}
       <div className='pt-[140px] text-center mx-5'>
         <div className='flex flex justify-center items-center'>
           <a href="/cart"className='flex justify-center pt-2 font-normal text-3xl pr-4'><span className='pr-2'>SHOPPING CART</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
@@ -98,6 +114,7 @@ const Cart = () => {
         </div>
         </div>
       </div>
+      < Footer />
     </>
   )
 }

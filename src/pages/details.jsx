@@ -1,16 +1,32 @@
 import React, { useState } from 'react'
 import Navbar from '..//component/navbar'
+import Modal from '../component/modal';
 import { FaGreaterThan } from "react-icons/fa";
+import Footer from '../component/footer';
 
 function Details() {
-    const [coupon, setCoupon] = useState(false)
+    const [showModal, setShowModal] = useState(false);
+    const [iconClicked, setIconClicked] = useState(null);
+    const [coupon, setCoupon] = useState(false)  
+    const openModal = (clickedIcon) => {
+        setShowModal(true);
+        setIconClicked(clickedIcon);
+      };
+    
+      const closeModal = () => {
+        setShowModal(false);
+      };
 
     const handleCoupon = () => {
         setCoupon(!coupon)
     }
   return (
     <>
-        <Navbar/>
+        <Navbar openModal={openModal}/>
+        {showModal && (
+        <Modal onClose={closeModal} iconClicked={iconClicked}>
+        </Modal>
+      )}
         <div className='pt-[140px] text-center mx-5'>
             <div className='flex flex justify-center items-center'>
                 <a href="/cart"className='flex justify-center hidden md:flex pt-2 font-normal text-3xl pr-4'><span className='pr-2'>SHOPPING CART</span> <FaGreaterThan size={20} color="gray" className='h-10'/></a>
@@ -35,6 +51,7 @@ function Details() {
             </div>
             </div>
         </div>
+      < Footer />
     </>
   )
 }
