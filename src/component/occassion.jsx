@@ -105,11 +105,11 @@ const Occassion = () => {
         </div>  
         <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
     </div>
-    <div className="my-20 w-full">
+    <div className="my-20 w-full relative">
         <img src={shop} alt=""
                 className=' top-o left-0  w-full object-cover' />
-        <div className=''>
-          <div className='text-black'>
+        <div className='absolute w-1/2 top-20 right-0  '>
+          <div className='text-black flex flex-col items-center gap-5'>
             <p className='text-lg md:text-3xl px-10 items-center font-bold text-center' >For Your Occasions</p>
             <p className='text-lg'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
             <a href=""

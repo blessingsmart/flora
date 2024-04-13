@@ -107,8 +107,9 @@ const Gift = () => {
     </div>
     <div className=" my-20 relative">
         <img src={shop} alt=""
-                className='' />
-        <div className=' absolute md:top-20 md:right-20 top-10 right-0 flex flex-col gap-5 text-black'>
+                className='top-o left-0  w-full object-cover' />
+        <div className='absolute w-1/2 top-20 right-0 '>
+          <div  className='text-black flex flex-col items-center gap-5'>
             <p className='text-lg md:text-3xl px-10 items-center font-bold text-center' >Perfect Flower Plants</p>
             <p className='text-lg'>Buy indoor and outdoor plants in Lagos, Nigeria for your home or office space</p>
             <a href=""
@@ -117,6 +118,7 @@ const Gift = () => {
                 SHOP NOW
                 </button>
             </a>
+            </div>
         </div>
     </div> 
     </>
