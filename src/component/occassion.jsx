@@ -109,9 +109,9 @@ const Occassion = () => {
         <img src={shop} alt=""
                 className=' top-o left-0  w-full object-cover' />
         <div className=''>
-          <div>
-            <p className='text-lg md:text-3xl px-10 items-center text-white font-bold text-center' >For Your Occasions</p>
-            <p className='text-lg text-white'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
+          <div className='text-black'>
+            <p className='text-lg md:text-3xl px-10 items-center font-bold text-center' >For Your Occasions</p>
+            <p className='text-lg'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
             <a href=""
                 className='place-self-center'>
                 <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
