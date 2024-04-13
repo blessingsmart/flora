@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import redrose from '../assets/redrose.jpg';
-import  food1 from "..//assets/food1.jpg";
+import  shop from "..//assets/shop.jpg";
 
 
 
@@ -106,7 +106,7 @@ const Occassion = () => {
         <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
     </div>
     <div className="my-20 w-full">
-        <img src={food1} alt=""
+        <img src={shop} alt=""
                 className=' top-o left-0  w-full object-cover' />
         <div className=''>
           <div>
