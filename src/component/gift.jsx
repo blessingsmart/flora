@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import redrose from '../assets/redrose.jpg';
-import  food1 from "..//assets/food1.jpg";
+import  shop from "..//assets/shop.jpg";
 
 
 
@@ -106,7 +106,7 @@ const Gift = () => {
         <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
     </div>
     <div className=" my-20 relative">
-        <img src={food1} alt=""
+        <img src={shop} alt=""
                 className='' />
         <div className=' absolute md:top-20 md:right-20 top-10 right-0 flex flex-col gap-5'>
             <p className='text-lg md:text-3xl px-10 items-center text-white font-bold text-center' >Perfect Flower Plants</p>
