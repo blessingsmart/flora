@@ -1,6 +1,17 @@
 import React, { useState } from 'react'
-import redrose from '../assets/redrose.jpg';
 import  shop from "..//assets/shop.jpg";
+import flower1 from '../assets/flower1.jpg';
+import flower2 from '../assets/flower2.jpg';
+import flower3 from '../assets/flower3.jpg';
+import flower4 from '../assets/flower4.jpg';
+import flower5 from '../assets/flower5.jpg';
+import flower6 from '../assets/flower6.jpg';
+import flower7 from '../assets/flower7.jpg';
+import flower8 from '../assets/flower8.jpg';
+import flower9 from '../assets/flower9.jpg';
+import flower10 from '../assets/flower10.jpg';
+import flower11 from '../assets/flower11.jpg';
+import flower12 from '../assets/flower12.jpg';
 
 
 
@@ -10,73 +21,73 @@ const Occassion = () => {
     const links = [
         {
           id: 1,
-          src: redrose ,
+          src: flower1 ,
           title: "Apology Flowers 002",
           price: "₦200,000",
         },
         {
           id: 2,
-          src:redrose,
+          src: flower2,
           title: "Apology Flowers 003",
           price: "#90,000",
         },
         {
           id: 3,
-          src: redrose,
+          src: flower3,
           title: "Apology Flowers 004",
           price: "#150,000",
         },
         {
           id: 4,
-          src: redrose,
+          src: flower4,
           title: "Aqua Pack 001",
           price: "#80,000",
         },
         {
           id: 5,
-          src: redrose,
+          src: flower5,
           title: "Aqua Pack 002",
           price: "#115,000",
         },
         {
           id: 6,
-          src: redrose,
+          src: flower6,
           title: "Aqua Pack 003",
           price: "#50,000",
         },
         {
           id: 7,
-          src: redrose,
+          src: flower7,
           title: "Aqua Pack 004",
           price: "#50,000",
         },
         {
           id: 8,
-          src: redrose,
+          src: flower8,
           title: "Aqua Pack 005",
           price: "#260,000",
         },
         {
           id: 9,
-          src: redrose,
+          src: flower9,
           title: "Aqua Pack 006",
           price: "#95,000",
         },
         {
           id: 10,
-          src: redrose,
+          src: flower10,
           title: "Aqua Pack 007",
           price: "#70,000",
         },
         {
           id: 11,
-          src: redrose,
+          src: flower11,
           title: "Aqua Pack 008",
           price: "#115,000",
         },
         {
           id: 12,
-          src: redrose,
+          src: flower12,
           title: "Aqua Pack 009",
           price: "#130,000",
         },

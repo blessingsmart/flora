@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
 const Details = lazy(() => import("./pages/details"));
+const ProductCategory = lazy(() => import("./pages/ProductCategory"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -28,6 +29,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Details />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/ProductCategory",
+    element: (
+      <React.Suspense>
+        <ProductCategory />
       </React.Suspense>
     ),
   },
