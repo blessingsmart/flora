@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <>
       <Navbar openModal={openModal} />
-      <div name="hero" id="splide1" className="splide px-16 ">
+      <div id="splide1" className="splide sm:px-16 p-5 ">
         <div className="splide__track">
           <ul className="splide__list ">
             <li className="splide__slide">
@@ -78,7 +78,7 @@ const Home = () => {
         <Modal onClose={closeModal} iconClicked={iconClicked}>
         </Modal>
       )}
-      <div className='lg:flex justify-between gap-5 p-16 text-xl'>
+      <div className='lg:flex justify-between gap-5 sm:p-16 p-5 text-xl'>
         <div className='pt-16 text-center lg:text-start lg:w-1/2'>
           <h1 className='font-signature py-6 text-4xl text-center'>Introducing Flower Imperial</h1>
           <div className='text-left leading-relaxed'>
