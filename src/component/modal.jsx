@@ -60,7 +60,7 @@ const Modal = ({onClose, iconClicked }) => {
     },
     {
       id: 11,
-      link: "ABOUT",
+      link: "/about",
       title: "ABOUT US",
     },
   ];

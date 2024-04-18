@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import logo from "../assets/logo.png"
 
@@ -9,7 +9,7 @@ const Footer = () => {
     const links = [
         {
           id: 1,
-          link: "/",
+          link: "/about",
           title: "About",
         },
         {
@@ -78,7 +78,7 @@ const Footer = () => {
                   key={id}
                   className="px-4 md:py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200 "
                 >
-                    <RouterLink to={link}>{title}</RouterLink>
+                    <Link to={link}>{title}</Link>
                 </li>
               ))}
             </ul> 
