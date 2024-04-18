@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div  className='w-full my-16 relative'>
             <img src={pexels}
-            className='top-o left-0  h-full min-h-[700px] object-cover' alt="" />
+            className='top-o left-0  h-full min-h-[750px] object-cover' alt="" />
             <div className='absolute md:w-1/2  top-0 flex flex-col p-10 text-black'>
                 <div>
                     <h2 className='font-signature text-5xl text-center m-5'>Contact us</h2>
