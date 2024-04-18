@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <>
       <Navbar openModal={openModal} />
-      <div id="splide1" className="splide sm:px-16 p-5 ">
+      <div id="splide1" className="splide sm:px-16 px-5 ">
         <div className="splide__track">
           <ul className="splide__list ">
             <li className="splide__slide">
