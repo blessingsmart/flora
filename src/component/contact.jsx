@@ -1,46 +1,48 @@
 import React from 'react'
+import pexels from '../assets/pexels.jpg'
 
 const Contact = () => {
   return (
     <div  className='w-full my-16 relative'>
-            <img src='https://images.pexels.com/photos/62279/pexels-photo-62279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            className='top-o left-0  w-full object-cover' alt="" />
-            <div className='absolute w-1/2  top-0 flex flex-col p-16 text-black'>
+            <img src={pexels}
+            className='top-o left-0  h-full min-h-[700px] object-cover' alt="" />
+            <div className='absolute md:w-1/2  top-0 flex flex-col p-10 text-black'>
                 <div>
                     <h2 className='font-signature text-5xl text-center m-5'>Contact us</h2>
-                    <div className='flex flex-col gap-6'>
+                    <div className='flex flex-col gap-6 w-full'>
                         <div className='flex  gap-1'>
                             <p className='font-bold'>Phone Number</p>
                             <p>-</p>
-                            <p>0801 567 8973</p>
+                            <p>0806 052 1476</p>
                         </div>
                         <div className='flex  gap-1'>
                             <p className='font-bold'>Email</p>
                             <p>-</p>
-                            <p>flower@gmail.com</p>
+                            <p>Flowersimperial34@gmail.com</p>
                         </div>
                         <div className='flex  gap-1'>
                             <p className='font-bold'>Address</p>
                             <p>-</p>
-                            <p>victoria Island Lagos, Nigeria</p>
+                            <p>Shop E112 Giwa shopping complex, 117 Alfred Rewane road, Falomo, Ikoyi, Lagos, Nigeria</p>
                         </div>
-                        <div className='py-5 flex flex-col gap-10'>
+                        <div className='py-5 flex flex-col gap-6 w-full'>
                             <input type="text" 
                                     name="Name" 
                                     id="Name" 
-                                    className="bg-white p-3 sm:w-96 focus:outline-none"
+                                    className="bg-white p-3 focus:outline-none"
                                     placeholder="FULL NAME" />
                             <input type="number" 
                                     name="number" 
                                     id="number" 
-                                    className="bg-white p-3 sm:w-96 focus:outline-none"
+                                    className="bg-white p-3 focus:outline-none"
                                     placeholder="PHONE NO." />
-                            <input type="text" 
+                            <textarea type="text" 
                                     name="message" 
                                     id="message" 
-                                    className="bg-white p-3 sm:w-96 focus:outline-none"
-                                    placeholder="MESSAGE" />
-                            <button  className='text-white bg-black'>SEND</button>
+                                    className="bg-white p-3 focus:outline-none"
+                                    placeholder="MESSAGE"
+                                    rows="4" />
+                            <button  className='text-white bg-black py-3 rounded-lg'>SEND</button>
                         </div>
                     </div>
                 </div>

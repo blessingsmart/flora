@@ -5,6 +5,7 @@ const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
 const Details = lazy(() => import("./pages/details"));
 const ProductCategory = lazy(() => import("./pages/ProductCategory"));
+const About = lazy(() => import("./pages/about"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -37,6 +38,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <ProductCategory />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <React.Suspense>
+        <About />
       </React.Suspense>
     ),
   },

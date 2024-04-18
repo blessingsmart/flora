@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link as RouterLink } from "react-router-dom";
 import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import logo from "../assets/logo.png"
+
+
 const Footer = () => {
 
     const links = [
@@ -31,7 +34,7 @@ const Footer = () => {
            <FaTwitter size={25}/>
         </>
       ),
-      href: 'https://www.twitter.com/sourcereflect1'
+      href: ''
     },
     {
       id: 2,
@@ -40,7 +43,7 @@ const Footer = () => {
            <FaWhatsapp size={25}/>
         </>
       ),
-      href: 'https://wa.me/message/YL3HPLETTPM5O1?src=qr',
+      href: '',
     },
     {
       id: 3,
@@ -49,7 +52,7 @@ const Footer = () => {
            <FaInstagram size={25}/>
         </>
       ),
-      href: 'https://instagram.com/sourcereflect?igshid=MmIzYWVlNDQ5Yg==',
+      href: '',
     },
     {
       id: 4,
@@ -58,21 +61,22 @@ const Footer = () => {
            <FaFacebook size={25}/>
         </>
       ),
-      href: 'https://www.facebook.com/sourcereflec?mibextid=LQQJ4d',
+      href: 'https://web.facebook.com/profile.php?id=100069380672418',
     },
   ];
 
     
   return (
-    <div className='h-40 flex flex-col '>
-        <div className='h-3/5 bg-black/90 px-16 flex text-white items-center justify-around'>
-            <h1>logo</h1>
+    <div className='md:h-40 flex flex-col '>
+        <div className='h-3/5 bg-black/90 lg:px-16 p-10 sm:flex-row flex flex-col gap-5 text-white items-center justify-around'>
+            <img src={logo} alt="imperial flower logo"
+                className='size-14' />
             <div>
-            <ul className="flex gap-4">
+            <ul className="flex flex-col md:gap-4 md:flex-row items-center">
               {links.map(({ id, link, title }) => (
                 <li
                   key={id}
-                  className="px-4 py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200 "
+                  className="px-4 md:py-2 cursor-pointer capitalize font-medium hover:scale-105 duration-200 "
                 >
                     <RouterLink to={link}>{title}</RouterLink>
                 </li>
@@ -102,7 +106,7 @@ const Footer = () => {
         </div>
         <div className='bg-black/60 h-2/5 flex px-16'>
             <div>
-                <h2 className='p-3 text-white/60'>lorem @ Copyright 2024</h2>
+                <h2 className='p-3 text-white/60 text-sm'>FLOWERS IMPERIAL @ Copyright 2024</h2>
             </div>
         </div>
     </div>
