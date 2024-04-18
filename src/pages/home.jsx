@@ -52,23 +52,23 @@ const Home = () => {
         <div className="splide__track">
           <ul className="splide__list ">
             <li className="splide__slide">
-              <div className="">
-                <img src={flower1} alt="Image 1" className="h-screen w-screen relative" />
+              <div >
+                <img src={flower1} alt="Image 1"/>
               </div>
             </li>
             <li className="splide__slide">
-              <div className="">
-                <img src={flower2} alt="Image 2" className="h-screen w-screen" />
+              <div>
+                <img src={flower2} alt="Image 2" />
               </div>
             </li>
             <li className="splide__slide">
-              <div className="">
-                <img src={flower3} alt="Image 3" className=" h-screen w-screen" />
+              <div>
+                <img src={flower3} alt="Image 3" />
               </div>
             </li>
             <li className="splide__slide">
-              <div className="">
-                <img src={flower4} alt="Image 3" className=" h-screen w-screen" />
+              <div>
+                <img src={flower4} alt="Image 3" />
               </div>
             </li>
           </ul>
