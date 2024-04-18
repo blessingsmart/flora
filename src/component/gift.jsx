@@ -97,9 +97,9 @@ const Gift = () => {
 
   return (
     <>
-    <div name="menu" className='flex flex-col items-center gap-12 p-16'>
+    <div name="menu" className='flex flex-col items-center gap-12 sm:p-16 p-5'>
         <h1 className='font-signature text-5xl text-center'>Shop For Gifts</h1>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 sm:px-0'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 '>
             {
             links.map(({ id, src, title, price}) => (
                 <div key={id} className='flex flex-col drop-shadow-xl '>

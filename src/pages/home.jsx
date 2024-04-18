@@ -25,6 +25,10 @@ const Home = () => {
       focus: 'center',
       autoplay: true,
       perPage: 3,
+      breakpoints: {
+        640: {
+          perPage: 1,},
+        },
     }).mount();
 
     return () => {
