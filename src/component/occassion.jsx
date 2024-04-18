@@ -107,7 +107,7 @@ const Occassion = () => {
                         <img src={src} alt='products' className='  ' />
                         <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'>Quick View</button>
                     </div>
-                    <div className='flex gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
+                    <div className='flex flex-col sm:flex-row gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                         <p className='p-2'>{title}</p >
                         <p className='p-2'>{price}</p >
                     </div>

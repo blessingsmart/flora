@@ -18,7 +18,7 @@ const Navbar = ({ openModal }) => {
           <img src={logo} alt="logo "/>
         </Link>
         <div className="flex gap-4">
-          <button onClick={() => openModal("search")}>
+          <button onClick={() => openModal("search")} className='hidden md:block'>
             <FaSearch size={25} />
           </button>
           <Link to="/cart">
