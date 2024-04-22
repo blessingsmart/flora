@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
 const Details = lazy(() => import("./pages/details"));
+const Preview = lazy(() => import("./component/preview"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -28,6 +29,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Details />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/preview",
+    element: (
+      <React.Suspense>
+        <Preview />
       </React.Suspense>
     ),
   },

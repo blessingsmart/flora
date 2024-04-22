@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { Link as RouterLink } from "react-router-dom";
+import Preview from './preview';
 
-const Modal = ({onClose, iconClicked }) => {
+const Modal = ({onClose, iconClicked, src, title, price}) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchChange = (e) => {
@@ -102,6 +103,10 @@ const Modal = ({onClose, iconClicked }) => {
                 </li>
               ))}
             </ul> 
+          </div>
+        ) : iconClicked === 'preview' ? (
+          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
+            <Preview src={src} title={title} price={price}/>
           </div>
         ) : (
           <div className="p-4">

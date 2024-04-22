@@ -16,6 +16,9 @@ import Footer from '../component/footer';
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [iconClicked, setIconClicked] = useState(null); // Initially set to null
+  const [modalData, setModalData] = useState({});
+
+
 
   useEffect(() => {
     const splide1 = new Splide('#splide1', {
@@ -32,14 +35,16 @@ const Home = () => {
     };
   }, []);
 
-  const openModal = (clickedIcon) => {
+  const openModal = (clickedIcon, src, title, price) => {
     setShowModal(true);
     setIconClicked(clickedIcon);
+    setModalData(src, title, price);
   };
 
   const closeModal = () => {
     setShowModal(false);
   };
+
 
   return (
     <>
@@ -71,7 +76,7 @@ const Home = () => {
         </div>
       </div>
       {showModal && (
-        <Modal onClose={closeModal} iconClicked={iconClicked}>
+        <Modal onClose={closeModal} iconClicked={iconClicked} src={modalData.src} title={modalData.title} price={modalData.price}>
         </Modal>
       )}
       <div className='lg:flex justify-between gap-5 p-16 text-xl'>
@@ -85,8 +90,8 @@ const Home = () => {
           <img src={redrose} alt="rose" className='size-72 drop-shadow-2xl' />
         </div>
       </div>
-      <Occassion />
-      < Gift />
+      <Occassion openModal={openModal}/>
+      < Gift openModal={openModal} />
       < Contact />
       < Footer />
     </>
