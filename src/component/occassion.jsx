@@ -15,7 +15,7 @@ import flower12 from '../assets/flower12.jpg';
 
 
 
-const Occassion = ({openModal}) => {
+const Occassion = ({openModal, dynamic}) => {
 
     const links = [
         {
@@ -28,72 +28,73 @@ const Occassion = ({openModal}) => {
           id: 2,
           src: flower2,
           title: "Apology Flowers 003",
-          price: "#90,000",
+          price: "₦90,000",
         },
         {
           id: 3,
           src: flower3,
           title: "Apology Flowers 004",
-          price: "#150,000",
+          price: "₦150,000",
         },
         {
           id: 4,
           src: flower4,
           title: "Aqua Pack 001",
-          price: "#80,000",
+          price: "₦80,000",
         },
         {
           id: 5,
           src: flower5,
           title: "Aqua Pack 002",
-          price: "#115,000",
+          price: "₦115,000",
         },
         {
           id: 6,
           src: flower6,
           title: "Aqua Pack 003",
-          price: "#50,000",
+          price: "₦50,000",
         },
         {
           id: 7,
           src: flower7,
           title: "Aqua Pack 004",
-          price: "#50,000",
+          price: "₦50,000",
         },
         {
           id: 8,
           src: flower8,
           title: "Aqua Pack 005",
-          price: "#260,000",
+          price: "₦260,000",
         },
         {
           id: 9,
           src: flower9,
           title: "Aqua Pack 006",
-          price: "#95,000",
+          price: "₦95,000",
         },
         {
           id: 10,
           src: flower10,
           title: "Aqua Pack 007",
-          price: "#70,000",
+          price: "₦70,000",
         },
         {
           id: 11,
           src: flower11,
           title: "Aqua Pack 008",
-          price: "#115,000",
+          price: "₦115,000",
         },
         {
           id: 12,
           src: flower12,
           title: "Aqua Pack 009",
-          price: "#130,000",
+          price: "₦130,000",
         },
       ];
 
       const handleItemClick = (id, src, title, price) => {
-        openModal("preview", { src, title, price }); // Pass src, title, and price only
+        openModal("preview"); // Pass src, title, and price only
+        dynamic({ src, title, price }); // Pass src, title, and price only
       };
       
 

@@ -15,7 +15,7 @@ import shop from '../assets/shop.jpg';
 
 
 
-const Gift = ({openModal}) => {
+const Gift = ({openModal, dynamic}) => {
 
     
     const links = [
@@ -94,9 +94,10 @@ const Gift = ({openModal}) => {
       ];
 
 
-    const handleItemClick = (id, src, title, price) => {
-      openModal("preview", { src, title, price }); // Pass src, title, and price only
-    };
+      const handleItemClick = (id, src, title, price) => {
+        openModal("preview"); // Pass src, title, and price only
+        dynamic({ src, title, price }); // Pass src, title, and price only
+      };
 
   return (
     <>

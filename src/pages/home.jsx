@@ -39,10 +39,12 @@ const Home = () => {
     };
   }, []);
 
-  const openModal = (clickedIcon, src, title, price) => {
+  const openModal = ( clickedIcon ) => {
     setShowModal(true);
     setIconClicked(clickedIcon);
-    setModalData(src, title, price);
+  };
+  const dynamic = ( {src, title, price} ) => {
+    setModalData({ src, title, price });
   };
 
   const closeModal = () => {
@@ -98,8 +100,8 @@ const Home = () => {
           <img src={flower4} alt="rose" className='size-72 drop-shadow-2xl' />
         </div>
       </div>
-      <Occassion openModal={openModal}/>
-      < Gift openModal={openModal} />
+      <Occassion openModal={openModal} dynamic={dynamic}/>
+      < Gift openModal={openModal} dynamic={dynamic}/>
       < Contact />
       < Footer />
     </>
