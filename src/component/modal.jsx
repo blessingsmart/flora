@@ -21,6 +21,7 @@ const Modal = ({onClose, iconClicked }) => {
     },
     {
       id: 3,
+      link: "/fresh-flower-bouquets",
       title: "FRESH FLOWER BOUQUETS",
     },
     {

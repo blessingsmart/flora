@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
-import  shop from "..//assets/shop.jpg";
-import flower1 from '../assets/flower1.jpg';
-import flower2 from '../assets/flower2.jpg';
-import flower3 from '../assets/flower3.jpg';
-import flower4 from '../assets/flower4.jpg';
-import flower5 from '../assets/flower5.jpg';
-import flower6 from '../assets/flower6.jpg';
-import flower7 from '../assets/flower7.jpg';
-import flower8 from '../assets/flower8.jpg';
-import flower9 from '../assets/flower9.jpg';
-import flower10 from '../assets/flower10.jpg';
-import flower11 from '../assets/flower11.jpg';
-import flower12 from '../assets/flower12.jpg';
+import React, { useEffect, useState } from 'react';
+import Modal from '../../component/modal';
+import flower1 from '../../assets/flower1.jpg';
+import flower2 from '../../assets/flower2.jpg';
+import flower3 from '../../assets/flower3.jpg';
+import flower4 from '../../assets/flower4.jpg';
+import flower5 from '../../assets/flower5.jpg';
+import flower6 from '../../assets/flower6.jpg';
+import flower7 from '../../assets/flower7.jpg';
+import flower8 from '../../assets/flower8.jpg';
+import flower9 from '../../assets/flower9.jpg';
+import flower10 from '../../assets/flower10.jpg';
+import flower11 from '../../assets/flower11.jpg';
+import flower12 from '../../assets/flower12.jpg';
+import Navbar from '../../component/navbar';
+import Footer from '../../component/footer';
 
 
 
@@ -93,12 +95,28 @@ const Fresh = () => {
         },
       ];
 
+      
+  const [showModal, setShowModal] = useState(false);
+  const [iconClicked, setIconClicked] = useState(null); // Initially set to null
+
+      const openModal = (clickedIcon) => {
+        setShowModal(true);
+        setIconClicked(clickedIcon);
+      };
+    
+      const closeModal = () => {
+        setShowModal(false);
+      };
 
 
   return (
     <>
+    <Navbar openModal={openModal} />
+    {showModal && (
+        <Modal onClose={closeModal} iconClicked={iconClicked}>
+        </Modal>
+      )}
     <div name="menu" className='flex flex-col items-center gap-12 sm:p-16 p-5'>
-        <h1 className='font-signature text-5xl text-center'>Shop For Occassion</h1>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             {
             links.map(({ id, src, title, price}) => (
@@ -113,9 +131,9 @@ const Fresh = () => {
                     </div>
                 </div>
                 ))}
-        </div>  
-        <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
+        </div>
     </div>
+    < Footer />
     </>
   )
 }
