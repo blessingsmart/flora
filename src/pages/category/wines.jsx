@@ -17,7 +17,7 @@ import Footer from '../../component/footer';
 
 
 
-const Fresh = () => {
+const Wine = () => {
 
     
     const links = [
@@ -138,4 +138,4 @@ const Fresh = () => {
   )
 }
 
-export default Fresh
+export default Wine
