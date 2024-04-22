@@ -4,7 +4,8 @@ import { createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
 const Details = lazy(() => import("./pages/details"));
-const Preview = lazy(() => import("./component/preview"));
+const ProductCategory = lazy(() => import("./pages/ProductCategory"));
+const About = lazy(() => import("./pages/about"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -33,10 +34,18 @@ const BrowserRouter = createBrowserRouter([
     ),
   },
   {
-    path: "/preview",
+    path: "/ProductCategory",
     element: (
       <React.Suspense>
-        <Preview />
+        <ProductCategory />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <React.Suspense>
+        <About />
       </React.Suspense>
     ),
   },

@@ -61,7 +61,7 @@ const Modal = ({onClose, iconClicked, src, title, price}) => {
     },
     {
       id: 11,
-      link: "ABOUT",
+      link: "/about",
       title: "ABOUT US",
     },
   ];
