@@ -15,85 +15,88 @@ import shop from '../assets/shop.jpg';
 
 
 
-const Gift = () => {
+const Gift = ({openModal}) => {
 
     
     const links = [
         {
           id: 1,
           src: flower13 ,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 001",
+          price: "#100,000",
         },
         {
           id: 2,
           src:flower14,
           title: "Apology Flowers 002",
-          price: "#50,000",
+          price: "#130,000",
         },
         {
           id: 3,
           src: flower15,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 003",
+          price: "#150,000",
         },
         {
           id: 4,
           src: flower16,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 004",
+          price: "#160,000",
         },
         {
           id: 5,
           src: flower17,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 005",
+          price: "#190,000",
         },
         {
           id: 6,
           src: flower18,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 006",
+          price: "#195,000",
         },
         {
           id: 7,
           src: flower19,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 007",
+          price: "#200,000",
         },
         {
           id: 8,
           src: flower20,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 008",
+          price: "#190,000",
         },
         {
           id: 9,
           src: flower21,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 009",
+          price: "#230,000",
         },
         {
           id: 10,
           src: flower22,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 010",
+          price: "#220,000",
         },
         {
           id: 11,
           src: flower23,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 011",
+          price: "#260,000",
         },
         {
           id: 12,
           src: flower24,
-          title: "Apology Flowers 002",
-          price: "#50,000",
+          title: "Apology Flowers 012",
+          price: "#290,000",
         },
       ];
 
 
+    const handleItemClick = (id, src, title, price) => {
+      openModal("preview", { src, title, price }); // Pass src, title, and price only
+    };
 
   return (
     <>
@@ -104,8 +107,8 @@ const Gift = () => {
             links.map(({ id, src, title, price}) => (
                 <div key={id} className='flex flex-col drop-shadow-xl '>
                     <div className='relative'>
-                        <img src={src} alt='products' className='' />
-                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'>Quick View</button>
+                        <img src={src} alt='products' className='  ' />
+                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
                     </div>
                     <div className='flex flex-col sm:flex-row sm:gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                         <p className='p-2'>{title}</p >

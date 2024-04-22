@@ -36,7 +36,7 @@ function Details() {
                 <h4><span className='text-gray-500'>Have a coupon?</span> <span className='hover:cursor-pointer' onClick={handleCoupon}>Click here to enter your code</span></h4>
             </div>
             <div>
-                <div className={coupon ? 'border-dashed border-2 border-gray-900 mb-5 mt-2 ease-in duration-1000': 'fixed top-[-20%] ease-out duration-100'}>
+                <div className={coupon ? 'border-dashed border-2 border-gray-900 mb-5 mt-2 ease-in duration-1000': 'fixed top-[-100%] ease-out duration-100'}>
                 <p className='text-start pl-8 mt-3'>if you have a coupon code, please apply it below.</p>
                 <div className='border mx-8 mt-4'>
                     <input 
