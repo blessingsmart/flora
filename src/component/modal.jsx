@@ -27,37 +27,37 @@ const Modal = ({onClose, iconClicked, src, title, price}) => {
     },
     {
       id: 4,
-      link: "/about",
+      link: "/fruit-baskets",
       title: "FRUIT BASKETS",
     },
     {
       id: 5,
-      link: "/Shop",
+      link: "/balloons",
       title: "BALLONS",
     },
     {
       id: 6,
-      link: "/Contact",
+      link: "/wines",
       title: "WINES",
     },
     {
       id: 7,
-      link: "/Contact",
+      link: "/teddy-bears",
       title: "TEDDY BEARS",
     },
     {
       id: 8,
-      link: "/Contact",
+      link: "/chocolates-valentine-gifts",
       title: "CHOCOLATES",
     },
     {
       id: 9,
-      link: "CARD",
+      link: "/cards",
       title: "CARDS",
     },
     {
       id: 10,
-      link: "PLANTS",
+      link: "/plants",
       title: "PLANTS",
     },
     {
