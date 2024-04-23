@@ -1,9 +1,9 @@
 import React from 'react';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
-function Flutter(props) {
+function Flutter({ price, title }) {
     // Destructure props if needed
-    const { price } = props;
+    //const { price } = props;
 
     const config = {
         public_key: 'FLWPUBK_TEST-a48050707c79f539429d871d89a1d840-X',
@@ -17,7 +17,7 @@ function Flutter(props) {
           name: 'customer',
         },
         customizations: {
-          title: 'my Payment Title',
+          title: title,
           description: 'Payment for items in cart',
           logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
         },
