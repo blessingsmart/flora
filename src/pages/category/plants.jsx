@@ -17,7 +17,7 @@ import Footer from '../../component/footer';
 
 
 
-const Bakery = () => {
+const Plant = () => {
 
     
     const links = [
@@ -138,4 +138,4 @@ const Bakery = () => {
   )
 }
 
-export default Bakery
+export default Plant
