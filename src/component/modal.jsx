@@ -3,7 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 import { Link as RouterLink } from "react-router-dom";
 import Preview from './preview';
 
-const Modal = ({onClose, iconClicked, src, title, price}) => {
+const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchChange = (e) => {
@@ -62,7 +62,7 @@ const Modal = ({onClose, iconClicked, src, title, price}) => {
     },
     {
       id: 11,
-      link: "/about",
+      link: "ABOUT",
       title: "ABOUT US",
     },
   ];
@@ -107,7 +107,7 @@ const Modal = ({onClose, iconClicked, src, title, price}) => {
           </div>
         ) : iconClicked === 'preview' ? (
           <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
-            <Preview src={src} title={title} price={price}/>
+            <Preview src={src} title={title} price={price} dynamic={dynamic}/>
           </div>
         ) : (
           <div className="p-4">
