@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaWhatsapp } from "react-icons/fa";
+import Flutter from './flutter';
 
-function preview({ src, title, price }) {
+function Preview({ src, title, price}) {
   return (
     <>
         <div className='md:mx-64 mx-6 bg-white pb-24 md:flex'>
@@ -103,7 +104,7 @@ function preview({ src, title, price }) {
                         <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]">+</button>
                     </div>
                     <div className='bg-[#c7889d] mx-5 border mt-5 hover:bg-[#b06981] pt-3'>
-                        <button className='text-white font-bold px-10'><a href="/cart">ADD TO CART</a></button>
+                        <button className='text-white font-bold px-10' ><Flutter price={(price)} title={(title)}/></button>
                     </div>
                 </div>
                 <div className='bg-[#0aad66] ml-8 border mt-5 hover:bg-[#0c985b] w-[300px]'>
@@ -127,4 +128,4 @@ function preview({ src, title, price }) {
   )
 }
 
-export default preview;
+export default Preview;
