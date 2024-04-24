@@ -16,10 +16,10 @@ const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
       link: "/",
       title: "HOME PAGE",
     },
-    {
-      id: 2,
-      title: "FALL FLOWERS",
-    },
+    // {
+    //   id: 2,
+    //   title: "FALL FLOWERS",
+    // },
     {
       id: 3,
       link: "/fresh-flower-bouquets",
