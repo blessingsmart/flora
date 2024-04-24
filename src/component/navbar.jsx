@@ -21,7 +21,7 @@ const Navbar = ({ openModal }) => {
           <button onClick={() => openModal("search")} className='hidden md:block'>
             <FaSearch size={25} />
           </button>
-          <Link to="/cart">
+          <Link to="/">
             <BsBasket size={25} />
           </Link>
         </div>
