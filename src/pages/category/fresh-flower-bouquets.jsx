@@ -34,7 +34,7 @@ import flower55 from '../../assets/flower55.jpg';
 import flower56 from '../../assets/flower56.jpg';
 import flower57 from '../../assets/flower57.jpg';
 import flower58 from '../../assets/flower58.jpg';
-import flower59 from '../../assets/flower59.jpg';
+// import flower59 from '../../assets/flower59.jpg';
 import flower60 from '../../assets/flower60.jpg';
 import flower61 from '../../assets/flower61.jpg';
 import flower62 from '../../assets/flower62.jpg';
@@ -54,8 +54,23 @@ import flower75 from '../../assets/flower75.jpg';
 import flower76 from '../../assets/flower76.jpg';
 import flower77 from '../../assets/flower77.jpg';
 import flower78 from '../../assets/flower78.jpg';
-import flower79 from '../../assets/flower79.jpg';
+// import flower79 from '../../assets/flower79.jpg';
 import flower80 from '../../assets/flower80.jpg';
+import flower81 from '../../assets/flower81.jpg';
+import flower82 from '../../assets/flower82.jpg';
+import flower83 from '../../assets/flower83.jpg';
+import flower84 from '../../assets/flower84.jpg';
+import flower85 from '../../assets/flower85.jpg';
+import flower86 from '../../assets/flower86.jpg';
+import flower87 from '../../assets/flower87.jpg';
+import flower88 from '../../assets/flower88.jpg';
+import flower89 from '../../assets/flower89.jpg';
+import flower90 from '../../assets/flower90.jpg';
+import flower91 from '../../assets/flower91.jpg';
+import flower92 from '../../assets/flower92.jpg';
+import flower93 from '../../assets/flower93.jpg';
+import flower94 from '../../assets/flower94.jpg';
+import flower95 from '../../assets/flower95.jpg';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
@@ -269,12 +284,12 @@ const Fresh = () => {
           title: "Aqua Pack 009",
           price: "#130,000",
         },
-        {
-          id: 35,
-          src: flower59,
-          title: "Aqua Pack 009",
-          price: "#130,000",
-        },
+        // {
+        //   id: 35,
+        //   src: flower59,
+        //   title: "Aqua Pack 009",
+        //   price: "#130,000",
+        // },
         {
           id: 36,
           src: flower60,
@@ -389,15 +404,105 @@ const Fresh = () => {
           title: "Aqua Pack 009",
           price: "#130,000",
         },
+        // {
+        //   id: 55,
+        //   src: flower79,
+        //   title: "Aqua Pack 009",
+        //   price: "#130,000",
+        // },
         {
-          id: 55,
-          src: flower79,
+          id: 56,
+          src: flower80,
           title: "Aqua Pack 009",
           price: "#130,000",
         },
         {
-          id: 56,
-          src: flower80,
+          id: 57,
+          src: flower81,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 58,
+          src: flower82,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 59,
+          src: flower83,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 60,
+          src: flower84,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 61,
+          src: flower85,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 62,
+          src: flower86,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 63,
+          src: flower87,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 54,
+          src: flower88,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 65,
+          src: flower89,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 66,
+          src: flower90,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 67,
+          src: flower91,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 68,
+          src: flower92,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 69,
+          src: flower93,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 70,
+          src: flower94,
+          title: "Aqua Pack 009",
+          price: "#130,000",
+        },
+        {
+          id: 71,
+          src: flower95,
           title: "Aqua Pack 009",
           price: "#130,000",
         },
