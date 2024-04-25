@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import  shop from "..//assets/shop.jpg";
 import flower1 from '../assets/flower1.jpg';
 import flower2 from '../assets/flower2.jpg';
@@ -117,7 +118,7 @@ const Occassion = ({openModal, dynamic}) => {
                 </div>
                 ))}
         </div>  
-        <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
+        <Link to="/fresh-flower-bouquets" className='bg-black text-xl text-center w-full p-3 text-white font-bold'>SEE MORE</Link> 
     </div>
     <div className="my-20 w-full relative">
         <img src={shop} alt=""
@@ -128,7 +129,7 @@ const Occassion = ({openModal, dynamic}) => {
             <p className='text-lg text-center'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
             <a href=""
                 className='place-self-center'>
-                <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
+                <button to="/about" className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
                 SHOP NOW
                 </button>
             </a>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import flower13 from '../assets/flower13.jpg';
 import flower14 from '../assets/flower14.jpg';
 import flower15 from '../assets/flower15.jpg';
@@ -123,7 +124,7 @@ const Gift = ({openModal, dynamic}) => {
                 </div>
                 ))}
         </div>  
-        <button className='bg-black text-xl w-full p-3 text-white font-bold'>SEE MORE</button> 
+        <Link to="/fresh-flower-bouquets" className='bg-black text-xl text-center w-full p-3 text-white font-bold'>SEE MORE</Link> 
     </div>
     <div className=" my-20 relative">
         <img src={shop} alt=""
