@@ -5,7 +5,7 @@ import Flutter from './flutter';
 function Preview({ src, title, price}) {
   return (
     <>
-        <div className='md:mx-64 mx-6 bg-white pb-24 md:flex'>
+        <div className='md:mx-64 mr-6 bg-white pb-24 md:flex'>
             <div className='md:w-[50%]'>
                 <img src={src} className='w-full h-[500px]' alt="" />
             </div>
@@ -18,27 +18,27 @@ function Preview({ src, title, price}) {
                     <ol className="list-decimal list-inside text-gray-700">
                         <li className="list-disc ml-[100px] mt-5">
                             <label>
-                                <input type="checkbox" /> Chocolates
+                                <input type="checkbox" /> Chocolates 25000
                             </label>
                         </li>
                         <li className="list-disc ml-[100px] mt-5">
                             <label>
-                                <input type="checkbox" /> Champagne
+                                <input type="checkbox" /> Champagne 120000
                             </label>
                         </li>
                         <li className="list-disc ml-[100px] mt-5">
                             <label>
-                                <input type="checkbox" /> Balloons
+                                <input type="checkbox" /> Balloons 25000 150000
                             </label>
                         </li>
                         <li className="list-disc ml-[100px] mt-5">
                             <label>
-                                <input type="checkbox" /> Card
+                                <input type="checkbox" /> Card 3000
                             </label>
                         </li>
                         <li className="list-disc ml-[100px] mt-5">
                             <label>
-                                <input type="checkbox" /> Wine
+                                <input type="checkbox" /> Wine 10000
                             </label>
                         </li>
                     </ol>

@@ -42,26 +42,31 @@ const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
     },
     {
       id: 7,
+      link: "/vase",
+      title: "VASE",
+    },
+    {
+      id: 8,
       link: "/teddy-bears",
       title: "TEDDY BEARS",
     },
     {
-      id: 8,
+      id: 9,
       link: "/chocolates-valentine-gifts",
       title: "CHOCOLATES",
     },
     {
-      id: 9,
+      id: 10,
       link: "/cards",
       title: "CARDS",
     },
     {
-      id: 10,
+      id: 11,
       link: "/plants",
       title: "PLANTS",
     },
     {
-      id: 11,
+      id: 12,
       link: "ABOUT",
       title: "ABOUT US",
     },
