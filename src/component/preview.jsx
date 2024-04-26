@@ -3,10 +3,23 @@ import { FaWhatsapp } from "react-icons/fa";
 import Flutter from './flutter';
 
 function Preview({ src, title, price}) {
-    const [prices, setPrice] = useState(price);
-    const [optItem, setOptItem] = useState(0);
+    const [name, setName] = useState()
+    const [contact, setContact] = useState()
+    const [message, setMessage] = useState()
+    const [address, setAddress] = useState()
+    const [date, setDate] = useState()
+    const [time, setTime] = useState()
 
+    const [optItem, setOptItem] = useState(0);      // initializing optional items
+    const [increase, setIncrease] = useState(1);    // initializing the quantity increment
     const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
+    const prices = price * increase + optItem;
+
+
+    // function to handle the quantity increment
+    const handleQuantityChange = (increment) => {
+        setIncrease(prevIncrease => prevIncrease + increment);
+    };
 
     const handleCheckboxClick = (checkPrice, isChecked) => {
         setOptItem(prevItem => {
@@ -79,6 +92,9 @@ function Preview({ src, title, price}) {
                                 type="text"
                                 name='name'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
                             />
                         </li>
                         <h5 className="text-sm font-bold ml-[40px] my-10">*Telephone number of recipient</h5>
@@ -87,38 +103,54 @@ function Preview({ src, title, price}) {
                                 type="text"
                                 name='contact'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={contact}
+                                onChange={(e) => setContact(e.target.value)}
+                                required
                             />
                         </li>
                         <h5 className="text-sm font-bold ml-[40px] my-10">*Message to be written on the card</h5>
                         <li className='list-disc ml-[70px] mt-5'>
-                            <input 
+                            <textarea 
                                 type="text"
                                 name='message'
-                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
-                            />
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-24 resize-none'
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
+                                >
+                            </textarea>
                         </li>
                         <h5 className="text-sm font-bold ml-[40px] my-10">*Delivery address</h5>
                         <li className='list-disc ml-[70px] mt-5'>
                             <input 
                                 type="text"
                                 name='address'
+                                value={address}
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                onChange={(e) => setAddress(e.target.value)}
+                                required
                             />
                         </li>
                         <h5 className="text-xs font-bold ml-[40px] my-10">*Date of delivery</h5>
                         <li className='list-disc ml-[70px] mt-5'>
                             <input 
-                                type="text"
+                                type="date"
                                 name='date'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={date}
+                                onChange={(e) => setDate(e.target.value)}
+                                required
                             />
                         </li>
                         <h5 className="text-sm font-bold ml-[40px] my-10">*Time</h5>
                         <li className='list-disc ml-[70px] mt-5'>
                             <input 
-                                type="text"
+                                type="time"
                                 name='time'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={time}
+                                onChange={(e) => setTime(e.target.value)}
+                                required
                             />
                         </li>
                     </ol>
@@ -131,12 +163,15 @@ function Preview({ src, title, price}) {
                 </div>
                 <div className='flex mt-6'>
                     <div className="flex items-center sm:pl-10 pl-3 md:pl-3 mt-5">
-                        <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-l w-[30px] h-[43px]">-</button>
-                        <input className="appearance-none border border-gray-300 w-10 h-11 text-center py-2 rounded-none" type="" value=""/>
-                        <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]">+</button>
+                        <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-l w-[30px] h-[43px]" onClick={() => handleQuantityChange(-1)}>-</button>
+                        <input 
+                            className="appearance-none text-black border border-gray-300 w-10 h-11 text-center py-2 rounded-none" 
+                            value={increase}
+                        />
+                        <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
                     </div>
                     <div className='bg-[#c7889d] ml-5 border mt-5 hover:bg-[#b06981] pt-3'>
-                        <button className='text-white font-bold sm:px-10 px-2' ><Flutter price={(price)} title={(title)}/></button>
+                        <button className='text-white font-bold sm:px-10 px-2' ><Flutter price={(price)} title={(title)} prices={(prices)}/></button>
                     </div>
                 </div>
                 <div className='bg-[#0aad66] ml-3 border mt-5 hover:bg-[#0c985b] sm:w-[280px] w-[210px]'>

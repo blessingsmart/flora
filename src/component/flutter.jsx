@@ -1,14 +1,14 @@
 import React from 'react';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
-function Flutter({ price, title }) {
+function Flutter({ prices, title }) {
     // Destructure props if needed
     //const { price } = props;
 
     const config = {
         public_key: 'FLWPUBK_TEST-a48050707c79f539429d871d89a1d840-X',
         tx_ref: Date.now(),
-        amount: price, // Use the price prop here
+        amount: prices, // Use the price prop here
         currency: 'NGN',
         payment_options: 'card,mobilemoney,ussd',
         customer: {
