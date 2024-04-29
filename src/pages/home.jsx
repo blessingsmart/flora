@@ -43,8 +43,8 @@ const Home = () => {
     setShowModal(true);
     setIconClicked(clickedIcon);
   };
-  const dynamic = ( {src, title, price} ) => {
-    setModalData({ src, title, price });
+  const dynamic = ( {id, src, title, price, prices} ) => {
+    setModalData({ id, src, title, price, prices });
   };
 
   const closeModal = () => {
@@ -82,7 +82,7 @@ const Home = () => {
         </div>
       </div>
       {showModal && (
-        <Modal onClose={closeModal} iconClicked={iconClicked} src={modalData.src} title={modalData.title} price={modalData.price}>
+        <Modal onClose={closeModal} iconClicked={iconClicked} id={modalData.id} src={modalData.src} title={modalData.title} price={modalData.price} prices={modalData.prices} openModal={openModal}>
         </Modal>
       )}
       <div className='lg:flex justify-between gap-5 sm:p-16 p-5 text-xl'>

@@ -1,45 +1,22 @@
 import React, { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
-import Flutter from './flutter';
+import { Link } from 'react-router-dom';
 
-function Preview({ src, title, price}) {
-    const [name, setName] = useState()
-    const [contact, setContact] = useState()
-    const [message, setMessage] = useState()
-    const [address, setAddress] = useState()
-    const [date, setDate] = useState()
-    const [time, setTime] = useState()
 
-    const [optItem, setOptItem] = useState(0);      // initializing optional items
-    const [increase, setIncrease] = useState(1);    // initializing the quantity increment
+function Preview({id, src, title, price, openModal, 
+                handleCheckboxClick, optItem, 
+                increase, handleQuantityChange,
+                totalPrices, name, contact, message, address, 
+                date, time, onChange
+            }) {
+
+                
     const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
-    const prices = price * increase + optItem;
+    
 
-
-    // function to handle the quantity increment
-    const handleQuantityChange = (increment) => {
-        setIncrease(prevIncrease => prevIncrease + increment);
-    };
-
-    const handleCheckboxClick = (checkPrice, isChecked) => {
-        setOptItem(prevItem => {
-            if (isChecked) {
-                // Checkbox is checked, add the value
-                return prevItem + checkPrice;
-            } else {
-                // Checkbox is unchecked, subtract the value
-                return prevItem - checkPrice;
-            }
-        });
-        setPrice(prevPrice => {
-            if (isChecked) {
-                // Checkbox is checked, add the value
-                return prevPrice + checkPrice;
-            } else {
-                // Checkbox is unchecked, subtract the value
-                return prevPrice - checkPrice;
-            }
-        })
+    const handleItemClick = (id, src, title, price, prices) => {
+        openModal("cart"); // Pass src, title, and price only
+        dynamic({ src, title, price, prices }); // Pass src, title, and price only
     };
 
   return (
@@ -93,7 +70,7 @@ function Preview({ src, title, price}) {
                                 name='name'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
                                 value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                onChange={onChange}
                                 required
                             />
                         </li>
@@ -104,7 +81,7 @@ function Preview({ src, title, price}) {
                                 name='contact'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
                                 value={contact}
-                                onChange={(e) => setContact(e.target.value)}
+                                onChange={onChange}
                                 required
                             />
                         </li>
@@ -115,7 +92,7 @@ function Preview({ src, title, price}) {
                                 name='message'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-24 resize-none'
                                 value={message}
-                                onChange={(e) => setMessage(e.target.value)}
+                                onChange={onChange}
                                 required
                                 >
                             </textarea>
@@ -127,7 +104,7 @@ function Preview({ src, title, price}) {
                                 name='address'
                                 value={address}
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
-                                onChange={(e) => setAddress(e.target.value)}
+                                onChange={onChange}
                                 required
                             />
                         </li>
@@ -138,7 +115,7 @@ function Preview({ src, title, price}) {
                                 name='date'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
                                 value={date}
-                                onChange={(e) => setDate(e.target.value)}
+                                onChange={onChange}
                                 required
                             />
                         </li>
@@ -149,7 +126,7 @@ function Preview({ src, title, price}) {
                                 name='time'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
                                 value={time}
-                                onChange={(e) => setTime(e.target.value)}
+                                onChange={onChange}
                                 required
                             />
                         </li>
@@ -159,7 +136,7 @@ function Preview({ src, title, price}) {
                     <h4 className='text-gray-900'>OPTIONS AMOUNT</h4>
                     <span className='text-xl text-black font-bold mt-2'>₦{optItem}</span>
                     <h4 className='text-gray-900 mt-5'>FINAL TOTAL</h4>
-                    <span className='text-xl text-black font-bold mt-2'>₦{prices}</span>
+                    <span className='text-xl text-black font-bold mt-2'>₦{totalPrices}</span>
                 </div>
                 <div className='flex mt-6'>
                     <div className="flex items-center sm:pl-10 pl-3 md:pl-3 mt-5">
@@ -171,7 +148,7 @@ function Preview({ src, title, price}) {
                         <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
                     </div>
                     <div className='bg-[#c7889d] ml-5 border mt-5 hover:bg-[#b06981] pt-3'>
-                        <button className='text-white font-bold sm:px-10 px-2' ><Flutter price={(price)} title={(title)} prices={(prices)}/></button>
+                        <button className='text-white font-bold sm:px-10 px-2' onClick={() => handleItemClick( id, src, title, price)}>ADD TO CART</button>
                     </div>
                 </div>
                 <div className='bg-[#0aad66] ml-3 border mt-5 hover:bg-[#0c985b] sm:w-[280px] w-[210px]'>
