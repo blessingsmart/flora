@@ -2,9 +2,78 @@ import React, { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { Link as RouterLink } from "react-router-dom";
 import Preview from './preview';
+import Cart from '../pages/cart';
 
-const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
+const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal}) => {
   const [searchValue, setSearchValue] = useState('');
+  const [optItem, setOptItem] = useState(0);  // initializing the checkbox
+  const [increase, setIncrease] = useState(1);  // initializing the quantity increment
+  const totalPrices = price * increase + optItem; // calculating total price
+
+  // initializing customer informations 
+  const [name, setName] = useState('');
+  const [contact, setContact] = useState('');
+  const [message, setMessage] = useState('');
+  const [address, setAddress] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+
+  // function to handle customer information
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case 'name':
+        setName(value);
+        break;
+      case 'contact':
+        setContact(value);
+        break;
+      case 'message':
+        setMessage(value);
+        break;
+      case 'address':
+        setAddress(value);
+        break;
+      case 'date':
+        setDate(value);
+        break;
+      case 'time':
+        setTime(value);
+        break;
+      default:
+        // Handle default case or do nothing
+        break;
+    }
+  }
+  
+
+  // function to handle the quantity increment
+  const handleQuantityChange = (increment) => {
+    setIncrease(prevIncrease => prevIncrease + increment);
+  };
+
+  // function to handle the checkbox in preview component
+  const handleCheckboxClick = (checkPrice, isChecked) => {
+    setOptItem(prevItem => {
+        if (isChecked) {
+            // Checkbox is checked, add the value
+            return prevItem + checkPrice;
+        } else {
+            // Checkbox is unchecked, subtract the value
+            return prevItem - checkPrice;
+        }
+    });
+    setPrice(prevPrice => {
+        if (isChecked) {
+            // Checkbox is checked, add the value
+            return prevPrice + checkPrice;
+        } else {
+            // Checkbox is unchecked, subtract the value
+            return prevPrice - checkPrice;
+        }
+    })
+};
+
 
   const handleSearchChange = (e) => {
     setSearchValue(e.target.value);
@@ -42,26 +111,31 @@ const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
     },
     {
       id: 7,
+      link: "/vase",
+      title: "VASE",
+    },
+    {
+      id: 8,
       link: "/teddy-bears",
       title: "TEDDY BEARS",
     },
     {
-      id: 8,
+      id: 9,
       link: "/chocolates-valentine-gifts",
       title: "CHOCOLATES",
     },
     {
-      id: 9,
+      id: 10,
       link: "/cards",
       title: "CARDS",
     },
     {
-      id: 10,
+      id: 11,
       link: "/plants",
       title: "PLANTS",
     },
     {
-      id: 11,
+      id: 12,
       link: "ABOUT",
       title: "ABOUT US",
     },
@@ -107,7 +181,28 @@ const Modal = ({onClose, iconClicked, src, title, price, dynamic}) => {
           </div>
         ) : iconClicked === 'preview' ? (
           <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
-            <Preview src={src} title={title} price={price} dynamic={dynamic}/>
+            <Preview id={id} src={src} title={title} price={price} 
+                     dynamic={dynamic} openModal={openModal} 
+                     handleCheckboxClick={handleCheckboxClick} 
+                     optItem={optItem}
+                     increase={increase}
+                     handleQuantityChange={handleQuantityChange}
+                     totalPrices={totalPrices}
+                     name={name}
+                     contact={contact}
+                     message={message}
+                     address={address}
+                     date={date}
+                     time={time}
+                     onChange={onChange}
+            />
+          </div>
+        ) : iconClicked === 'cart' ? (
+          <div className="absolute left-0 top-0 bg-black/80 w-full max-h-screen h-screen overflow-y-auto ">
+            <Cart src={src} title={title} price={price} totalPrices={totalPrices}
+                  optItem={optItem} name={name} contact={contact} increase={increase}
+                  message={message} address={address} date={date} time={time}
+            />
           </div>
         ) : (
           <div className="p-4">

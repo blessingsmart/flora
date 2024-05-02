@@ -22,7 +22,9 @@ const Navbar = ({ openModal }) => {
             <FaSearch size={25} />
           </button>
           <Link to="/">
+          <button onClick={() => openModal("cart")}>
             <BsBasket size={25} />
+          </button>
           </Link>
         </div>
       </div>

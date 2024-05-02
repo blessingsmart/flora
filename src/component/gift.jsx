@@ -23,74 +23,74 @@ const Gift = ({openModal, dynamic}) => {
         {
           id: 1,
           src: flower13 ,
-          title: "Apology Flowers 001",
-          price: 100000,
+          title: "Star gazer 001",
+          price: 150000,
         },
         {
           id: 2,
           src:flower14,
-          title: "Apology Flowers 002",
-          price: 130000,
+          title: "Throw in bouquet & vase 002",
+          price: 220000,
         },
         {
           id: 3,
           src: flower15,
-          title: "Apology Flowers 003",
+          title: "Heart shape 003",
           price: 150000,
         },
         {
           id: 4,
           src: flower16,
-          title: "Apology Flowers 004",
-          price: 160000,
+          title: "Bouquet of mixed color roses & gypso 004",
+          price: 50000,
         },
         {
           id: 5,
           src: flower17,
-          title: "Apology Flowers 005",
-          price: 190000,
+          title: "I love you forever 005",
+          price: 500000,
         },
         {
           id: 6,
           src: flower18,
-          title: "Apology Flowers 006",
-          price: 195000,
+          title: "Red roses and gypso 006",
+          price: 35000,
         },
         {
           id: 7,
           src: flower19,
-          title: "Apology Flowers 007",
-          price: 200000,
+          title: "Pink roses & chocolate 007",
+          price: 125000,
         },
         {
           id: 8,
           src: flower20,
-          title: "Apology Flowers 008",
-          price: 190000,
+          title: "Red roses 008",
+          price: 100000,
         },
         {
           id: 9,
           src: flower21,
-          title: "Apology Flowers 009",
-          price: 230000,
+          title: "Apology bouquet 009",
+          price: 90000,
         },
         {
           id: 10,
           src: flower22,
-          title: "Apology Flowers 010",
-          price: 220000,
+          title: "Ivory 010",
+          price: 250000,
         },
         {
           id: 11,
           src: flower23,
-          title: "Apology Flowers 011",
-          price: 260000,
+          title: "Roses & gypso 011",
+          price: 35000,
         },
         {
           id: 12,
           src: flower24,
-          title: "Apology Flowers 012",
-          price: 290000,
+          title: "Heart shape with chocolate 012",
+          price: 150000,
         },
       ];
 
@@ -104,6 +104,11 @@ const Gift = ({openModal, dynamic}) => {
     <>
     <div name="menu" className='flex flex-col items-center gap-12 sm:p-16 p-5'>
         <h1 className='font-signature text-5xl text-center'>Shop For Gifts</h1>
+        <pre className='text-sm'>
+                          -Happy birthday
+                          -Apology
+                          -Just because
+        </pre>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 '>
             {
             links.map(({ id, src, title, price}) => (
