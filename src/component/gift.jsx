@@ -130,9 +130,11 @@ const Gift = ({openModal, dynamic}) => {
             <p className='text-lg text-center'>Buy indoor and outdoor plants in Lagos, Nigeria for your home or office space</p>
             <a href=""
                 className='place-self-center'>
+                <a href="https://wa.me/2348060521476">
                 <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
                 SHOP NOW
                 </button>
+                </a>
             </a>
             </div>
         </div>
