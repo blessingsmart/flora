@@ -606,9 +606,10 @@ category: "Food Items",        },
         <Modal onClose={closeModal} iconClicked={iconClicked}>
         </Modal>
       )}
+    <div className='font-medium text-center py-5 cursor-pointer md:hidden'>FILTER</div>
     <div className='flex sm:p-16 p-5 justify-between'>
-      <div className='flex flex-col pr-10 '>
-        <h2 className='py-10 font-medium text-gray-600 text-lg cursor-pointer'
+      <div className='md:flex flex-col pr-10 hidden '>
+        <h2 className='py-10 font-medium text-gray-600 text-center text-lg cursor-pointer'
             onClick={() => setSelectedCategory('All')}>PRODUCT CATEGORIES</h2>
         <div className='flex flex-col gap-3 text-left'>
           <button onClick={() => setSelectedCategory('Boxed')}>Boxed Flowers</button>
@@ -616,8 +617,8 @@ category: "Food Items",        },
           <button onClick={() => setSelectedCategory('Vase')}>Vase Arrangements</button>
         </div>
       </div>
-      <div name="menu" className='flex flex-col items-center gap-12 basis-4/5'>
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-8'>
+      <div name="menu" className='flex flex-col items-center gap-12 md:basis-4/5'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 gap-8'>
               {
               filteredLinks.map(({ id, src, title, price}) => (
                   <div key={id} className='flex flex-col drop-shadow-xl '>
