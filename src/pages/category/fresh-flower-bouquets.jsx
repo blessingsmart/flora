@@ -78,7 +78,7 @@ import Footer from '../../component/footer';
 
 const Fresh = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('Food Items');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
     
     const links = [
@@ -87,35 +87,35 @@ const Fresh = () => {
           src: flower25 ,
           title: "Apology Flowers 002",
           price: "₦200,000",
-          category: "Food Items",
+          category: "Boxed",
         },
         {
           id: 2,
           src: flower26,
           title: "Apology Flowers 003",
           price: "#90,000",
-          category: "Food Items",        
+          category: "Occassions",        
         },
         {
           id: 3,
           src: flower27,
           title: "Apology Flowers 004",
           price: "#150,000",
-          category: "Food Items",
+          category: "Occassions",
         },
         {
           id: 4,
           src: flower28,
           title: "Aqua Pack 001",
           price: "#80,000",
-          category: "Food Items",        
+          category: "Vase",        
         },
         {
           id: 5,
           src: flower29,
           title: "Aqua Pack 002",
           price: "#115,000",
-          category: "Food Items",
+          category: "Vase",
         },
         {
           id: 6,
@@ -123,7 +123,7 @@ const Fresh = () => {
           title: "Aqua Pack 003",
           price: "#50,000",
 
-category: "Food Items",        },
+category: "Vase",        },
         {
           id: 7,
           src: flower31,
@@ -608,17 +608,18 @@ category: "Food Items",        },
       )}
     <div className='flex sm:p-16 p-5 justify-between'>
       <div className='flex flex-col pr-10 '>
-        <h2 className='py-10 font-medium text-gray-600 text-lg'>PRODUCT CATEGORIES</h2>
-        <div className='flex flex-col gap-3'>
-          <h3 onClick={() => setSelectedCategory('All')}>Boxed Flowers</h3>
-          <h3 onClick={() => setSelectedCategory('All')}>Occassions</h3>
-          <h3 onClick={() => setSelectedCategory('All')}>Vase Arrangements</h3>
+        <h2 className='py-10 font-medium text-gray-600 text-lg cursor-pointer'
+            onClick={() => setSelectedCategory('All')}>PRODUCT CATEGORIES</h2>
+        <div className='flex flex-col gap-3 text-left'>
+          <button onClick={() => setSelectedCategory('Boxed')}>Boxed Flowers</button>
+          <button onClick={() => setSelectedCategory('Occassions')}>Occassions</button>
+          <button onClick={() => setSelectedCategory('Vase')}>Vase Arrangements</button>
         </div>
       </div>
       <div name="menu" className='flex flex-col items-center gap-12 basis-4/5'>
           <div className='grid grid-cols-2 md:grid-cols-3 gap-8'>
               {
-              links.map(({ id, src, title, price}) => (
+              filteredLinks.map(({ id, src, title, price}) => (
                   <div key={id} className='flex flex-col drop-shadow-xl '>
                       <div className='relative'>
                           <img src={src} alt='products' className='  ' />
