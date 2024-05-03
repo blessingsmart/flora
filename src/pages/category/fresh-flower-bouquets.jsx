@@ -610,9 +610,9 @@ category: "Food Items",        },
       <div className='flex flex-col pr-10 '>
         <h2 className='py-10 font-medium text-gray-600 text-lg'>PRODUCT CATEGORIES</h2>
         <div className='flex flex-col gap-3'>
-          <h3>Boxed Flowers</h3>
-          <h3>Occassions</h3>
-          <h3>Vase Arrangements</h3>
+          <h3 onClick={() => setSelectedCategory('All')}>Boxed Flowers</h3>
+          <h3 onClick={() => setSelectedCategory('All')}>Occassions</h3>
+          <h3 onClick={() => setSelectedCategory('All')}>Vase Arrangements</h3>
         </div>
       </div>
       <div name="menu" className='flex flex-col items-center gap-12 basis-4/5'>
