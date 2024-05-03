@@ -616,7 +616,7 @@ category: "Food Items",        },
         </div>
       </div>
       <div name="menu" className='flex flex-col items-center gap-12 basis-4/5'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-8'>
               {
               links.map(({ id, src, title, price}) => (
                   <div key={id} className='flex flex-col drop-shadow-xl '>
