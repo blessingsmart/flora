@@ -4,10 +4,10 @@ import Modal from '../component/modal';
 import Navbar from '../component/navbar';
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
-import flower1 from '../assets/flower1.jpg';
-import flower2 from '../assets/flower2.jpg';
-import flower3 from '../assets/flower3.jpg';
-import flower4 from '../assets/flower4.jpg';
+import flower1 from '../assets/flower01.jpg';
+import flower2 from '../assets/flower02.jpg';
+import flower3 from '../assets/flower03.jpg';
+import flower4 from '../assets/flower04.jpg';
 import Occassion from '../component/occassion';
 import Gift from '../component/gift';
 import Contact from "../component/contact"
