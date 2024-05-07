@@ -14,12 +14,12 @@ const Footer = () => {
         },
         {
           id: 2,
-          link: "/",
+          link: "/fresh-flower-bouquets",
           title: "Shop",
         },
         {
           id: 3,
-          link: "/",
+          link: "/contact",
           title: "Contact us",
         },
       ];
