@@ -15,7 +15,7 @@ const Plant = lazy(() => import("./pages/category/plants"));
 const Bakery = lazy(() => import("./pages/category/the-plant-based-bakery"));
 const Wine = lazy(() => import("./pages/category/wines"));
 const Teddy = lazy(() => import("./pages/category/teddy-bears"));
-const Contact = lazy(() => import("./pages/contact"));
+const Contactus = lazy(() => import("./pages/contactus"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -135,7 +135,7 @@ const BrowserRouter = createBrowserRouter([
     path: "/contact",
     element: (
       <React.Suspense>
-        <Contact />
+        <Contactus />
       </React.Suspense>
     ),
   },
