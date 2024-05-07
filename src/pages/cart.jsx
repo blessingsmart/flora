@@ -8,7 +8,7 @@ import Flutter from '../component/flutter';
 const Cart = ({ src, title, price, totalPrices, 
                 optItem, name, contact, message, 
                 address, date, time, handleQuantityChange,
-                increase
+                increase, sendersName, sendersPhone, sendersEmail
               }) => {
   const [showModal, setShowModal] = useState(false);
   const [iconClicked, setIconClicked] = useState(null);
@@ -53,14 +53,14 @@ const Cart = ({ src, title, price, totalPrices,
             <div className='pl-2 text-gray-500 text-xs'>
                 <h5 className='font-bold text-[17px]'>{title}</h5>
                 <p className='font-bold text-[11px] pt-[3px]'>Edit options</p>
-                <h6 className='pt-3'>EXTRAS +₦ {optItem}</h6>
-                <h6 className='pt-[2px]'>NAME OF RECIPIENT: {name}</h6>
-                <h6 className='pt-[2px]'>TELEPHONE NUMBER OF RECIPIENT: {contact}</h6>
-                <h6 className='pt-[2px]'>MESSAGE TO BE WRITTEN ON THE CARD: {message}</h6>
-                <h6 className='pt-[2px]'>DELIVERY ADDRESS: {address}</h6>
-                <h6 className='pt-[2px]'>DATE OF DELIVERY: {date}</h6>
-                <h6 className='pt-[2px]'>TIME: {time}</h6>
-                <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>1 x <span className='text-black'>₦{price}</span></h3>
+                <h6 className='pt-3'>EXTRAS +<span className='text-black font-bold'>₦{optItem}</span></h6>
+                <h6 className='pt-[2px]'>NAME OF RECIPIENT: <span className='text-black font-bold'>{name}</span></h6>
+                <h6 className='pt-[2px]'>TELEPHONE NUMBER OF RECIPIENT: <span className='text-black font-bold'>{contact}</span></h6>
+                <h6 className='pt-[2px]'>MESSAGE TO BE WRITTEN ON THE CARD: <span className='text-black font-bold'>{message}</span></h6>
+                <h6 className='pt-[2px]'>DELIVERY ADDRESS: <span className='text-black font-bold'>{address}</span></h6>
+                <h6 className='pt-[2px]'>DATE OF DELIVERY: <span className='text-black font-bold'>{date}</span></h6>
+                <h6 className='pt-[2px]'>TIME: <span className='text-black font-bold'>{time}</span></h6>
+                <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>{increase} x <span className='text-black'>₦{price}</span></h3>
             </div>
             <div className='pt-[74px] ml-8 hidden md:flex'>
               <span className='text-black text-sm font-bold pl-2'>₦{price}</span>
@@ -101,7 +101,12 @@ const Cart = ({ src, title, price, totalPrices,
               </ul>
           </div>
           <div className='bg-[#c7889d] ml-2 border mt-5 hover:bg-[#b06981]'>
-            <button className='text-white py-2 font-bold'><Flutter totalPrices={totalPrices} title={title} contact={contact}></Flutter></button>
+            <button className='text-white py-2 font-bold'>
+              <Flutter src={src} totalPrices={totalPrices} title={title} customerName={name} 
+                  contact={contact} message={message} address={address} date={date} 
+                  time={time} sendersName={sendersName} sendersPhone={sendersPhone} sendersEmail={sendersEmail}>
+              </Flutter>
+            </button>
           </div>
           <div className='bg-[#0aad66] ml-2 border mt-5 hover:bg-[#0c985b]'>
             <button className='flex ml-[120px] text-center text-white py-2 font-bold'><FaWhatsapp className='mx-2 mt-[4px]'/><span>ASK IN WHATSAPP</span></button>

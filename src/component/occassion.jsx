@@ -17,6 +17,7 @@ import flower12 from '../assets/flower12.jpg';
 
 
 const Occassion = ({openModal, dynamic}) => {
+    const [selectedItems, setSelectedItems] = useState([]);
 
     const links = [
         {
@@ -93,6 +94,14 @@ const Occassion = ({openModal, dynamic}) => {
         },
       ];
 
+      const handleItemPicking = (item) => {
+        if (selectedItems.includes(item)) {
+          setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== item));
+        } else {
+          setSelectedItems([...selectedItems, item]);
+        }
+      };
+
       const handleItemClick = (id, src, title, price) => {
         openModal("preview"); // Pass src, title, and price only
         dynamic({ src, title, price }); // Pass src, title, and price only
@@ -105,9 +114,9 @@ const Occassion = ({openModal, dynamic}) => {
         <h1 className='font-signature text-5xl text-center'>Shop For Occassion</h1>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             {
-            links.map(({ id, src, title, price}) => (
+            links.map(({ id, src, title, price}, item, index) => (
                 <div key={id} className='flex flex-col drop-shadow-xl '>
-                    <div className='relative'>
+                    <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                         <img src={src} alt='products' className='  ' />
                         <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
                     </div>
