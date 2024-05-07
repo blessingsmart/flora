@@ -19,7 +19,7 @@ const Footer = () => {
         },
         {
           id: 3,
-          link: "/",
+          link: "/contact",
           title: "Contact us",
         },
       ];

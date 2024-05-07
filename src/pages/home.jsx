@@ -4,10 +4,10 @@ import Modal from '../component/modal';
 import Navbar from '../component/navbar';
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
-import flower1 from '../assets/flower1.jpg';
-import flower2 from '../assets/flower2.jpg';
-import flower3 from '../assets/flower3.jpg';
-import flower4 from '../assets/flower4.jpg';
+import flower1 from '../assets/flower01.jpg';
+import flower2 from '../assets/flower02.jpg';
+import flower3 from '../assets/flower03.jpg';
+import flower4 from '../assets/flower04.jpg';
 import Occassion from '../component/occassion';
 import Gift from '../component/gift';
 import Contact from "../component/contact"
@@ -89,7 +89,7 @@ const Home = () => {
         <div className='pt-16 text-center lg:text-start lg:w-1/2'>
           <h1 className='font-signature py-6 text-4xl text-center'>Introducing Flowers Imperial</h1>
           <div className='text-left leading-relaxed text-lg'>
-            <p className=''>Flowers Imperial is a unique floral shop specializing in handcrafted floral arrangements using only the freshest and most vibrant blooms. This is an idea birthed out of love for fresh flowers and flowery plants from childhood. Studies have shown that the presence of flowers or plants in ones space is very beneficial to the health hence we find this worthy of extending to the world around us.</p>
+            <p className=''>Flowers Imperial is a unique floral shop specialized in handcrafted floral arrangements using only the freshest and most vibrant blooms. This is an idea birthed out of love for fresh flowers and flowery plants from childhood. Studies have shown that the presence of flowers or plants in ones space is very beneficial to the health hence we find this worthy of extending to the world around us.</p>
             <p className=''>Flowers Imperial is a thriving fresh flowers shop located in Ikoyi, Lagos Nigeria. We have a wide range of fresh flowers for any occasion such as birthday, wedding anniversary, just because, bridal bouquet, funeral wreath, events, etc.)available for pick up and delivery within Lagos and neighboring States . Our major priority is to ensure every client gets value for money spent with an excellent customer service.
               <Link to="/about">read more… </Link>
             </p>
