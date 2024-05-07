@@ -2,12 +2,32 @@ import React from 'react'
 import Navbar from '../component/navbar'
 import Footer from '../component/footer'
 import pexels from '../assets/pexels.jpg'
+import { IoCallOutline, IoMailOpenOutline } from "react-icons/io5";
+import { PiHouseLine } from "react-icons/pi";
 
 const Contactus = () => {
   return (
     <>
     <Navbar />
-    <h1>Contact us</h1>
+    <h1 className='text-center text-5xl p-10'>Contact us</h1>
+    <div className='font-bold text-lg'>
+      <div className='flex gap-5 p-5 items-center'>
+        <IoCallOutline size={30} />
+        <p>0806 052 1476</p>
+      </div>
+      <div className='flex gap-5 p-5 items-center'>
+        <IoMailOpenOutline size={30} />
+        <p>Flowersimperial34@gmail.com</p>
+      </div>
+      <div className='flex gap-5 p-5 items-center'>
+        <PiHouseLine size={30} />
+        <p>Shop E112 Giwa shopping complex, 117 Alfred Rewane road, Falomo, Ikoyi, Lagos, Nigeria</p>
+      </div>
+      <div className='flex gap-5 p-5 items-center'>
+        <PiHouseLine size={30} />
+        <p>24/7</p>
+      </div>
+    </div>
     <div  className='w-full my-16 relative'>
             <img src={pexels}
             className='top-o left-0  h-full min-h-[650px] object-cover' alt="" />
