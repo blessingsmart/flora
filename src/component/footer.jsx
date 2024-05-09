@@ -43,7 +43,7 @@ const Footer = () => {
            <FaWhatsapp size={25}/>
         </>
       ),
-      href: '',
+      href: 'https://wa.me/2348060521476',
     },
     {
       id: 3,
