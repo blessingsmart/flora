@@ -122,15 +122,15 @@ const Fresh = () => {
           src: flower30,
           title: "Aqua Pack 003",
           price: "#50,000",
-
-category: "Vase",        },
+          category: "Vase",        
+        },
         {
           id: 7,
           src: flower31,
           title: "Aqua Pack 004",
           price: "#50,000",
-
-category: "Food Items",        },
+          category: "Food Items",        
+        },
         {
           id: 8,
           src: flower32,
@@ -143,15 +143,15 @@ category: "Food Items",        },
           src: flower33,
           title: "Aqua Pack 006",
           price: "#95,000",
-
-category: "Food Items",        },
+          category: "Food Items",        
+        },
         {
           id: 10,
           src: flower34,
           title: "Aqua Pack 007",
           price: "#70,000",
-
-category: "Food Items",        },
+          category: "Food Items",        
+        },
         {
           id: 11,
           src: flower35,
@@ -579,6 +579,7 @@ category: "Food Items",        },
           price: "#130,000",
           category: "Food Items",
         },
+        
       ];
 
       const filteredLinks = links.filter(link => {

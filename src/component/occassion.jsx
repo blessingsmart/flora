@@ -24,19 +24,19 @@ const Occassion = ({openModal, dynamic}) => {
           id: 1,
           src: flower1 ,
           title: "Forever my love 001",
-          price: 150000,
+          price: 150,
         },
         {
           id: 2,
           src: flower2,
           title: "My love you 002",
-          price: 100000,
+          price: 100,
         },
         {
           id: 3,
           src: flower3,
           title: "Ivory aqua pack 003",
-          price: 120000,
+          price: 120,
         },
         {
           id: 4,
