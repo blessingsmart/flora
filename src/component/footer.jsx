@@ -52,7 +52,7 @@ const Footer = () => {
            <FaInstagram size={25}/>
         </>
       ),
-      href: '',
+      href: 'https://www.instagram.com/flowersimperial',
     },
     {
       id: 4,

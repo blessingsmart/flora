@@ -17,6 +17,9 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
   const [address, setAddress] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
+  const [sendersName, setSendersName] = useState('');
+  const [sendersPhone, setSendersPhone] = useState('');
+  const [sendersEmail, setSendersEmail] = useState('');
 
   // function to handle customer information
   const onChange = (e) => {
@@ -39,6 +42,15 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
         break;
       case 'time':
         setTime(value);
+        break;
+      case 'sendersName':
+        setSendersName(value);
+        break;
+      case 'sendersPhone':
+        setSendersPhone(value);
+        break;
+      case 'sendersEmail':
+        setSendersEmail(value);
         break;
       default:
         // Handle default case or do nothing
@@ -194,6 +206,9 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
                      address={address}
                      date={date}
                      time={time}
+                     sendersName={sendersName}
+                     sendersPhone={sendersPhone}
+                     sendersEmail={sendersEmail}
                      onChange={onChange}
             />
           </div>
@@ -201,7 +216,9 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
           <div className="absolute left-0 top-0 bg-black/80 w-full max-h-screen h-screen overflow-y-auto ">
             <Cart src={src} title={title} price={price} totalPrices={totalPrices}
                   optItem={optItem} name={name} contact={contact} increase={increase}
-                  message={message} address={address} date={date} time={time}
+                  message={message} address={address} date={date} time={time} 
+                  sendersName={sendersName} sendersPhone={sendersPhone} sendersEmail={sendersEmail}
+                  handleQuantityChange={handleQuantityChange}
             />
           </div>
         ) : (

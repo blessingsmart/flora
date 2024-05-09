@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
+const Notification = lazy(() => import("./pages/notifications"));
 const Details = lazy(() => import("./pages/details"));
 const ProductCategory = lazy(() => import("./pages/ProductCategory"));
 const About = lazy(() => import("./pages/about"));
@@ -80,6 +81,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Card />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/notification",
+    element: (
+      <React.Suspense>
+        <Notification />
       </React.Suspense>
     ),
   },

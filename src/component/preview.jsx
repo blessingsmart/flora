@@ -7,7 +7,7 @@ function Preview({id, src, title, price, openModal,
                 handleCheckboxClick, optItem, 
                 increase, handleQuantityChange,
                 totalPrices, name, contact, message, address, 
-                date, time, onChange
+                date, time, sendersName, sendersPhone, sendersEmail, onChange
             }) {
 
                 
@@ -119,13 +119,46 @@ function Preview({id, src, title, price, openModal,
                                 required
                             />
                         </li>
-                        <h5 className="text-sm font-bold ml-[40px] my-10">*Time</h5>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Time of delivery</h5>
                         <li className='list-disc ml-[70px] mt-5'>
                             <input 
                                 type="time"
                                 name='time'
                                 className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
                                 value={time}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders name</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="text"
+                                name='sendersName'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersName}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders phone</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="text"
+                                name='sendersPhone'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersPhone}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders email</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="email"
+                                name='sendersEmail'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersEmail}
                                 onChange={onChange}
                                 required
                             />
