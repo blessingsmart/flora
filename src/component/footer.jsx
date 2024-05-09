@@ -43,6 +43,7 @@ const Footer = () => {
     },
     {
       id: 2,
+      classname: 'text-[#25D366]',
       child: (
         <>
            <FaWhatsapp size={25}/>
@@ -90,7 +91,7 @@ const Footer = () => {
             </div>
             <div>
                 <ul className='flex justify-between items-center '>
-                          {social.map(({id, child, href}) => (
+                          {social.map(({id, child, href, classname}) => (
                             <li 
                               key={id} 
                               className={
