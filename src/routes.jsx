@@ -19,6 +19,7 @@ const Wine = lazy(() => import("./pages/category/wines"));
 const Vase = lazy(() => import("./pages/category/vase"));
 const Teddy = lazy(() => import("./pages/category/teddy-bears"));
 const Contactus = lazy(() => import("./pages/contactus"));
+const Conditions = lazy(() => import("./pages/Conditions"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -163,6 +164,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Contactus />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/Terms-and-Conditions",
+    element: (
+      <React.Suspense>
+        <Conditions />
       </React.Suspense>
     ),
   },

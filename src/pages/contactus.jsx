@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../component/navbar'
 import Footer from '../component/footer'
-import pexels from '../assets/pexels.jpg'
+import contact from '../assets/contact.jpg'
 import { IoCallOutline, IoMailOpenOutline } from "react-icons/io5";
 import { PiHouseLine} from "react-icons/pi";
 import { LuFlower } from "react-icons/lu";
@@ -34,9 +34,9 @@ const Contactus = () => {
       </div>
     </div>
     <div  className='w-full my-16 relative'>
-            <img src={pexels}
-            className='top-o left-0  h-full min-h-[650px] object-cover' alt="" />
-            <div className='absolute md:w-1/2  top-0 flex flex-col p-10 text-black'>
+            <img src={contact}
+            className=' h-full min-h-[650px] object-cover' alt="" />
+            <div className='absolute md:w-1/2  top-0 right-0 flex flex-col p-10 text-black'>
                 <div>
                     <h2 className='font-signature text-5xl text-center m-5'>Send Us a Message</h2>
                     <div className='flex flex-col gap-6 w-full'>
