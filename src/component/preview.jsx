@@ -21,7 +21,7 @@ function Preview({id, src, title, price, openModal,
 
   return (
     <>
-        <div className='md:mx-64 m-auto bg-white pb-24 md:flex md:w-[60%]'>
+        <div className='md:mx-64 bg-white pb-24 md:flex md:w-[60%]'>
             <div className='md:w-[50%]'>
                 <img src={src} className='w-full h-[400px] sm:h-[500px]' alt="" />
             </div>
