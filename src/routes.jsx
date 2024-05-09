@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
 const Notification = lazy(() => import("./pages/notifications"));
+const Flutter = lazy(() => import("./component/flutter"));
 const Details = lazy(() => import("./pages/details"));
 const ProductCategory = lazy(() => import("./pages/ProductCategory"));
 const About = lazy(() => import("./pages/about"));
@@ -15,6 +16,7 @@ const Fruit = lazy(() => import("./pages/category/fruit-baskets"));
 const Plant = lazy(() => import("./pages/category/plants"));
 const Bakery = lazy(() => import("./pages/category/the-plant-based-bakery"));
 const Wine = lazy(() => import("./pages/category/wines"));
+const Vase = lazy(() => import("./pages/category/vase"));
 const Teddy = lazy(() => import("./pages/category/teddy-bears"));
 const Contactus = lazy(() => import("./pages/contactus"));
 
@@ -93,6 +95,14 @@ const BrowserRouter = createBrowserRouter([
     ),
   },
   {
+    path: "/flutter",
+    element: (
+      <React.Suspense>
+        <Flutter />
+      </React.Suspense>
+    ),
+  },
+  {
     path: "/chocolates-valentine-gifts",
     element: (
       <React.Suspense>
@@ -137,6 +147,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Wine />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/vase",
+    element: (
+      <React.Suspense>
+        <Vase />
       </React.Suspense>
     ),
   },
