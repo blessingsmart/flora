@@ -3,13 +3,18 @@ import Navbar from '../component/navbar'
 import Footer from '../component/footer'
 import pexels from '../assets/pexels.jpg'
 import { IoCallOutline, IoMailOpenOutline } from "react-icons/io5";
-import { PiHouseLine } from "react-icons/pi";
+import { PiHouseLine} from "react-icons/pi";
+import { LuFlower } from "react-icons/lu";
+
 
 const Contactus = () => {
   return (
     <>
     <Navbar />
-    <h1 className='text-center text-5xl p-10'>Contact us</h1>
+    <div className='text-center items-center gap-5 text-5xl p-10 flex flex-col'>
+      <h1>Contact us</h1>
+      <LuFlower size={30}/>
+    </div>
     <div className='font-bold text-lg'>
       <div className='flex gap-5 p-5 items-center'>
         <IoCallOutline size={30} />
