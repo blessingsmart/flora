@@ -1,5 +1,46 @@
 import React from 'react'
 import contact from '../assets/contact.jpg'
+import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from "react-icons/fa";
+
+
+const social = [
+    {
+      id: 1,
+      child: (
+        <>
+           <FaTwitter size={25}/>
+        </>
+      ),
+      href: ''
+    },
+    {
+      id: 2,
+      child: (
+        <>
+           <FaWhatsapp size={25}/>
+        </>
+      ),
+      href: 'https://wa.me/2348060521476',
+    },
+    {
+      id: 3,
+      child: (
+        <>
+           <FaInstagram size={25}/>
+        </>
+      ),
+      href: 'https://www.instagram.com/flowersimperial',
+    },
+    {
+      id: 4,
+      child: (
+        <>
+           <FaFacebook size={25}/>
+        </>
+      ),
+      href: 'https://web.facebook.com/profile.php?id=100069380672418',
+    },
+  ];
 
 const Contact = () => {
   return (
@@ -24,6 +65,29 @@ const Contact = () => {
                             <p className='font-bold text-xl'>Address</p>
                             <p>-</p>
                             <p className='font-bold'>Shop E112 Giwa shopping complex, 117 Alfred Rewane road, Falomo, Ikoyi, Lagos, Nigeria</p>
+                        </div>
+                        <div className='flex  gap-5'>
+                            <p className='font-bold text-xl'>Follow us</p>
+                            <div>
+                                    <ul className='flex  items-center '>
+                                            {social.map(({id, child, href}) => (
+                                                <li 
+                                                key={id} 
+                                                className={
+                                                    `hover:scale-105 m-1`
+                                                }
+                                                >
+                                                <a 
+                                                    href={href} 
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                >
+                                                    {child}
+                                                </a>
+                                                </li>
+                                            ))} 
+                                    </ul>
+                                </div>
                         </div>
                         <form   action="https://getform.io/f/warkrzjb" 
                                 method="POST"
