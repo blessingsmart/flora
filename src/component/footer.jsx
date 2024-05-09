@@ -73,7 +73,7 @@ const Footer = () => {
     
   return (
     <div className='md:h-40 flex flex-col '>
-        <div className='h-3/5 bg-black/90 lg:px-16 p-10 sm:flex-row flex flex-col gap-5 text-white items-center justify-around'>
+        <div className='h-3/5 bg-black/40 lg:px-16 p-10 sm:flex-row flex flex-col gap-5 text-white items-center justify-around'>
             <img src={logo} alt="imperial flower logo"
                 className='size-14' />
             <div>
