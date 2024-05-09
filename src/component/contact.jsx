@@ -6,6 +6,7 @@ import { FaInstagram, FaTwitter, FaWhatsapp, FaFacebook } from "react-icons/fa";
 const social = [
     {
       id: 1,
+      classname: 'text-[#1DA1F2]',
       child: (
         <>
            <FaTwitter size={25}/>
@@ -15,6 +16,7 @@ const social = [
     },
     {
       id: 2,
+      classname: 'text-[#25D366]',
       child: (
         <>
            <FaWhatsapp size={25}/>
@@ -24,6 +26,7 @@ const social = [
     },
     {
       id: 3,
+      classname: 'text-[#C13584]',
       child: (
         <>
            <FaInstagram size={25}/>
@@ -33,6 +36,7 @@ const social = [
     },
     {
       id: 4,
+      classname: 'text-[#4267B2]',
       child: (
         <>
            <FaFacebook size={25}/>
@@ -70,11 +74,11 @@ const Contact = () => {
                             <p className='font-bold text-xl'>Follow us</p>
                             <div>
                                     <ul className='flex  items-center '>
-                                            {social.map(({id, child, href}) => (
+                                            {social.map(({id, child, href, classname}) => (
                                                 <li 
                                                 key={id} 
                                                 className={
-                                                    `hover:scale-105 m-1`
+                                                    `hover:scale-105 m-1 ${classname}`
                                                 }
                                                 >
                                                 <a 

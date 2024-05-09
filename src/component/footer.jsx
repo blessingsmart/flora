@@ -34,6 +34,7 @@ const Footer = () => {
     const social = [
     {
       id: 1,
+      classname: 'text-[#1DA1F2]',
       child: (
         <>
            <FaTwitter size={25}/>
@@ -53,6 +54,7 @@ const Footer = () => {
     },
     {
       id: 3,
+      classname: 'text-[#C13584]',
       child: (
         <>
            <FaInstagram size={25}/>
@@ -62,6 +64,7 @@ const Footer = () => {
     },
     {
       id: 4,
+      classname: 'text-[#4267B2]',
       child: (
         <>
            <FaFacebook size={25}/>
@@ -95,7 +98,7 @@ const Footer = () => {
                             <li 
                               key={id} 
                               className={
-                                `hover:scale-105 m-1`
+                                `hover:scale-105 m-1 ${classname} `
                               }
                             >
                               <a 
