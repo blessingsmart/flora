@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import  shop from "..//assets/shop.jpg";
+import  shop from "..//assets/contact.jpg";
 import flower1 from '../assets/flower1.jpg';
 import flower2 from '../assets/flower2.jpg';
 import flower3 from '../assets/flower3.jpg';
