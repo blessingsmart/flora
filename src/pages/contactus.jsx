@@ -45,7 +45,8 @@ const Contactus = () => {
                                     name="Name" 
                                     id="Name" 
                                     className="bg-white p-3 focus:outline-none"
-                                    placeholder="FULL NAME" />
+                                    placeholder="FULL NAME"
+                                    action="https://getform.io/f/warkrzjb" method="POST" />
                             <input type="number" 
                                     name="number" 
                                     id="number" 
