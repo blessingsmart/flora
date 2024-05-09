@@ -40,13 +40,17 @@ const Contactus = () => {
                 <div>
                     <h2 className='font-signature text-5xl text-center m-5'>Send Us a Message</h2>
                     <div className='flex flex-col gap-6 w-full'>
-                        <div className='py-5 flex flex-col gap-6 w-full'>
+                        <form
+                            action="https://getform.io/f/warkrzjb" 
+                            method="POST"
+                            className='py-5 flex flex-col gap-6 w-full'
+                          >
                             <input type="text" 
                                     name="Name" 
                                     id="Name" 
                                     className="bg-white p-3 focus:outline-none"
                                     placeholder="FULL NAME"
-                                    action="https://getform.io/f/warkrzjb" method="POST" />
+                                     />
                             <input type="number" 
                                     name="number" 
                                     id="number" 
@@ -59,7 +63,7 @@ const Contactus = () => {
                                     placeholder="MESSAGE"
                                     rows="4" />
                             <button  className='text-white bg-black py-3 rounded-lg'>SEND</button>
-                        </div>
+                            </ form >
                     </div>
                 </div>
             </div>
