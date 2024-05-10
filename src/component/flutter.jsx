@@ -3,7 +3,10 @@ import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import axios from 'axios';
 
 
-const Flutter = ({ src, sendersName, sendersPhone, sendersEmail, title, totalPrices }) => {
+const Flutter = ({ src, sendersName, sendersPhone,
+    sendersEmail, title, totalPrices, customerName,
+    contact, message, address, date, time
+}) => {
     const [keys, setKeys] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -54,7 +57,7 @@ const Flutter = ({ src, sendersName, sendersPhone, sendersEmail, title, totalPri
                     handleFlutterPayment({
                         callback: async (response) => {
                             console.log(response);
-                            if (response.status === "success") {
+                            if (response.status === "successful") {
                                 try {
                                     // Make an HTTP request to your backend endpoint
                                     await axios.post('http://localhost:3001/api/transaction', {
@@ -62,7 +65,15 @@ const Flutter = ({ src, sendersName, sendersPhone, sendersEmail, title, totalPri
                                         userDetails: {
                                             name: sendersName,
                                             email: sendersEmail,
-                                            phone: sendersPhone
+                                            phone: sendersPhone,
+                                            title: title,
+                                            totalPrices: totalPrices,
+                                            reciever: customerName,
+                                            contact: contact,
+                                            message: message,
+                                            address: address,
+                                            date: date,
+                                            time: time
                                         }
                                     });
                                      // Show Preview component on successful payment
