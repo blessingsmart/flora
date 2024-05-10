@@ -192,7 +192,7 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
             </ul> 
           </div>
         ) : iconClicked === 'preview' ? (
-          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
+          <div className="py-16 sm:px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
             <Preview id={id} src={src} title={title} price={price} 
                      dynamic={dynamic} openModal={openModal} 
                      handleCheckboxClick={handleCheckboxClick} 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import  shop from "..//assets/shop.jpg";
+import  shop from "..//assets/contact.jpg";
 import flower1 from '../assets/flower1.jpg';
 import flower2 from '../assets/flower2.jpg';
 import flower3 from '../assets/flower3.jpg';
@@ -115,10 +115,10 @@ const Occassion = ({openModal, dynamic}) => {
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             {
             links.map(({ id, src, title, price}, item, index) => (
-                <div key={id} className='flex flex-col drop-shadow-xl '>
+                <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer' onClick={() => handleItemClick(id, src, title, price)}>
                     <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                         <img src={src} alt='products' className='  ' />
-                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
+                        {/* <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' >Quick View</button> */}
                     </div>
                     <div className='flex flex-col sm:flex-row gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                         <p className='p-2'>{title}</p >

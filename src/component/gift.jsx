@@ -12,7 +12,7 @@ import flower21 from '../assets/flower21.jpg';
 import flower22 from '../assets/flower22.jpg';
 import flower23 from '../assets/flower23.jpg';
 import flower24 from '../assets/flower24.jpg';
-import shop from '../assets/shop.jpg';
+import shop from '../assets/contact.jpg';
 
 
 

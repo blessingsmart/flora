@@ -162,7 +162,7 @@ const Vase = () => {
             links.map(({ id, src, title, price}) => (
                 <div key={id} className='flex flex-col drop-shadow-xl '>
                     <div className='relative'>
-                        <img src={src} alt='products' className='h-[400px] w-[400px]' />
+                        <img src={src} alt='products'/>
                         <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'>Quick View</button>
                     </div>
                     <div className='flex flex-col sm:flex-row gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
