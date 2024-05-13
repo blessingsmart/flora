@@ -64,7 +64,7 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
   const prices = new Intl.NumberFormat('en-NG', {
     style: 'currency',
     currency: 'NGN'
-}).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
+}).format(price);;
 
 const totalPrices = new Intl.NumberFormat('en-NG', {
   style: 'currency',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import links from "../../component/Data"
+import links from "../../component/data"
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
