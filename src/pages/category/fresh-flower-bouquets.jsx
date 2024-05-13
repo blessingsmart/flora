@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../component/modal';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
-import fresh from '../component/data';
+import fresh from '../../component/data';
 import Preview from '../../component/preview';
 
 
@@ -18,6 +18,7 @@ const Fresh = () => {
       const filteredLinks = fresh.filter(link => {
         return selectedCategory === 'All' || link.category === selectedCategory;
       });
+      console.log("filteredLinks")
 
       
   const [showModal, setShowModal] = useState(false);
