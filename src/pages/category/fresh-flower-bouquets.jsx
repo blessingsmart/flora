@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../../component/modal';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
-import fresh from '../component/data';
+import { fresh } from '../../component/data';
 import Preview from '../../component/preview';
 
 
@@ -72,7 +72,7 @@ const Fresh = () => {
               {
               filteredLinks.map(({ id, src, title, price}, item, index) => (
                   <div key={id} className='flex flex-col drop-shadow-xl '>
-                      <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
+                      <div className='relative'>
                           <img src={src} alt='products' className='  ' />
                           <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
                       </div>

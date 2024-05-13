@@ -314,7 +314,7 @@ export const links = [
       id: 1,
       src: flower25 ,
       title: "Apology Flowers 002",
-      price: "200000",
+      price: "600000",
       category: "Boxed",
     },
     {
@@ -809,6 +809,3 @@ export const links = [
     },
     
   ];
-
-export default links
-  
