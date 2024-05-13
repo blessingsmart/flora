@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Modal from '../../component/modal';
-import fresh from "../../component/data"
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
+import fresh from '../component/data';
 import Preview from '../../component/preview';
 
 
@@ -13,7 +13,7 @@ const Fresh = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
     
-    
+
 
       const filteredLinks = fresh.filter(link => {
         return selectedCategory === 'All' || link.category === selectedCategory;
