@@ -237,10 +237,19 @@ const optionItem = new Intl.NumberFormat('en-NG', {
           </div>
         ) : iconClicked === 'cart' ? (
           <div className="absolute left-0 top-0 bg-black/80 w-full max-h-screen h-screen overflow-y-auto ">
-            <Cart src={src} title={title} price={price} totalPrices={totalPrices}
-                  optItem={optItem} name={name} contact={contact} increase={increase}
-                  message={message} address={address} date={date} time={time} 
-                  sendersName={sendersName} sendersPhone={sendersPhone} sendersEmail={sendersEmail}
+            <Cart src={src} title={title} prices={prices}
+                  totalPrices={totalPrices}
+                  optionItem={optionItem}
+                  name={name}
+                  contact={contact}
+                  increase={increase}
+                  message={message}
+                  address={address}
+                  date={date}
+                  time={time} 
+                  sendersName={sendersName}
+                  sendersPhone={sendersPhone}
+                  sendersEmail={sendersEmail}
                   handleQuantityChange={handleQuantityChange}
             />
           </div>
