@@ -73,12 +73,14 @@ import flower94 from '../../assets/flower94.jpg';
 import flower95 from '../../assets/flower95.jpg';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
+import Preview from '../../component/preview';
 
 
 
 const Fresh = () => {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedItems, setSelectedItems] = useState([]);
 
     
     const links = [
@@ -589,6 +591,7 @@ const Fresh = () => {
       
   const [showModal, setShowModal] = useState(false);
   const [iconClicked, setIconClicked] = useState(null); // Initially set to null
+  const [modalData, setModalData] = useState({})
 
       const openModal = (clickedIcon) => {
         setShowModal(true);
@@ -597,6 +600,21 @@ const Fresh = () => {
     
       const closeModal = () => {
         setShowModal(false);
+      };
+
+
+      const handleItemPicking = (item) => {
+        if (selectedItems.find(selectedItem => selectedItem.id === item.id)) {
+          setSelectedItems(selectedItems.filter((selectedItem) => selectedItem.id !== item.id));
+        } else {
+          setSelectedItems([...selectedItems, item]);
+        }
+      };
+
+
+      const handleItemClick = (id, src, title, price) => {
+        openModal("preview");
+        setModalData({ src, title, price });
       };
 
 
@@ -621,11 +639,11 @@ const Fresh = () => {
       <div name="menu" className='flex flex-col items-center gap-12 md:basis-4/5'>
           <div className='grid grid-cols-2 sm:grid-cols-3 gap-8'>
               {
-              filteredLinks.map(({ id, src, title, price}) => (
+              filteredLinks.map(({ id, src, title, price}, item, index) => (
                   <div key={id} className='flex flex-col drop-shadow-xl '>
-                      <div className='relative'>
+                      <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                           <img src={src} alt='products' className='  ' />
-                          <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'>Quick View</button>
+                          <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
                       </div>
                       <div className='flex flex-col sm:flex-row gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                           <p className='p-2'>{title}</p >

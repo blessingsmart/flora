@@ -8,7 +8,8 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
   const [searchValue, setSearchValue] = useState('');
   const [optItem, setOptItem] = useState(0);  // initializing the checkbox
   const [increase, setIncrease] = useState(1);  // initializing the quantity increment
-  const totalPrices = price * increase + optItem; // calculating total price
+  const totalPrice = price * increase + optItem; // calculating total price
+  const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
 
   // initializing customer informations 
   const [name, setName] = useState('');
@@ -58,6 +59,23 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
     }
   }
   
+
+  // Convert the string prop to a number
+  const prices = new Intl.NumberFormat('en-NG', {
+    style: 'currency',
+    currency: 'NGN'
+}).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
+
+const totalPrices = new Intl.NumberFormat('en-NG', {
+  style: 'currency',
+  currency: 'NGN'
+}).format(totalPrice);
+
+const optionItem = new Intl.NumberFormat('en-NG', {
+  style: 'currency',
+  currency: 'NGN'
+}).format(optItem);
+
 
   // function to handle the quantity increment
   const handleQuantityChange = (increment) => {
@@ -193,13 +211,18 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
           </div>
         ) : iconClicked === 'preview' ? (
           <div className="py-16 sm:px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
-            <Preview id={id} src={src} title={title} price={price} 
+            <Preview id={id} src={src} title={title} prices={prices} 
                      dynamic={dynamic} openModal={openModal} 
                      handleCheckboxClick={handleCheckboxClick} 
-                     optItem={optItem}
+                     optionItem={optionItem}
                      increase={increase}
                      handleQuantityChange={handleQuantityChange}
                      totalPrices={totalPrices}
+                     chocolates={chocolates}
+                     champagne={champagne}
+                     balloons={balloons}
+                     card={card}
+                     wine={wine}
                      name={name}
                      contact={contact}
                      message={message}
