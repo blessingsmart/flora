@@ -5,8 +5,8 @@ import Modal from '../component/modal';
 import Footer from '../component/footer';
 import Flutter from '../component/flutter';
 
-const Cart = ({ src, title, price, totalPrices, 
-                optItem, name, contact, message, 
+const Cart = ({ src, title, prices, totalPrices, 
+                optionItem, name, contact, message, 
                 address, date, time, handleQuantityChange,
                 increase, sendersName, sendersPhone, sendersEmail
               }) => {
@@ -53,17 +53,17 @@ const Cart = ({ src, title, price, totalPrices,
             <div className='pl-2 text-gray-500 text-xs'>
                 <h5 className='font-bold text-[17px]'>{title}</h5>
                 <p className='font-bold text-[11px] pt-[3px]'>Edit options</p>
-                <h6 className='pt-3'>EXTRAS +<span className='text-black font-bold'>₦{optItem}</span></h6>
+                <h6 className='pt-3'>EXTRAS +<span className='text-black font-bold'>{optionItem}</span></h6>
                 <h6 className='pt-[2px]'>NAME OF RECIPIENT: <span className='text-black font-bold'>{name}</span></h6>
                 <h6 className='pt-[2px]'>TELEPHONE NUMBER OF RECIPIENT: <span className='text-black font-bold'>{contact}</span></h6>
                 <h6 className='pt-[2px]'>MESSAGE TO BE WRITTEN ON THE CARD: <span className='text-black font-bold'>{message}</span></h6>
                 <h6 className='pt-[2px]'>DELIVERY ADDRESS: <span className='text-black font-bold'>{address}</span></h6>
                 <h6 className='pt-[2px]'>DATE OF DELIVERY: <span className='text-black font-bold'>{date}</span></h6>
                 <h6 className='pt-[2px]'>TIME: <span className='text-black font-bold'>{time}</span></h6>
-                <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>{increase} x <span className='text-black'>₦{price}</span></h3>
+                <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>{increase} x <span className='text-black'>{prices}</span></h3>
             </div>
             <div className='pt-[74px] ml-8 hidden md:flex'>
-              <span className='text-black text-sm font-bold pl-2'>₦{price}</span>
+              <span className='text-black text-sm font-bold pl-2'>{prices}</span>
             </div>
             <div className="flex items-center pl-12 md:pl-3">
               <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-l w-[2px] h-[43px]" onClick={() => handleQuantityChange(-1)}>-</button>
@@ -74,7 +74,7 @@ const Cart = ({ src, title, price, totalPrices,
               <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-r w-[2px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
             </div>
             <div className='pt-[74px] ml-2 hidden md:flex'>
-              <span className='text-black text-sm font-bold pl-2'>₦{totalPrices}</span>
+              <span className='text-black text-sm font-bold pl-2'>{totalPrices}</span>
             </div>
           </div>
           <hr className='h-px mt-5 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
@@ -91,12 +91,12 @@ const Cart = ({ src, title, price, totalPrices,
           <hr className='h-px my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
           <div>
               <ul className='ml-2'>
-                <li className='flex justify-between'><span>Subtotal</span><span className='text-black font-bold mr-[2px]'>₦{totalPrices}</span></li>
+                <li className='flex justify-between'><span>Subtotal</span><span className='text-black font-bold mr-[2px]'>{totalPrices}</span></li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
                 <li className='flex justify-between'><span>Shipping</span><span className='pl-[100px] text-end'>Enter your address to view shipping options</span></li>
                 <li className='text-end'>Calculate shipping</li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
-                <li className='flex justify-between'><span>Total</span><span className='text-black font-bold mr-[2px]'>₦{totalPrices}</span></li>
+                <li className='flex justify-between'><span>Total</span><span className='text-black font-bold mr-[2px]'>{totalPrices}</span></li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
               </ul>
           </div>

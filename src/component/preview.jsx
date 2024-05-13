@@ -11,34 +11,32 @@ function Preview({id, src, title, prices, openModal,
                 sendersName, sendersPhone, sendersEmail, onChange
             }) {
 
-    // Convert the string prop to a number
 
+    // Convert each number to a formatted currency string
+    const formattedChocolates = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(chocolates);
 
-// Convert each number to a formatted currency string
-const formattedChocolates = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(chocolates);
+    const formattedChampagne = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(champagne);
 
-const formattedChampagne = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(champagne);
+    const formattedBalloons = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(balloons);
 
-const formattedBalloons = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(balloons);
+    const formattedCard = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(card);
 
-const formattedCard = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(card);
-
-const formattedWine = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(wine);
+    const formattedWine = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(wine);
 
 
     const handleItemClick = (id, src, title, price, prices) => {
