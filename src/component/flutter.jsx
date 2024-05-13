@@ -10,6 +10,7 @@ const Flutter = ({ src, sendersName, sendersPhone,
     const [keys, setKeys] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const totalPrice = parseFloat(totalPrices.replace(/[^\d.-]/g, ''));
 
 
     useEffect(() => {
@@ -32,7 +33,7 @@ const Flutter = ({ src, sendersName, sendersPhone,
     const config = keys && {
         public_key: keys.publicKey,
         tx_ref: Date.now(),
-        amount: totalPrices,
+        amount: totalPrice,
         currency: 'NGN',
         payment_options: 'card,mobilemoney,ussd',
         customer: {
