@@ -135,13 +135,13 @@ export const occassions = [
     {
       id: 2,
       src: flower2,
-      title: "My love you 002",
+      title: "My love 002",
       price: "100000",
     },
     {
       id: 3,
       src: flower3,
-      title: "Ivory aqua pack 003",
+      title: "Tie Bouquet 003",
       price: "120000",
     },
     {
@@ -165,7 +165,7 @@ export const occassions = [
     {
       id: 7,
       src: flower7,
-      title: "Aqua Pack 007",
+      title: "Tie Bouquet",
       price: "60000",
     },
     {
@@ -177,19 +177,19 @@ export const occassions = [
     {
       id: 9,
       src: flower9,
-      title: "Aqua Pack 009",
+      title: "Tie Bouquet",
       price: "70000",
     },
     {
       id: 10,
       src: flower10,
-      title: "Aqua Pack 010",
+      title: "Tie Bouquet",
       price: "100000",
     },
     {
       id: 11,
       src: flower11,
-      title: "Aqua Pack 011",
+      title: "Tie Bouquet",
       price: "120000",
     },
     {
