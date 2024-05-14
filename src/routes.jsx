@@ -6,7 +6,6 @@ const Cart = lazy(() => import("./pages/cart"));
 const Notification = lazy(() => import("./pages/notifications"));
 const Flutter = lazy(() => import("./component/flutter"));
 const Details = lazy(() => import("./pages/details"));
-const ProductCategory = lazy(() => import("./pages/ProductCategory"));
 const About = lazy(() => import("./pages/about"));
 const Fresh = lazy(() => import("./pages/category/fresh-flower-bouquets"));
 const Balloon = lazy(() => import("./pages/category/balloons"));
@@ -44,14 +43,6 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Details />
-      </React.Suspense>
-    ),
-  },
-  {
-    path: "/ProductCategory",
-    element: (
-      <React.Suspense>
-        <ProductCategory />
       </React.Suspense>
     ),
   },
