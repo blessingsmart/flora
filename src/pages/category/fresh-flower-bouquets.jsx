@@ -18,6 +18,7 @@ const Fresh = () => {
       const filteredLinks = fresh.filter(link => {
         return selectedCategory === 'All' || link.category === selectedCategory;
       });
+      console.log("filteredLinks")
 
       
   const [showModal, setShowModal] = useState(false);
