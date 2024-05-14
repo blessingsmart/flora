@@ -141,7 +141,7 @@ export const occassions = [
     {
       id: 3,
       src: flower3,
-      title: "Tie Bouquet 003",
+      title: "Hand Tie Bouquet 003",
       price: "120000",
     },
     {
@@ -165,7 +165,7 @@ export const occassions = [
     {
       id: 7,
       src: flower7,
-      title: "Tie Bouquet",
+      title: "Hand Tie Bouquet",
       price: "60000",
     },
     {
@@ -183,13 +183,13 @@ export const occassions = [
     {
       id: 10,
       src: flower10,
-      title: "Tie Bouquet",
+      title: "Hand Tie Bouquet",
       price: "100000",
     },
     {
       id: 11,
       src: flower11,
-      title: "Tie Bouquet",
+      title: "Hand Tie Bouquet",
       price: "120000",
     },
     {
