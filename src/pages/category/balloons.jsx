@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import links from "../../component/data"
+import { occassions } from "../../component/data"
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
@@ -30,7 +30,7 @@ const Balloon = () => {
     <div name="menu" className='flex flex-col items-center gap-12 sm:p-16 p-5'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
             {
-            links.map(({ id, src, title, price}) => (
+            occassions.map(({ id, src, title, price}) => (
                 <div key={id} className='flex flex-col drop-shadow-xl '>
                     <div className='relative'>
                         <img src={src} alt='products' className='  ' />
