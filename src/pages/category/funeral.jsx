@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { funeral } from "../../component/data"
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
+import Modal from '../../component/modal';
 
 const Funeral = () => {
     const [showModal, setShowModal] = useState(false);
@@ -15,6 +16,7 @@ const Funeral = () => {
         const closeModal = () => {
           setShowModal(false);
         };
+
     
   return (
     <>
