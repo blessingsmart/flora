@@ -82,6 +82,47 @@ import flower92 from '../assets/flower92.jpg';
 import flower93 from '../assets/flower93.jpg';
 import flower94 from '../assets/flower94.jpg';
 import flower95 from '../assets/flower95.jpg';
+import wreath250 from '../assets/wreath250.jpg';
+import wreath70 from '../assets/wreath70.jpg';
+import wreath95 from '../assets/wreath95.jpg';
+import wreath200 from '../assets/wreath200.png';
+import vase180 from '../assets/vase180.jpg';
+import vase90 from '../assets/vase90.jpg';
+import vase_90 from '../assets/vase_90.jpg';
+import wedding60 from '../assets/wedding60.jpg';
+import wedding100 from '../assets/wedding100.jpg';
+import wedding45 from '../assets/wedding45.jpg';
+import wedding_60 from '../assets/wedding_60.jpg';
+import wreath150ii from '../assets/wreath150ii.jpg';
+import wreath180 from '../assets/wreath180.jpg';
+import wreath150 from '../assets/wreath150.jpg';
+import wreath_180 from '../assets/wreath_180.png';
+import aqua50 from '../assets/aqua50.jpg';
+import aqua70 from '../assets/aqua70.jpg';
+import aqua75 from '../assets/aqua75.jpg';
+import aqua80 from '../assets/aqua80.jpg';
+import aqua90 from '../assets/aqua90.jpg';
+import wreath90 from '../assets/Wreath90.png';
+import artificial100 from '../assets/artificial100.jpg';
+import redrose120 from '../assets/redrose120.jpg';
+import heart200 from '../assets/heart200.jpg';
+import mix50 from '../assets/mix50.jpg';
+import mix55 from '../assets/mix55.jpg';
+import mix75 from '../assets/mix75.jpg';
+import pink100 from '../assets/pink100.jpg';
+import vase290 from '../assets/vase290.jpg';
+import roses150 from '../assets/roses150.jpg';
+import roses1000 from '../assets/roses1000.jpg';
+import pack500 from '../assets/pack500.jpg';
+import pack65 from '../assets/pack65.jpg';
+import pack70 from '../assets/pack70.jpg';
+import pack95 from '../assets/pack95.jpg';
+import pack45 from '../assets/pack45.jpg';
+import pack100 from '../assets/pack100.jpg';
+import pack120 from '../assets/pack120.jpg';
+import pack150 from '../assets/pack150.jpg';
+import pack250 from '../assets/pack250.jpg';
+import rose120 from '../assets/rose120.jpg';
 
 
 export const occassions = [
@@ -807,8 +848,292 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
+    {
+      id: 72,
+      src: wreath70,
+      title: "wreath",
+      price: 70000,
+      category: "Occassions",
+    },
+    {
+      id: 73,
+      src: wreath95,
+      title: "wreath",
+      price: 95000,
+      category: "Occassions",
+    },
+    {
+      id: 74,
+      src: wreath90,
+      title: "wreath",
+      price: 90000,
+      category: "Occassions",
+    },
+    {
+      id: 75,
+      src: wreath200,
+      title: "wreath",
+      price: 200000,
+      category: "Occassions",
+    },
+    {
+      id: 76,
+      src: wreath250,
+      title: "wreath",
+      price: 250000,
+      category: "Occassions",
+    },
+    {
+      id: 77,
+      src: vase180,
+      title: "Vase Arrangement",
+      price: 180000,
+      category: "Vase",
+    },
+    {
+      id: 78,
+      src: vase90,
+      title: "Vase Arrangement",
+      price: 90000,
+      category: "Vase",
+    },
+    {
+      id: 79,
+      src: vase_90,
+      title: "Vase Arrangement",
+      price: 90000,
+      category: "Vase",
+    },
+    {
+      id: 80,
+      src: wedding60,
+      title: "Wedding bouqua",
+      price: 60000,
+      category: "Occassions",
+    },
+    {
+      id: 81,
+      src: wedding100,
+      title: "Wedding bouquet",
+      price: 100000,
+      category: "Occassions",
+    },
+    {
+      id: 82,
+      src: wedding45,
+      title: "Wedding bouquet",
+      price: 45000,
+      category: "Occassions",
+    },
+    {
+      id: 83,
+      src: wedding_60,
+      title: "Wedding bouquet",
+      price: 60000,
+      category: "Occassions",
+    },
+    {
+      id: 84,
+      src: wreath150ii,
+      title: "Wreath",
+      price: 150000,
+      category: "Occassions",
+    },
+    {
+      id: 85,
+      src: wreath180,
+      title: "Wreath",
+      price: 180000,
+      category: "Occassions",
+    },
+    {
+      id: 86,
+      src: wreath150,
+      title: "Wreath",
+      price: 150000,
+      category: "Occassions",
+    },
+    {
+      id: 87,
+      src: wreath_180,
+      title: "Wreath",
+      price: 180000,
+      category: "Occassions",
+    },
+    {
+      id: 88,
+      src: aqua50,
+      title: "Aqua pack",
+      price: 50000,
+      category: "Occassions",
+    },
+    {
+      id: 89,
+      src: aqua70,
+      title: "Aqua pack",
+      price: 70000,
+      category: "Occassions",
+    },
+    {
+      id: 90,
+      src: aqua75,
+      title: "Aqua pack",
+      price: 75000,
+      category: "Occassions",
+    },
+    {
+      id: 91,
+      src: aqua80,
+      title: "Aqua pack",
+      price: 80000,
+      category: "Occassions",
+    },
+    {
+      id: 92,
+      src: aqua90,
+      title: "Aqua pack",
+      price: 90000,
+      category: "Occassions",
+    },
+    {
+      id: 93,
+      src: artificial100,
+      title: "Artificial wreath",
+      price: 100000,
+      category: "Occassions",
+    },
+    {
+      id: 94,
+      src: redrose120,
+      title: "Boquet of 20 red roses and gypso",
+      price: 120000,
+      category: "Occassions",
+    },
+    {
+      id: 95,
+      src: heart200,
+      title: "Heart shape wreath",
+      price: 200000,
+      category: "Occassions",
+    },
+    {
+      id: 96,
+      src: mix50,
+      title: "mixed cut",
+      price: 50000,
+      category: "Occassions",
+    },
+    {
+      id: 97,
+      src: mix55,
+      title: "mixed cut",
+      price: 55000,
+      category: "Occassions",
+    },
+    {
+      id: 98,
+      src: mix75,
+      title: "mixed cut",
+      price: 75000,
+      category: "Occassions",
+    },
+    {
+      id: 99,
+      src: pink100,
+      title: "Pink spray roses",
+      price: 75000,
+      category: "Occassions",
+    },
+    {
+      id: 100,
+      src: vase290,
+      title: "Vase Arrangement",
+      price: 290000,
+      category: "Vase",
+    },
+    {
+      id: 101,
+      src: roses150,
+      title: "30 Stems Rose",
+      price: 150000,
+      category: "Occassions",
+    },
+    {
+      id: 102,
+      src: roses1000,
+      title: "30 Stems Roses",
+      price: 1000000,
+      category: "Occassions",
+    },
+    {
+      id: 103,
+      src: pack500,
+      title: "Aqua pack",
+      price: 500000,
+      category: "Occassions",
+    },
+    {
+      id: 104,
+      src: pack65,
+      title: "Aqua pack",
+      price: 65000,
+      category: "Occassions",
+    },
+    {
+      id: 105,
+      src: pack70,
+      title: "Aqua pack",
+      price: 70000,
+      category: "Occassions",
+    },
+    {
+      id: 106,
+      src: pack95,
+      title: "Aqua pack",
+      price: 95000,
+      category: "Occassions",
+    },
+    {
+      id: 107,
+      src: pack45,
+      title: "Aqua pack",
+      price: 45000,
+      category: "Occassions",
+    },
+    {
+      id: 108,
+      src: pack100,
+      title: "Aqua pack",
+      price: 100000,
+      category: "Occassions",
+    },
+    {
+      id: 109,
+      src: pack120,
+      title: "Aqua pack",
+      price: 120000,
+      category: "Occassions",
+    },
+    {
+      id: 110,
+      src: pack150,
+      title: "Aqua pack",
+      price: 150000,
+      category: "Occassions",
+    },
+    {
+      id: 111,
+      src: pack250,
+      title: "Aqua pack",
+      price: 250000,
+      category: "Occassions",
+    },
+    {
+      id: 112,
+      src: rose120,
+      title: "20 Red Roses and Gypso",
+      price: 120000,
+      category: "Occassions",
+    },
     
   ];
-
-export default links
-  
