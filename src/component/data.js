@@ -84,7 +84,7 @@ import flower94 from '../assets/flower94.jpg';
 import flower95 from '../assets/flower95.jpg';
 
 
-export const links = [
+export const occassions = [
     {
       id: 1,
       src: flower1 ,
