@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../component/modal';
-import cards from "../../component/data"
+import {cards} from "../../component/data"
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
