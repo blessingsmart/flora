@@ -166,7 +166,7 @@ const optionItem = new Intl.NumberFormat('en-NG', {
     },
     {
       id: 12,
-      link: "ABOUT",
+      link: "/about",
       title: "ABOUT US",
     },
   ];
