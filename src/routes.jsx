@@ -17,6 +17,7 @@ const Bakery = lazy(() => import("./pages/category/the-plant-based-bakery"));
 const Wine = lazy(() => import("./pages/category/wines"));
 const Vase = lazy(() => import("./pages/category/vase"));
 const Teddy = lazy(() => import("./pages/category/teddy-bears"));
+const Funeral = lazy(() => import("./pages/category/funeral"));
 const Contactus = lazy(() => import("./pages/contactus"));
 const Conditions = lazy(() => import("./pages/Conditions"));
 
@@ -107,6 +108,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Fruit />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/funerals",
+    element: (
+      <React.Suspense>
+        <Funeral />
       </React.Suspense>
     ),
   },

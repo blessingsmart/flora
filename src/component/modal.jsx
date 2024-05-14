@@ -156,16 +156,21 @@ const optionItem = new Intl.NumberFormat('en-NG', {
     },
     {
       id: 10,
+      link: "/funerals",
+      title: "FUNERAL",
+    },
+    {
+      id: 11,
       link: "/cards",
       title: "CARDS",
     },
     {
-      id: 11,
+      id: 12,
       link: "/plants",
       title: "PLANTS",
     },
     {
-      id: 12,
+      id: 13,
       link: "/about",
       title: "ABOUT US",
     },

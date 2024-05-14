@@ -199,6 +199,197 @@ export const occassions = [
       price: "150000",
     },
   ];
+export const funeral = [
+  {
+    id: 76,
+    src: wreath250,
+    title: "wreath",
+    price: 250000,
+    category: "Occassions",
+  },
+  {
+    id: 75,
+    src: wreath200,
+    title: "wreath",
+    price: 200000,
+    category: "Occassions",
+  },
+  {
+    id: 85,
+    src: wreath180,
+    title: "Wreath",
+    price: 180000,
+    category: "Occassions",
+  },
+  {
+    id: 84,
+    src: wreath150ii,
+    title: "Wreath",
+    price: 150000,
+    category: "Occassions",
+  },
+  {
+    id: 86,
+    src: wreath150,
+    title: "Wreath",
+    price: 150000,
+    category: "Occassions",
+  },
+  {
+    id: 73,
+    src: wreath95,
+    title: "wreath",
+    price: 95000,
+    category: "Occassions",
+  },
+  {
+    id: 74,
+    src: wreath90,
+    title: "wreath",
+    price: 90000,
+    category: "Occassions",
+  },
+  {
+    id: 72,
+    src: wreath70,
+    title: "wreath",
+    price: 70000,
+    category: "Occassions",
+  },
+  {
+    id: 87,
+    src: wreath_180,
+    title: "Wreath",
+    price: 180000,
+    category: "Occassions",
+  },
+  {
+    id: 95,
+    src: heart200,
+    title: "Heart shape wreath",
+    price: 200000,
+    category: "Occassions",
+  },
+  {
+    id: 54,
+    src: flower78,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 50,
+    src: flower74,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 53,
+    src: flower77,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 44,
+    src: flower68,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 42,
+    src: flower66,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 43,
+    src: flower67,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 36,
+    src: flower60,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 38,
+    src: flower62,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 31,
+    src: flower55,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 26,
+    src: flower50,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 23,
+    src: flower47,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 18,
+    src: flower42,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 19,
+    src: flower43,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 21,
+    src: flower45,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 16,
+    src: flower40,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 12,
+    src: flower36,
+    title: "Aqua Pack 009",
+    price: "#130,000",
+    category: "Food Items",
+  },
+  {
+    id: 93,
+    src: artificial100,
+    title: "Artificial wreath",
+    price: 100000,
+    category: "Occassions",
+  },
+  ];
 
   export const cards = [
     {
@@ -272,6 +463,20 @@ export const occassions = [
       src: flower12,
       title: "Aqua Pack 009",
       price: "130000",
+    },
+    {
+      id: 47,
+      src: flower71,
+      title: "Aqua Pack 009",
+      price: "#130,000",
+      category: "Food Items",
+    },
+    {
+      id: 29,
+      src: flower53,
+      title: "Aqua Pack 009",
+      price: "#130,000",
+      category: "Food Items",
     },
   ];
 
@@ -428,13 +633,7 @@ export const occassions = [
       price: "#115,000",
       category: "Food Items",
     },
-    {
-      id: 12,
-      src: flower36,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 13,
       src: flower37,
@@ -456,13 +655,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 16,
-      src: flower40,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 17,
       src: flower41,
@@ -470,20 +663,8 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 18,
-      src: flower42,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
-    {
-      id: 19,
-      src: flower43,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
+    
     {
       id: 20,
       src: flower44,
@@ -491,13 +672,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 21,
-      src: flower45,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 22,
       src: flower46,
@@ -505,13 +680,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 23,
-      src: flower47,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 24,
       src: flower48,
@@ -526,13 +695,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 26,
-      src: flower50,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+   
     {
       id: 27,
       src: flower51,
@@ -547,13 +710,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 29,
-      src: flower53,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 30,
       src: flower54,
@@ -561,13 +718,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 31,
-      src: flower55,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 32,
       src: flower56,
@@ -596,13 +747,7 @@ export const occassions = [
     //   price: "#130,000",
     //category: "Food Items",
     // },
-    {
-      id: 36,
-      src: flower60,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 37,
       src: flower61,
@@ -610,13 +755,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 38,
-      src: flower62,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 39,
       src: flower63,
@@ -638,27 +777,9 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 42,
-      src: flower66,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
-    {
-      id: 43,
-      src: flower67,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
-    {
-      id: 44,
-      src: flower68,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
+    
+    
     {
       id: 45,
       src: flower69,
@@ -673,13 +794,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 47,
-      src: flower71,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 48,
       src: flower72,
@@ -694,13 +809,7 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 50,
-      src: flower74,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
     {
       id: 51,
       src: flower75,
@@ -715,20 +824,8 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 53,
-      src: flower77,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
-    {
-      id: 54,
-      src: flower78,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-      category: "Food Items",
-    },
+    
+    
     // {
     //   id: 55,
     //   src: flower79,
@@ -848,41 +945,11 @@ export const occassions = [
       price: "#130,000",
       category: "Food Items",
     },
-    {
-      id: 72,
-      src: wreath70,
-      title: "wreath",
-      price: 70000,
-      category: "Occassions",
-    },
-    {
-      id: 73,
-      src: wreath95,
-      title: "wreath",
-      price: 95000,
-      category: "Occassions",
-    },
-    {
-      id: 74,
-      src: wreath90,
-      title: "wreath",
-      price: 90000,
-      category: "Occassions",
-    },
-    {
-      id: 75,
-      src: wreath200,
-      title: "wreath",
-      price: 200000,
-      category: "Occassions",
-    },
-    {
-      id: 76,
-      src: wreath250,
-      title: "wreath",
-      price: 250000,
-      category: "Occassions",
-    },
+    
+    
+    
+   
+    
     {
       id: 77,
       src: vase180,
@@ -932,34 +999,10 @@ export const occassions = [
       price: 60000,
       category: "Occassions",
     },
-    {
-      id: 84,
-      src: wreath150ii,
-      title: "Wreath",
-      price: 150000,
-      category: "Occassions",
-    },
-    {
-      id: 85,
-      src: wreath180,
-      title: "Wreath",
-      price: 180000,
-      category: "Occassions",
-    },
-    {
-      id: 86,
-      src: wreath150,
-      title: "Wreath",
-      price: 150000,
-      category: "Occassions",
-    },
-    {
-      id: 87,
-      src: wreath_180,
-      title: "Wreath",
-      price: 180000,
-      category: "Occassions",
-    },
+    
+    
+    
+    
     {
       id: 88,
       src: aqua50,
@@ -995,13 +1038,7 @@ export const occassions = [
       price: 90000,
       category: "Occassions",
     },
-    {
-      id: 93,
-      src: artificial100,
-      title: "Artificial wreath",
-      price: 100000,
-      category: "Occassions",
-    },
+    
     {
       id: 94,
       src: redrose120,
@@ -1009,13 +1046,7 @@ export const occassions = [
       price: 120000,
       category: "Occassions",
     },
-    {
-      id: 95,
-      src: heart200,
-      title: "Heart shape wreath",
-      price: 200000,
-      category: "Occassions",
-    },
+    
     {
       id: 96,
       src: mix50,
