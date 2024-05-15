@@ -84,79 +84,79 @@ import flower94 from '../assets/flower94.jpg';
 import flower95 from '../assets/flower95.jpg';
 
 
-export const links = [
-    {
-      id: 1,
-      src: flower1 ,
-      title: "Apology Flowers 002",
-      price: "₦200,000",
-    },
-    {
-      id: 2,
-      src: flower2,
-      title: "Apology Flowers 003",
-      price: "#90,000",
-    },
-    {
-      id: 3,
-      src: flower3,
-      title: "Apology Flowers 004",
-      price: "#150,000",
-    },
-    {
-      id: 4,
-      src: flower4,
-      title: "Aqua Pack 001",
-      price: "#80,000",
-    },
-    {
-      id: 5,
-      src: flower5,
-      title: "Aqua Pack 002",
-      price: "#115,000",
-    },
-    {
-      id: 6,
-      src: flower6,
-      title: "Aqua Pack 003",
-      price: "#50,000",
-    },
-    {
-      id: 7,
-      src: flower7,
-      title: "Aqua Pack 004",
-      price: "#50,000",
-    },
-    {
-      id: 8,
-      src: flower8,
-      title: "Aqua Pack 005",
-      price: "#260,000",
-    },
-    {
-      id: 9,
-      src: flower9,
-      title: "Aqua Pack 006",
-      price: "#95,000",
-    },
-    {
-      id: 10,
-      src: flower10,
-      title: "Aqua Pack 007",
-      price: "#70,000",
-    },
-    {
-      id: 11,
-      src: flower11,
-      title: "Aqua Pack 008",
-      price: "#115,000",
-    },
-    {
-      id: 12,
-      src: flower12,
-      title: "Aqua Pack 009",
-      price: "#130,000",
-    },
+export const occassions = [
+  {
+    id: 1,
+    src: flower1 ,
+    title: "Forever my love 001",
+    price: '150',
+  },
+  {
+    id: 2,
+    src: flower2,
+    title: "My love you 002",
+    price: '100',
+  },
+  {
+    id: 3,
+    src: flower3,
+    title: "Ivory aqua pack 003",
+    price: '120',
+  },
+  {
+    id: 4,
+    src: flower4,
+    title: "Table top arrangement 004",
+    price: '90000',
+  },
+  {
+    id: 5,
+    src: flower5,
+    title: "Box arrangement 005",
+    price: '200000',
+  },
+  {
+    id: 6,
+    src: flower6,
+    title: "Box arrangement 006",
+    price: '250000',
+  },
+  {
+    id: 7,
+    src: flower7,
+    title: "Aqua Pack 007",
+    price: '60000',
+  },
+  {
+    id: 8,
+    src: flower8,
+    title: "Centerpiece 008",
+    price: '70000',
+  },
+  {
+    id: 9,
+    src: flower9,
+    title: "Aqua Pack 009",
+    price: '70000',
+  },
+  {
+    id: 10,
+    src: flower10,
+    title: "Aqua Pack 010",
+    price: '100000',
+  },
+  {
+    id: 11,
+    src: flower11,
+    title: "Aqua Pack 011",
+    price: '120000',
+  },
+  {
+    id: 12,
+    src: flower12,
+    title: "Throw in bouquet 012",
+    price: '150000',
+  },
   ];
 
   export const cards = [
@@ -810,5 +810,5 @@ export const links = [
     
   ];
 
-export default links
+export default occassions
   
