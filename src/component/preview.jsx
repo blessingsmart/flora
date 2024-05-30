@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 
 function Preview({id, src, title, prices, openModal, 
@@ -10,7 +9,6 @@ function Preview({id, src, title, prices, openModal,
                 name, contact, message, address, date, time,
                 sendersName, sendersPhone, sendersEmail, onChange
             }) {
-
 
     // Convert each number to a formatted currency string
     const formattedChocolates = new Intl.NumberFormat('en-NG', {
