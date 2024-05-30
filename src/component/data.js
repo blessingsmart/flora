@@ -177,7 +177,7 @@ export const occassions = [
     {
       id: 9,
       src: flower9,
-      title: "Tie Bouquet",
+      title: "Hand Tie Bouquet",
       price: "70000",
     },
     {
