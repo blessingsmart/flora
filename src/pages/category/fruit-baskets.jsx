@@ -44,7 +44,7 @@ const Fruit = () => {
           id: 4,
           src: fruit4,
           title: "Fruit 004",
-          price: "#90,000",
+          price: "#120,000",
         },
         {
           id: 5,
@@ -56,37 +56,37 @@ const Fruit = () => {
           id: 6,
           src: fruit6,
           title: "Fruit 006",
-          price: "#90,000",
+          price: "#250,000",
         },
         {
           id: 7,
           src: fruit7,
           title: "Fruit 007",
-          price: "#90,000",
+          price: "#60,000",
         },
         {
           id: 8,
           src: fruit8,
           title: "Fruit 008",
-          price: "#90,000",
+          price: "#130,000",
         },
         {
           id: 9,
           src: fruit9,
           title: "Fruit 009",
-          price: "#90,000",
+          price: "#150,000",
         },
         {
           id: 10,
           src: fruit10,
           title: "Fruit 010",
-          price: "#90,000",
+          price: "#180,000",
         },
         {
           id: 11,
           src: fruit11,
           title: "Fruit 011",
-          price: "#90,000",
+          price: "#200,000",
         },
         {
           id: 12,
@@ -98,7 +98,7 @@ const Fruit = () => {
           id: 13,
           src: fruit13,
           title: "Fruit 013",
-          price: "#90,000",
+          price: "#100,000",
         },
       ];
 
