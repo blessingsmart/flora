@@ -58,6 +58,8 @@ import splide49 from '../assets/splide49.jpg';
 import splide50 from '../assets/splide50.jpg';
 import Contact from "../component/contact"
 import Footer from '../component/footer';
+import Occassion from "../component/occassion"
+import Gift from "../component/gift"
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);

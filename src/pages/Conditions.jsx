@@ -27,7 +27,7 @@ const Conditions = () => {
         <Modal onClose={closeModal} iconClicked={iconClicked} id={modalData.id} src={modalData.src} title={modalData.title} price={modalData.price} prices={modalData.prices} openModal={openModal}>
         </Modal>
       )}
-      <div className='px-52 text-gray-500 flex flex-col gap-5 py-10'>
+      <div className='md:px-52 px-5 text-lg text-gray-500 flex flex-col gap-5 py-10'>
           <h1 className='font-bold text-lg '>Terms And Conditions</h1>
           <p>{"1. General: All our prices are already inclusive of VAT. However, a delivery fee will be added on during checkoutOur delivery rates for areas in Lagos, Nigeria are as listed below:"}</p>
           <div>

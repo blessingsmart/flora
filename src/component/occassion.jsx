@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import  shop from "..//assets/shop.jpg";
-import occassions from "./data"
+import {occassions} from "./data"
 
 
 
