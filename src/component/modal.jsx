@@ -5,7 +5,7 @@ import Preview from './preview';
 import Cart from '../pages/cart';
 
 
-const Modal = ({ onClose, iconClicked, dynamic, openModal, modalData, setModalData, newData}) => {
+const Modal = ({ id, price, onClose, iconClicked, dynamic, openModal, modalData, setModalData, newData}) => {
   const [searchValue, setSearchValue] = useState('');
   const [optItem, setOptItem] = useState(0);  // initializing the checkbox
   const [increase, setIncrease] = useState(1);  // initializing the quantity increment
