@@ -4,14 +4,62 @@ import Modal from '../component/modal';
 import Navbar from '../component/navbar';
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
-import flower1 from '../assets/flower01.jpg';
-import flower2 from '../assets/flower02.jpg';
 import flower3 from '../assets/flower03.jpg';
 import flower4 from '../assets/flower04.jpg';
-import Occassion from '../component/occassion';
-import Gift from '../component/gift';
+import splide1 from '../assets/splide1.jpg';
+import splide2 from '../assets/splide2.jpg';
+import splide3 from '../assets/splide3.jpg';
+import splide4 from '../assets/splide4.jpg';
+import splide5 from '../assets/splide5.jpg';
+import splide6 from '../assets/splide6.jpg';
+import splide7 from '../assets/splide7.jpg';
+import splide8 from '../assets/splide8.jpg';
+import splide9 from '../assets/splide9.jpg';
+import splide10 from '../assets/splide10.jpg';
+import splide11 from '../assets/splide11.jpg';
+import splide12 from '../assets/splide12.jpg';
+import splide13 from '../assets/splide13.jpg';
+import splide14 from '../assets/splide14.jpg';
+import splide15 from '../assets/splide15.jpg';
+import splide16 from '../assets/splide16.jpg';
+import splide17 from '../assets/splide17.jpg';
+import splide18 from '../assets/splide18.jpg';
+import splide19 from '../assets/splide19.jpg';
+import splide20 from '../assets/splide20.jpg';
+import splide21 from '../assets/splide21.jpg';
+import splide22 from '../assets/splide22.jpg';
+import splide23 from '../assets/splide23.jpg';
+import splide24 from '../assets/splide24.jpg';
+import splide25 from '../assets/splide25.jpg';
+import splide26 from '../assets/splide26.jpg';
+import splide27 from '../assets/splide27.jpg';
+import splide28 from '../assets/splide28.jpg';
+import splide29 from '../assets/splide29.jpg';
+import splide30 from '../assets/splide30.jpg';
+import splide31 from '../assets/splide31.jpg';
+import splide32 from '../assets/splide32.jpg';
+import splide33 from '../assets/splide33.jpg';
+import splide34 from '../assets/splide34.jpg';
+import splide35 from '../assets/splide35.jpg';
+import splide36 from '../assets/splide36.jpg';
+import splide37 from '../assets/splide37.jpg';
+import splide38 from '../assets/splide38.jpg';
+import splide39 from '../assets/splide39.jpg';
+import splide40 from '../assets/splide40.jpg';
+import splide41 from '../assets/splide41.jpg';
+import splide42 from '../assets/splide42.jpg';
+import splide43 from '../assets/splide43.jpg';
+import splide44 from '../assets/splide44.jpg';
+import splide45 from '../assets/splide45.jpg';
+import splide46 from '../assets/splide46.jpg';
+import splide47 from '../assets/splide47.jpg';
+import splide48 from '../assets/splide48.jpg';
+import splide49 from '../assets/splide49.jpg';
+import splide50 from '../assets/splide50.jpg';
 import Contact from "../component/contact"
 import Footer from '../component/footer';
+import Occassion from "../component/occassion"
+import Gift from "../component/gift"
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -82,22 +130,252 @@ const Home = () => {
           <ul className="splide__list ">
             <li className="splide__slide">
               <div >
-                <img src={flower1} alt="Image 1"/>
+                <img src={splide1} alt="Image 1"/>
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={flower2} alt="Image 2" />
+                <img src={splide2} alt="Image 2" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={flower3} alt="Image 3" />
+                <img src={splide3} alt="Image 3" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={flower4} alt="Image 3" />
+                <img src={splide4} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide5} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide6} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide7} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide8} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide9} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide10} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide11} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide12} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide13} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide14} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide15} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide16} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide17} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide18} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide19} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide20} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide21} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide22} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide23} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide24} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide25} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide26} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide27} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide28} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide29} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide30} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide31} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide32} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide33} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide34} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide35} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide36} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide37} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide38} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide39} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide40} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide41} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide42} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide43} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide44} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide45} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide46} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide47} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide48} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide49} alt="Image 3" />
+              </div>
+            </li>
+            <li className="splide__slide">
+              <div>
+                <img src={splide50} alt="Image 3" />
               </div>
             </li>
           </ul>

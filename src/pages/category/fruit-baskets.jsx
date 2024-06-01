@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import Modal from '../../component/modal';
 import fruit1 from '../../assets/fruit1.jpg';
 import fruit2 from '../../assets/fruit2.jpg';
-// import flower3 from '../../assets/flower3.jpg';
-// import flower4 from '../../assets/flower4.jpg';
-// import flower5 from '../../assets/flower5.jpg';
-// import flower6 from '../../assets/flower6.jpg';
-// import flower7 from '../../assets/flower7.jpg';
-// import flower8 from '../../assets/flower8.jpg';
-// import flower9 from '../../assets/flower9.jpg';
-// import flower10 from '../../assets/flower10.jpg';
-// import flower11 from '../../assets/flower11.jpg';
-// import flower12 from '../../assets/flower12.jpg';
+import fruit3 from '../../assets/fruit3.jpg';
+import fruit4 from '../../assets/fruit4.jpg';
+import fruit5 from '../../assets/fruit5.jpg';
+import fruit6 from '../../assets/fruit6.jpg';
+import fruit7 from '../../assets/fruit7.jpg';
+import fruit8 from '../../assets/fruit8.jpg';
+import fruit9 from '../../assets/fruit9.jpg';
+import fruit10 from '../../assets/fruit10.jpg';
+import fruit11 from '../../assets/fruit11.jpg';
+import fruit12 from '../../assets/fruit12.jpg';
+import fruit13 from '../../assets/fruit13.jpg';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
@@ -84,66 +85,72 @@ const Fruit = () => {
           title: "Fruit 002",
           price: "90000",
         },
-        // {
-        //   id: 3,
-        //   src: flower3,
-        //   title: "Apology Flowers 004",
-        //   price: "#150,000",
-        // },
-        // {
-        //   id: 4,
-        //   src: flower4,
-        //   title: "Aqua Pack 001",
-        //   price: "#80,000",
-        // },
-        // {
-        //   id: 5,
-        //   src: flower5,
-        //   title: "Aqua Pack 002",
-        //   price: "#115,000",
-        // },
-        // {
-        //   id: 6,
-        //   src: flower6,
-        //   title: "Aqua Pack 003",
-        //   price: "#50,000",
-        // },
-        // {
-        //   id: 7,
-        //   src: flower7,
-        //   title: "Aqua Pack 004",
-        //   price: "#50,000",
-        // },
-        // {
-        //   id: 8,
-        //   src: flower8,
-        //   title: "Aqua Pack 005",
-        //   price: "#260,000",
-        // },
-        // {
-        //   id: 9,
-        //   src: flower9,
-        //   title: "Aqua Pack 006",
-        //   price: "#95,000",
-        // },
-        // {
-        //   id: 10,
-        //   src: flower10,
-        //   title: "Aqua Pack 007",
-        //   price: "#70,000",
-        // },
-        // {
-        //   id: 11,
-        //   src: flower11,
-        //   title: "Aqua Pack 008",
-        //   price: "#115,000",
-        // },
-        // {
-        //   id: 12,
-        //   src: flower12,
-        //   title: "Aqua Pack 009",
-        //   price: "#130,000",
-        // },
+        {
+          id: 3,
+          src: fruit3,
+          title: "Fruit 003",
+          price: "#90,000",
+        },
+        {
+          id: 4,
+          src: fruit4,
+          title: "Fruit 004",
+          price: "#120,000",
+        },
+        {
+          id: 5,
+          src: fruit5,
+          title: "Fruit 005",
+          price: "#90,000",
+        },
+        {
+          id: 6,
+          src: fruit6,
+          title: "Fruit 006",
+          price: "#250,000",
+        },
+        {
+          id: 7,
+          src: fruit7,
+          title: "Fruit 007",
+          price: "#60,000",
+        },
+        {
+          id: 8,
+          src: fruit8,
+          title: "Fruit 008",
+          price: "#130,000",
+        },
+        {
+          id: 9,
+          src: fruit9,
+          title: "Fruit 009",
+          price: "#150,000",
+        },
+        {
+          id: 10,
+          src: fruit10,
+          title: "Fruit 010",
+          price: "#180,000",
+        },
+        {
+          id: 11,
+          src: fruit11,
+          title: "Fruit 011",
+          price: "#200,000",
+        },
+        {
+          id: 12,
+          src: fruit12,
+          title: "Fruit 012",
+          price: "#90,000",
+        },
+        {
+          id: 13,
+          src: fruit13,
+          title: "Fruit 013",
+          price: "#100,000",
+        },
       ];
 
       
