@@ -52,7 +52,7 @@ const Teddy = () => {
         {
           id: 6,
           src: teddy6,
-          title: "teddy 006",
+          title: "Teddy 006",
           price: "#150,000",
         },
         {
