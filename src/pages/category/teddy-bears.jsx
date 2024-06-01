@@ -73,61 +73,61 @@ const Teddy = () => {
           id: 1,
           src: teddy1 ,
           title: "Teddy 001",
-          price: "₦50,000",
+          price: "50000",
         },
         {
           id: 2,
           src: teddy2,
           title: "Teddy 002",
-          price: "#70,000",
+          price: "70000",
         },
         {
           id: 3,
           src: teddy3,
           title: "Teddy 003",
-          price: "#100,000",
+          price: "100000",
         },
         {
           id: 4,
           src: teddy4,
           title: "Teddy 004",
-          price: "#60,000",
+          price: "60000",
         },
         {
           id: 5,
           src: teddy5,
           title: "Teddy 005",
-          price: "#85,000",
+          price: "85000",
         },
         {
           id: 6,
           src: teddy6,
           title: "Teddy 006",
-          price: "#150,000",
+          price: "150000",
         },
         {
           id: 7,
           src: teddy7,
           title: "Teddy 007",
-          price: "#80,000",
+          price: "80000",
         },
         {
           id: 8,
           src: teddy8,
           title: "Teddy 008",
-          price: "#60,000",
+          price: "60000",
         },
         {
           id: 9,
           src: teddy9,
           title: "Teddy 009(35cm)",
-          price: "#50,000",
+          price: "50000",
         },
         {
           id: 10,
           src: teddy10,
           title: "Teddy 010",
-          price: "#70,000",
+          price: "70000",
         },
       ];
 
@@ -147,16 +147,16 @@ const Teddy = () => {
             }).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
 
         return(
-            <div key={id} className='flex flex-col drop-shadow-xl '>
+              <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer' onClick={() => handleItemClick(id, src, title, price)}>
                 <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                     <img src={src} alt='products' className='  ' />
-                    <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
+                    <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'></button>
                 </div>
                 <div className='flex flex-col sm:flex-row sm:gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                     <p className='p-2'>{title}</p >
                     <p className='p-2'>{formattedPrice}</p >
                 </div>
-            </div>
+              </div>
             )}
           )}
         </div>

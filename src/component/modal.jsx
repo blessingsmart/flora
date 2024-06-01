@@ -114,11 +114,6 @@ const Modal = ({ id, price, onClose, iconClicked, dynamic, openModal, modalData,
     }
   };
 
-  // Convert the string prop to a number
-//  const price = new Intl.NumberFormat('en-NG', {
-//    style: 'currency',
-//    currency: 'NGN'
-//}).format(newData.price);
 
 const totalPrices = new Intl.NumberFormat('en-NG', {
   style: 'currency',
@@ -328,6 +323,7 @@ const handleSearchChange = (e) => {
                   handleQuantityChange={handleQuantityChange}
                   modalData={modalData}
                   FinaltotalPrice={FinaltotalPrice}
+                  onClose={onClose}
             />
           </div>
         ) : (

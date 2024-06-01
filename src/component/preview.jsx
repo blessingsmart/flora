@@ -42,6 +42,12 @@ function Preview({ newData, openModal,
         handleSubTotal();
     };
 
+    // Convert the string prop to a number
+    const price = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(newData.price);
+
   return (
     <>
         <div className='md:mx-64 bg-white pb-24 md:flex md:w-[60%]'>
@@ -50,8 +56,7 @@ function Preview({ newData, openModal,
             </div>
             <div className='md:w-[50%] md:ml-10'>
                 <h1 className='md:text-3xl text-xl font-bold text-gray-500 m-5'>{newData.title}</h1>
-                <span className='text-xl font-bold m-5 text-black'>{newData.price}</span>
-                <p className='m-5 text-gray-500'>I'm Sorry</p>
+                <span className='text-xl font-bold m-5 text-black'>{price}</span>
                 <div>
                     <h2 className="text-sm text-gray-500 font-bold m-5">Add-ons</h2>
                     <ol className="list-decimal list-inside text-gray-700">

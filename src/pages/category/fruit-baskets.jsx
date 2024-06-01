@@ -89,67 +89,67 @@ const Fruit = () => {
           id: 3,
           src: fruit3,
           title: "Fruit 003",
-          price: "#90,000",
+          price: "90000",
         },
         {
           id: 4,
           src: fruit4,
           title: "Fruit 004",
-          price: "#120,000",
+          price: "120000",
         },
         {
           id: 5,
           src: fruit5,
           title: "Fruit 005",
-          price: "#90,000",
+          price: "90000",
         },
         {
           id: 6,
           src: fruit6,
           title: "Fruit 006",
-          price: "#250,000",
+          price: "250000",
         },
         {
           id: 7,
           src: fruit7,
           title: "Fruit 007",
-          price: "#60,000",
+          price: "60000",
         },
         {
           id: 8,
           src: fruit8,
           title: "Fruit 008",
-          price: "#130,000",
+          price: "130000",
         },
         {
           id: 9,
           src: fruit9,
           title: "Fruit 009",
-          price: "#150,000",
+          price: "150000",
         },
         {
           id: 10,
           src: fruit10,
           title: "Fruit 010",
-          price: "#180,000",
+          price: "180000",
         },
         {
           id: 11,
           src: fruit11,
           title: "Fruit 011",
-          price: "#200,000",
+          price: "200000",
         },
         {
           id: 12,
           src: fruit12,
           title: "Fruit 012",
-          price: "#90,000",
+          price: "90000",
         },
         {
           id: 13,
           src: fruit13,
           title: "Fruit 013",
-          price: "#100,000",
+          price: "100000",
         },
       ];
 
@@ -172,16 +172,16 @@ const Fruit = () => {
             }).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
 
         return(
-            <div key={id} className='flex flex-col drop-shadow-xl '>
+              <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer' onClick={() => handleItemClick(id, src, title, price)}>
                 <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                     <img src={src} alt='products' className='  ' />
-                    <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
+                    <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'></button>
                 </div>
                 <div className='flex flex-col sm:flex-row sm:gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                     <p className='p-2'>{title}</p >
                     <p className='p-2'>{formattedPrice}</p >
                 </div>
-            </div>
+              </div>
             )}
           )}
         </div>
