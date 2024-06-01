@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import Modal from '../../component/modal';
-import flower1 from '../../assets/flower1.jpg';
-import flower2 from '../../assets/flower2.jpg';
-import flower3 from '../../assets/flower3.jpg';
-import flower4 from '../../assets/flower4.jpg';
-import flower5 from '../../assets/flower5.jpg';
-import flower6 from '../../assets/flower6.jpg';
-import flower7 from '../../assets/flower7.jpg';
-import flower8 from '../../assets/flower8.jpg';
-import flower9 from '../../assets/flower9.jpg';
-import flower10 from '../../assets/flower10.jpg';
-import flower11 from '../../assets/flower11.jpg';
-import flower12 from '../../assets/flower12.jpg';
+import teddy1 from '../../assets/teddy1.jpg';
+import teddy2 from '../../assets/teddy2.jpg';
+import teddy3 from '../../assets/teddy3.jpg';
+import teddy4 from '../../assets/teddy4.jpg';
+import teddy5 from '../../assets/teddy5.jpg';
+import teddy6 from '../../assets/teddy6.jpg';
+import teddy7 from '../../assets/teddy7.jpg';
+import teddy8 from '../../assets/teddy8.jpg';
+import teddy9 from '../../assets/teddy9.jpg';
+import teddy10 from '../../assets/teddy10.jpg';
 import Navbar from '../../component/navbar';
 import Footer from '../../component/footer';
 
@@ -23,75 +21,63 @@ const Teddy = () => {
     const links = [
         {
           id: 1,
-          src: flower1 ,
-          title: "Apology Flowers 002",
-          price: "₦200,000",
+          src: teddy1 ,
+          title: "Teddy 001",
+          price: "₦50,000",
         },
         {
           id: 2,
-          src: flower2,
-          title: "Apology Flowers 003",
-          price: "#90,000",
-        },
-        {
-          id: 3,
-          src: flower3,
-          title: "Apology Flowers 004",
-          price: "#150,000",
-        },
-        {
-          id: 4,
-          src: flower4,
-          title: "Aqua Pack 001",
-          price: "#80,000",
-        },
-        {
-          id: 5,
-          src: flower5,
-          title: "Aqua Pack 002",
-          price: "#115,000",
-        },
-        {
-          id: 6,
-          src: flower6,
-          title: "Aqua Pack 003",
-          price: "#50,000",
-        },
-        {
-          id: 7,
-          src: flower7,
-          title: "Aqua Pack 004",
-          price: "#50,000",
-        },
-        {
-          id: 8,
-          src: flower8,
-          title: "Aqua Pack 005",
-          price: "#260,000",
-        },
-        {
-          id: 9,
-          src: flower9,
-          title: "Aqua Pack 006",
-          price: "#95,000",
-        },
-        {
-          id: 10,
-          src: flower10,
-          title: "Aqua Pack 007",
+          src: teddy2,
+          title: "Teddy 002",
           price: "#70,000",
         },
         {
-          id: 11,
-          src: flower11,
-          title: "Aqua Pack 008",
-          price: "#115,000",
+          id: 3,
+          src: teddy3,
+          title: "Teddy 003",
+          price: "#100,000",
         },
         {
-          id: 12,
-          src: flower12,
-          title: "Aqua Pack 009",
-          price: "#130,000",
+          id: 4,
+          src: teddy4,
+          title: "Teddy 004",
+          price: "#60,000",
+        },
+        {
+          id: 5,
+          src: teddy5,
+          title: "Teddy 005",
+          price: "#85,000",
+        },
+        {
+          id: 6,
+          src: teddy6,
+          title: "teddy 006",
+          price: "#150,000",
+        },
+        {
+          id: 7,
+          src: teddy7,
+          title: "Teddy 007",
+          price: "#80,000",
+        },
+        {
+          id: 8,
+          src: teddy8,
+          title: "Teddy 008",
+          price: "#60,000",
+        },
+        {
+          id: 9,
+          src: teddy9,
+          title: "Teddy 009(35cm)",
+          price: "#50,000",
+        },
+        {
+          id: 10,
+          src: teddy10,
+          title: "Teddy 010",
+          price: "#70,000",
         },
       ];
 
