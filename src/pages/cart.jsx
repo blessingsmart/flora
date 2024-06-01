@@ -5,13 +5,12 @@ import Modal from '../component/modal';
 import Footer from '../component/footer';
 import Flutter from '../component/flutter';
 
-const Cart = ({ src, title, prices, totalPrices, 
-                optionItem, name, contact, message, 
-                address, date, time, handleQuantityChange,
-                increase, sendersName, sendersPhone, sendersEmail
-              }) => {
+const Cart = ({ src, title, totalPrices, FinaltotalPrice, contact, message, address,
+              date, time, sendersName, sendersPhone, sendersEmail, modalData, newData
+            }) => {
   const [showModal, setShowModal] = useState(false);
   const [iconClicked, setIconClicked] = useState(null);
+
   const openModal = (clickedIcon) => {
     setShowModal(true);
     setIconClicked(clickedIcon);
@@ -20,6 +19,8 @@ const Cart = ({ src, title, prices, totalPrices,
   const closeModal = () => {
     setShowModal(false);
   };
+
+
   return (
     <>
       <Navbar openModal={openModal} />
@@ -45,39 +46,45 @@ const Cart = ({ src, title, prices, totalPrices,
             </div>
             <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-full mx-auto'/>
           </div>
-          <div className='flex text-start'>
-            <div className='md:flex'>
-              <FaTimes size={20} className='mt-3 mx-2 md:mt-[70px]' style={{color: '#808080'}}/>
-              <img src={src} className='w-[75px] h-[100px] mx-2 mt-7' alt="" />
-            </div>
-            <div className='pl-2 text-gray-500 text-xs'>
-                <h5 className='font-bold text-[17px]'>{title}</h5>
-                <p className='font-bold text-[11px] pt-[3px]'>Edit options</p>
-                <h6 className='pt-3'>EXTRAS +<span className='text-black font-bold'>{optionItem}</span></h6>
-                <h6 className='pt-[2px]'>NAME OF RECIPIENT: <span className='text-black font-bold'>{name}</span></h6>
-                <h6 className='pt-[2px]'>TELEPHONE NUMBER OF RECIPIENT: <span className='text-black font-bold'>{contact}</span></h6>
-                <h6 className='pt-[2px]'>MESSAGE TO BE WRITTEN ON THE CARD: <span className='text-black font-bold'>{message}</span></h6>
-                <h6 className='pt-[2px]'>DELIVERY ADDRESS: <span className='text-black font-bold'>{address}</span></h6>
-                <h6 className='pt-[2px]'>DATE OF DELIVERY: <span className='text-black font-bold'>{date}</span></h6>
-                <h6 className='pt-[2px]'>TIME: <span className='text-black font-bold'>{time}</span></h6>
-                <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>{increase} x <span className='text-black'>{prices}</span></h3>
-            </div>
-            <div className='pt-[74px] ml-8 hidden md:flex'>
-              <span className='text-black text-sm font-bold pl-2'>{prices}</span>
-            </div>
-            <div className="flex items-center pl-12 md:pl-3">
-              <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-l w-[2px] h-[43px]" onClick={() => handleQuantityChange(-1)}>-</button>
-              <input 
-                  className="appearance-none border text-black border-gray-300 w-10 text-center py-[10px] rounded-none" 
-                  value={increase}
-              />
-              <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-r w-[2px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
-            </div>
-            <div className='pt-[74px] ml-2 hidden md:flex'>
-              <span className='text-black text-sm font-bold pl-2'>{totalPrices}</span>
-            </div>
+          <div>
+            {modalData.map((item) => (
+              <div key={item}>
+                <div className='flex text-start'>
+                  <div className='md:flex'>
+                    <FaTimes size={20} className='mt-3 mx-2 md:mt-[70px]' style={{color: '#808080'}}/>
+                    <img src={item.src} className='w-[75px] h-[100px] mx-2 mt-7' alt="" />
+                  </div>
+                  <div className='pl-2 text-gray-500 text-xs'>
+                      <h5 className='font-bold text-[17px]'>{item.title}</h5>
+                      <p className='font-bold text-[11px] pt-[3px]'>Edit options</p>
+                      <h6 className='pt-3'>EXTRAS +<span className='text-black font-bold'>{item.optionItem}</span></h6>
+                      <h6 className='pt-[2px]'>NAME OF RECIPIENT: <span className='text-black font-bold'>{item.name}</span></h6>
+                      <h6 className='pt-[2px]'>TELEPHONE NUMBER OF RECIPIENT: <span className='text-black font-bold'>{item.contact}</span></h6>
+                      <h6 className='pt-[2px]'>MESSAGE TO BE WRITTEN ON THE CARD: <span className='text-black font-bold'>{item.message}</span></h6>
+                      <h6 className='pt-[2px]'>DELIVERY ADDRESS: <span className='text-black font-bold'>{item.address}</span></h6>
+                      <h6 className='pt-[2px]'>DATE OF DELIVERY: <span className='text-black font-bold'>{item.date}</span></h6>
+                      <h6 className='pt-[2px]'>TIME: <span className='text-black font-bold'>{item.time}</span></h6>
+                      <h3 className='font-bold md:hidden text-[15px] pt-[10px]'>{item.increase} x <span className='text-black'>{item.price}</span></h3>
+                  </div>
+                  <div className='pt-[74px] ml-8 hidden md:flex'>
+                    <span className='text-black text-sm font-bold pl-2'>{item.price}</span>
+                  </div>
+                  <div className="flex items-center pl-12 md:pl-3">
+                    <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-l w-[2px] h-[43px]" onClick={() => handleQuantityChange(-1)}>-</button>
+                    <input 
+                        className="appearance-none border text-black border-gray-300 w-10 text-center py-[10px] rounded-none" 
+                        value={item.increase}
+                    />
+                    <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal px-3 rounded-r w-[2px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
+                  </div>
+                  <div className='pt-[74px] ml-2 hidden md:flex'>
+                    <span className='text-black text-sm font-bold pl-2'>{item.totalPrices}</span>
+                  </div>
+                </div>
+                <hr className='h-px my-5 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
+              </div>
+            ))}
           </div>
-          <hr className='h-px mt-5 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
           <div className='flex mt-5'>
             <button className='flex text-black font-semibold border border-gray-600 p-2 mx-2 hover:bg-black hover:text-white'><FaArrowLeft size={20} style={{ color: 'gray' }} className='mt-[3px]'/> <span className='ml-3'>CONTINUE SHOPPING</span></button>
             <button className='bg-gray-500 font-semibold text-white border border-gray-600 px-5 mx-2'>UPDATE CART</button>
@@ -91,12 +98,12 @@ const Cart = ({ src, title, prices, totalPrices,
           <hr className='h-px my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
           <div>
               <ul className='ml-2'>
-                <li className='flex justify-between'><span>Subtotal</span><span className='text-black font-bold mr-[2px]'>{totalPrices}</span></li>
+                <li className='flex justify-between'><span>Subtotal</span><span className='text-black font-bold mr-[2px]'>{FinaltotalPrice}</span></li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
                 <li className='flex justify-between'><span>Shipping</span><span className='pl-[100px] text-end'>Enter your address to view shipping options</span></li>
                 <li className='text-end'>Calculate shipping</li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
-                <li className='flex justify-between'><span>Total</span><span className='text-black font-bold mr-[2px]'>{totalPrices}</span></li>
+                <li className='flex justify-between'><span>Total</span><span className='text-black font-bold mr-[2px]'>{FinaltotalPrice}</span></li>
                 <hr className='my-2 bg-gray-200 border dark:bg-gray-700 w-[97%] mx-auto'/>
               </ul>
           </div>
@@ -104,7 +111,8 @@ const Cart = ({ src, title, prices, totalPrices,
             <button className='text-white py-2 font-bold'>
               <Flutter src={src} totalPrices={totalPrices} title={title} customerName={name} 
                   contact={contact} message={message} address={address} date={date} 
-                  time={time} sendersName={sendersName} sendersPhone={sendersPhone} sendersEmail={sendersEmail}>
+                  time={time} sendersName={sendersName} sendersPhone={sendersPhone}
+                  sendersEmail={sendersEmail} modalData={modalData} newData={newData} FinaltotalPrice={FinaltotalPrice}>
               </Flutter>
             </button>
           </div>

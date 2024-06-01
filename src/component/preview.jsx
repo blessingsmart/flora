@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
 
 
-function Preview({id, src, title, prices, openModal, 
+function Preview({ newData, openModal, 
                 handleCheckboxClick, optionItem, 
                 increase, handleQuantityChange,
                 totalPrices, chocolates, champagne, balloons, card, wine,
                 name, contact, message, address, date, time,
-                sendersName, sendersPhone, sendersEmail, onChange
+                sendersName, sendersPhone, sendersEmail, onChange, handleSubTotal
             }) {
+    
 
     // Convert each number to a formatted currency string
     const formattedChocolates = new Intl.NumberFormat('en-NG', {
@@ -36,21 +37,20 @@ function Preview({id, src, title, prices, openModal,
         currency: 'NGN'
     }).format(wine);
 
-
-    const handleItemClick = (id, src, title, price, prices) => {
+    const handleItemClick = () => {
         openModal("cart"); // Pass src, title, and price only
-        dynamic({ src, title, price, prices }); // Pass src, title, and price only
+        handleSubTotal();
     };
 
   return (
     <>
         <div className='md:mx-64 bg-white pb-24 md:flex md:w-[60%]'>
             <div className='md:w-[50%]'>
-                <img src={src} className='w-full h-[400px] sm:h-[500px]' alt="" />
+                <img src={newData.src} className='w-full h-[400px] sm:h-[500px]' alt="" />
             </div>
             <div className='md:w-[50%] md:ml-10'>
-                <h1 className='md:text-3xl text-xl font-bold text-gray-500 m-5'>{title}</h1>
-                <span className='text-xl font-bold m-5 text-black'>{prices}</span>
+                <h1 className='md:text-3xl text-xl font-bold text-gray-500 m-5'>{newData.title}</h1>
+                <span className='text-xl font-bold m-5 text-black'>{newData.price}</span>
                 <p className='m-5 text-gray-500'>I'm Sorry</p>
                 <div>
                     <h2 className="text-sm text-gray-500 font-bold m-5">Add-ons</h2>
@@ -204,7 +204,7 @@ function Preview({id, src, title, prices, openModal,
                         <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
                     </div>
                     <div className='bg-[#c7889d] ml-5 border mt-5 hover:bg-[#b06981] pt-3'>
-                        <button className='text-white font-bold sm:px-10 px-2' onClick={() => handleItemClick( id, src, title, prices)}>ADD TO CART</button>
+                        <button className='text-white font-bold sm:px-10 px-2' onClick={() => handleItemClick()}>ADD TO CART</button>
                     </div>
                 </div>
                 <div className='bg-[#0aad66] ml-3 border mt-5 hover:bg-[#0c985b] sm:w-[280px] w-[210px]'>

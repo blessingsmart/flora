@@ -15,10 +15,10 @@ import Footer from '../component/footer';
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [showFresh, setshowFresh] = useState(false);
   const [iconClicked, setIconClicked] = useState(null); // Initially set to null
-  const [modalData, setModalData] = useState({});
-
-
+  const [modalData, setModalData] = useState([]);
+  const [newData, setNewData] = useState([]);
 
   useEffect(() => {
     const splide1 = new Splide('#splide1', {
@@ -43,14 +43,36 @@ const Home = () => {
     setShowModal(true);
     setIconClicked(clickedIcon);
   };
-  const dynamic = ( {id, src, title, price, prices} ) => {
-    setModalData({ id, src, title, price, prices });
+
+  const handleAddProduct = (product) => {
+    const newProductId = product;
+    setNewData(newProductId);
+
+    setModalData({ id: product.id, src: product.src, title: product.title,
+                  price: product.price });
+
+    const productExist = modalData.find((item) => item.id === product.id);
+    if (productExist) {
+      setModalData(
+        modalData.map((item) =>
+          item.id === product.id ? { ...productExist } : item
+        )
+      );
+    } 
+    else {
+      setModalData([...modalData, product]);
+    }
   };
+
+  const dynamic = ({ id, src, title, price }) => {
+    handleAddProduct({ id, src, title, price });
+  };
+  
+  
 
   const closeModal = () => {
     setShowModal(false);
   };
-
 
   return (
     <>
@@ -82,7 +104,7 @@ const Home = () => {
         </div>
       </div>
       {showModal && (
-        <Modal onClose={closeModal} iconClicked={iconClicked} id={modalData.id} src={modalData.src} title={modalData.title} price={modalData.price} prices={modalData.prices} openModal={openModal}>
+        <Modal onClose={closeModal} iconClicked={iconClicked} openModal={openModal} dynamic={dynamic} modalData={modalData} setModalData={setModalData} newData={newData}>
         </Modal>
       )}
       <div className='lg:flex justify-between gap-5 sm:p-16 p-5 text-xl'>

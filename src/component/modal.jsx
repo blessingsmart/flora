@@ -4,11 +4,12 @@ import { Link as RouterLink } from "react-router-dom";
 import Preview from './preview';
 import Cart from '../pages/cart';
 
-const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal}) => {
+
+const Modal = ({ onClose, iconClicked, dynamic, openModal, modalData, setModalData, newData}) => {
   const [searchValue, setSearchValue] = useState('');
   const [optItem, setOptItem] = useState(0);  // initializing the checkbox
   const [increase, setIncrease] = useState(1);  // initializing the quantity increment
-  const totalPrice = price * increase + optItem; // calculating total price
+  const totalPrice = newData.price * increase + optItem; // calculating total price
   const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
 
   // initializing customer informations 
@@ -28,43 +29,96 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
     switch (name) {
       case 'name':
         setName(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, name: value };
+          }
+          return item;
+        }));
         break;
       case 'contact':
         setContact(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, contact: value };
+          }
+          return item;
+        }));
         break;
       case 'message':
         setMessage(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, message: value };
+          }
+          return item;
+        }));
         break;
       case 'address':
         setAddress(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, address: value };
+          }
+          return item;
+        }));
         break;
       case 'date':
         setDate(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, date: value };
+          }
+          return item;
+        }));
         break;
       case 'time':
         setTime(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, time: value };
+          }
+          return item;
+        }));
         break;
       case 'sendersName':
         setSendersName(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersName: value };
+          }
+          return item;
+        }));
         break;
       case 'sendersPhone':
         setSendersPhone(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersPhone: value };
+          }
+          return item;
+        }));
         break;
       case 'sendersEmail':
         setSendersEmail(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersEmail: value };
+          }
+          return item;
+        }));
         break;
       default:
         // Handle default case or do nothing
         break;
     }
-  }
-  
+  };
 
   // Convert the string prop to a number
-  const prices = new Intl.NumberFormat('en-NG', {
-    style: 'currency',
-    currency: 'NGN'
-}).format(price);
+//  const price = new Intl.NumberFormat('en-NG', {
+//    style: 'currency',
+//    currency: 'NGN'
+//}).format(newData.price);
 
 const totalPrices = new Intl.NumberFormat('en-NG', {
   style: 'currency',
@@ -75,6 +129,7 @@ const optionItem = new Intl.NumberFormat('en-NG', {
   style: 'currency',
   currency: 'NGN'
 }).format(optItem);
+
 
 
   // function to handle the quantity increment
@@ -93,21 +148,34 @@ const optionItem = new Intl.NumberFormat('en-NG', {
             return prevItem - checkPrice;
         }
     });
-    setPrice(prevPrice => {
-        if (isChecked) {
-            // Checkbox is checked, add the value
-            return prevPrice + checkPrice;
-        } else {
-            // Checkbox is unchecked, subtract the value
-            return prevPrice - checkPrice;
-        }
-    })
+    
+    setModalData(prevModalData => prevModalData.map(item => {
+      if (item.id === newData.id) {
+        return { ...item, optionItem: optItem + checkPrice };
+      }
+      return item;
+    }));
 };
 
+const FinaltotalPrice = modalData.reduce((accumulator, currentItem) => {
+  return accumulator + (currentItem.totalPrices ? parseFloat(currentItem.totalPrices.replace(/[^\d.-]/g, '')) : 0);
+}, 0);
+console.log(FinaltotalPrice);
 
-  const handleSearchChange = (e) => {
-    setSearchValue(e.target.value);
-  };
+const handleSubTotal = () => {
+  setModalData(prevModalData => prevModalData.map(item => {
+    if (item.id === newData.id) {
+      return { ...item, totalPrices: totalPrices, increase: increase };
+    }
+    return item;
+  }));
+  
+  FinaltotalPrice();
+};
+
+const handleSearchChange = (e) => {
+  setSearchValue(e.target.value);
+};
 
   const links = [
     {
@@ -178,6 +246,7 @@ const optionItem = new Intl.NumberFormat('en-NG', {
 
 
   return (
+    <>
     <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center ">
       <div className="text-white text-sm">
         {iconClicked === 'search' ? (
@@ -216,7 +285,7 @@ const optionItem = new Intl.NumberFormat('en-NG', {
           </div>
         ) : iconClicked === 'preview' ? (
           <div className="py-16 sm:px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
-            <Preview id={id} src={src} title={title} prices={prices} 
+            <Preview newData={newData}
                      dynamic={dynamic} openModal={openModal} 
                      handleCheckboxClick={handleCheckboxClick} 
                      optionItem={optionItem}
@@ -238,24 +307,27 @@ const optionItem = new Intl.NumberFormat('en-NG', {
                      sendersPhone={sendersPhone}
                      sendersEmail={sendersEmail}
                      onChange={onChange}
+                     handleSubTotal={handleSubTotal}
             />
           </div>
         ) : iconClicked === 'cart' ? (
           <div className="absolute left-0 top-0 bg-black/80 w-full max-h-screen h-screen overflow-y-auto ">
-            <Cart src={src} title={title} prices={prices}
-                  totalPrices={totalPrices}
+            <Cart totalPrices={totalPrices}
                   optionItem={optionItem}
-                  name={name}
+                  customerName={name}
                   contact={contact}
                   increase={increase}
                   message={message}
                   address={address}
                   date={date}
-                  time={time} 
+                  time={time}
+                  newData={newData} 
                   sendersName={sendersName}
                   sendersPhone={sendersPhone}
                   sendersEmail={sendersEmail}
                   handleQuantityChange={handleQuantityChange}
+                  modalData={modalData}
+                  FinaltotalPrice={FinaltotalPrice}
             />
           </div>
         ) : (
@@ -268,6 +340,7 @@ const optionItem = new Intl.NumberFormat('en-NG', {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

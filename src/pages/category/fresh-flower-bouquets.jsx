@@ -15,50 +15,71 @@ const Fresh = () => {
     
 
 
-      const filteredLinks = fresh.filter(link => {
-        return selectedCategory === 'All' || link.category === selectedCategory;
-      });
-      console.log("filteredLinks")
+  const filteredLinks = fresh.filter(link => {
+    return selectedCategory === 'All' || link.category === selectedCategory;
+  });
 
       
   const [showModal, setShowModal] = useState(false);
   const [iconClicked, setIconClicked] = useState(null); // Initially set to null
-  const [modalData, setModalData] = useState({});
+  const [modalData, setModalData] = useState([]);
+  const [newData, setNewData] = useState([]);
 
-      const openModal = (clickedIcon) => {
-        setShowModal(true);
-        setIconClicked(clickedIcon);
-      };
+  const openModal = (clickedIcon) => {
+    setShowModal(true);
+    setIconClicked(clickedIcon);
+  };
 
-      const dynamic = ( {id, src, title, price, prices} ) => {
-        setModalData({ id, src, title, price, prices });
-      };
-    
-      const closeModal = () => {
-        setShowModal(false);
-      };
+  const handleAddProduct = (product) => {
+  const newProductId = product;
+  setNewData(newProductId);
+
+  setModalData({ id: product.id, src: product.src, title: product.title,
+                price: product.price });
+
+  const productExist = modalData.find((item) => item.id === product.id);
+  if (productExist) {
+    setModalData(
+      modalData.map((item) =>
+        item.id === product.id ? { ...productExist } : item
+      )
+    );
+  } 
+  else {
+    setModalData([...modalData, product]);
+  }
+  };
+
+  const dynamic = ({ id, src, title, price }) => {
+    handleAddProduct({ id, src, title, price });
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
 
-      const handleItemPicking = (item) => {
-        if (selectedItems.find(selectedItem => selectedItem.id === item.id)) {
-          setSelectedItems(selectedItems.filter((selectedItem) => selectedItem.id !== item.id));
-        } else {
-          setSelectedItems([...selectedItems, item]);
-        }
-      };
+  const handleItemPicking = (item) => {
+    if (selectedItems.find(selectedItem => selectedItem.id === item.id)) {
+      setSelectedItems(selectedItems.filter((selectedItem) => selectedItem.id !== item.id));
+    } else {
+      setSelectedItems([...selectedItems, item]);
+    }
+  };
 
 
-      const handleItemClick = (id, src, title, price) => {
-        openModal("preview");
-        dynamic({ src, title, price });
-      };
+  const handleItemClick = (id, src, title, price) => {
+    openModal("preview"); // Pass src, title, and price only
+    dynamic({id, src, title, price }); // Pass src, title, and price only
+  };
+  
 
 
   return (
     <>
     <Navbar openModal={openModal} />
     {showModal && (
-        <Modal onClose={closeModal} iconClicked={iconClicked} id={modalData.id} src={modalData.src} title={modalData.title} price={modalData.price} prices={modalData.prices} openModal={openModal}>
+        <Modal id={modalData.id} price={modalData.price} onClose={closeModal} iconClicked={iconClicked} openModal={openModal} dynamic={dynamic} modalData={modalData} setModalData={setModalData} newData={newData}>
         </Modal>
       )}
     <div className='font-medium text-center py-5 cursor-pointer md:hidden'>FILTER</div>
@@ -82,10 +103,10 @@ const Fresh = () => {
                 }).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
     
             return(
-                <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer' onClick={() => handleItemClick(id, src, title, price)}>
+                <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer'>
                     <div key={index} onClick={() => handleItemPicking(item)} className='relative'>
                         <img src={src} alt='products' className='  ' />
-                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full'>Quick View</button>
+                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
                     </div>
                     <div className='flex flex-col sm:flex-row sm:gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                         <p className='p-2'>{title}</p >

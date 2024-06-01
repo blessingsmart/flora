@@ -20,7 +20,7 @@ const Occassion = ({openModal, dynamic}) => {
 
       const handleItemClick = (id, src, title, price) => {
         openModal("preview"); // Pass src, title, and price only
-        dynamic({ src, title, price }); // Pass src, title, and price only
+        dynamic({id, src, title, price }); // Pass src, title, and price only
       };
 
   return (

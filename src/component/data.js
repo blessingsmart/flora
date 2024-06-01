@@ -130,31 +130,31 @@ export const occassions = [
       id: 1,
       src: flower1 ,
       title: "Forever my love 001",
-      price: "150000",
+      price: "150",
     },
     {
       id: 2,
       src: flower2,
       title: "My love 002",
-      price: "100000",
+      price: "100",
     },
     {
       id: 3,
       src: flower3,
       title: "Hand Tie Bouquet 003",
-      price: "120000",
+      price: "120",
     },
     {
       id: 4,
       src: flower4,
       title: "Table top arrangement 004",
-      price: "90000",
+      price: "90",
     },
     {
       id: 5,
       src: flower5,
       title: "Box arrangement 005",
-      price: "200000",
+      price: "200",
     },
     {
       id: 6,
@@ -1164,3 +1164,5 @@ export const funeral = [
     },
     
   ];
+
+  export default occassions

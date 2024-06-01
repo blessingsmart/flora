@@ -5,13 +5,13 @@ import axios from 'axios';
 
 const Flutter = ({ src, sendersName, sendersPhone,
     sendersEmail, title, totalPrices, customerName,
-    contact, message, address, date, time
+    contact, message, address, date, time, modalData, newData,
+    FinaltotalPrice
 }) => {
     const [keys, setKeys] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const totalPrice = parseFloat(totalPrices.replace(/[^\d.-]/g, ''));
-
 
     useEffect(() => {
         const fetchKeys = async () => {
@@ -33,18 +33,18 @@ const Flutter = ({ src, sendersName, sendersPhone,
     const config = keys && {
         public_key: keys.publicKey,
         tx_ref: Date.now(),
-        amount: totalPrice,
+        amount: FinaltotalPrice,
         currency: 'NGN',
         payment_options: 'card,mobilemoney,ussd',
         customer: {
             email: sendersEmail,
             phone_number: sendersPhone,
-            name: sendersName,
+            name: customerName,
         },
         customizations: {
             title: title,
             description: 'Payment for items in cart',
-            logo: src,
+            logo: modalData.src,
         },
     };
 
@@ -60,23 +60,28 @@ const Flutter = ({ src, sendersName, sendersPhone,
                             console.log(response);
                             if (response.status === "successful") {
                                 try {
+                                    const userDetails = modalData.map(item => ({
+                                        name: item.sendersName,
+                                        email: item.sendersEmail,
+                                        phone: item.sendersPhone,
+                                        title: item.title,
+                                        reciever: item.customerName,
+                                        contact: item.contact,
+                                        message: item.message,
+                                        address: item.address,
+                                        date: item.date,
+                                        time: item.time
+                                    }));
                                     // Make an HTTP request to your backend endpoint
+                                    userDetails.map(async user => {
                                     await axios.post('http://localhost:3001/api/transaction', {
                                         transactionDetails: response,
-                                        userDetails: {
-                                            name: sendersName,
-                                            email: sendersEmail,
-                                            phone: sendersPhone,
-                                            title: title,
-                                            totalPrices: totalPrices,
-                                            reciever: customerName,
-                                            contact: contact,
-                                            message: message,
-                                            address: address,
-                                            date: date,
-                                            time: time
+                                        userDetails: { userDetails,
+                                                    totalPrices: FinaltotalPrice,
                                         }
                                     });
+                                    console.log(userDetails)
+                                })
                                      // Show Preview component on successful payment
                                 } catch (error) {
                                     console.error('Error sending transaction details to backend:', error);
