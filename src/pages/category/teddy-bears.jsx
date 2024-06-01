@@ -131,20 +131,6 @@ const Teddy = () => {
         },
       ];
 
-      
-  const [showModal, setShowModal] = useState(false);
-  const [iconClicked, setIconClicked] = useState(null); // Initially set to null
-
-      const openModal = (clickedIcon) => {
-        setShowModal(true);
-        setIconClicked(clickedIcon);
-      };
-    
-      const closeModal = () => {
-        setShowModal(false);
-      };
-
-
   return (
     <>
     <Navbar openModal={openModal} />
