@@ -129,19 +129,19 @@ export const occassions = [
     {
       id: 1,
       src: flower1 ,
-      title: "Forever my love 001",
-      price: "150000",
+      title: "20 Luxury red roses #001",
+      price: "100",
     },
     {
       id: 2,
       src: flower2,
-      title: "My love 002",
-      price: "100000",
+      title: "Mixed cut bouquet #002",
+      price: "100",
     },
     {
       id: 3,
       src: flower3,
-      title: "Hand Tie Bouquet 003",
+      title: "Mixed cut bouquet #003",
       price: "120000",
     },
     {

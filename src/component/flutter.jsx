@@ -3,7 +3,7 @@ import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import axios from 'axios';
 
 
-const Flutter = ({ src, sendersName, sendersPhone,
+const Flutter = ({ sendersName, sendersPhone,
     sendersEmail, title, totalPrices, customerName,
     contact, message, address, date, time, modalData, newData,
     FinaltotalPrice
@@ -60,12 +60,13 @@ const Flutter = ({ src, sendersName, sendersPhone,
                             console.log(response);
                             if (response.status === "successful") {
                                 try {
-                                    const userDetails = modalData.map(item => ({
+                                    const userDetail = modalData.map(item => ({
                                         name: item.sendersName,
                                         email: item.sendersEmail,
                                         phone: item.sendersPhone,
                                         title: item.title,
-                                        reciever: item.customerName,
+                                        price: item.totalPrices,
+                                        reciever: item.name,
                                         contact: item.contact,
                                         message: item.message,
                                         address: item.address,
@@ -73,14 +74,12 @@ const Flutter = ({ src, sendersName, sendersPhone,
                                         time: item.time
                                     }));
                                     // Make an HTTP request to your backend endpoint
-                                    userDetails.map(async user => {
-                                    await axios.post('http://localhost:3001/api/transaction', {
-                                        transactionDetails: response,
-                                        userDetails: { userDetails,
-                                                    totalPrices: FinaltotalPrice,
-                                        }
-                                    });
-                                    console.log(userDetails)
+                                    userDetail.map(async user => {
+                                        await axios.post('http://localhost:3001/api/transaction', {
+                                            transactionDetails: response,
+                                            userDetails: userDetail, // Pass userDetail directly as an array
+                                            FinaltotalPrice: {FinaltotalPrice} // Move totalPrices outside userDetail
+                                        });
                                 })
                                      // Show Preview component on successful payment
                                 } catch (error) {
