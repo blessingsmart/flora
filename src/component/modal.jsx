@@ -178,10 +178,6 @@ const handleSearchChange = (e) => {
       link: "/",
       title: "HOME PAGE",
     },
-    // {
-    //   id: 2,
-    //   title: "FALL FLOWERS",
-    // },
     {
       id: 3,
       link: "/fresh-flower-bouquets",
@@ -194,12 +190,12 @@ const handleSearchChange = (e) => {
     },
     {
       id: 5,
-      link: "/balloons",
+      // link: "/balloons",
       title: "BALLONS",
     },
     {
       id: 6,
-      link: "/wines",
+      // link: "/wines",
       title: "WINES",
     },
     {
@@ -221,16 +217,6 @@ const handleSearchChange = (e) => {
       id: 10,
       link: "/funerals",
       title: "FUNERAL",
-    },
-    {
-      id: 11,
-      link: "/cards",
-      title: "CARDS",
-    },
-    {
-      id: 12,
-      link: "/plants",
-      title: "HAMPERS",
     },
     {
       id: 13,
