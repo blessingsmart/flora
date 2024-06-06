@@ -123,6 +123,19 @@ import pack120 from '../assets/pack120.jpg';
 import pack150 from '../assets/pack150.jpg';
 import pack250 from '../assets/pack250.jpg';
 import rose120 from '../assets/rose120.jpg';
+import chocolate from '../assets/chocolate.jpg';
+import chocolate2 from '../assets/chocolate2.jpg';
+import chocolate3 from '../assets/chocolate3.jpg';
+import chocolate4 from '../assets/chocolate4.jpg';
+import chocolate5 from '../assets/chocolate5.jpg';
+import chocolate6 from '../assets/chocolate6.jpg';
+import chocolate7 from '../assets/chocolate7.jpg';
+import chocolate8 from '../assets/chocolate8.jpg';
+import chocolate9 from '../assets/chocolate9.jpg';
+import chocolate10 from '../assets/chocolate10.jpg';
+import chocolate11 from '../assets/chocolate11.jpg';
+import chocolate12 from '../assets/chocolate12.jpg';
+import chocolate13 from '../assets/chocolate13.jpg';
 
 
 export const occassions = [
@@ -483,74 +496,80 @@ export const funeral = [
   export const chocolates = [
     {
       id: 1,
-      src: flower1 ,
-      title: "Apology Flowers 002",
+      src: chocolate ,
+      title: "Chocolate 001",
       price: "200000",
     },
     {
       id: 2,
-      src: flower2,
-      title: "Apology Flowers 003",
+      src: chocolate2,
+      title: "Chocolate 002",
       price: "90000",
     },
     {
       id: 3,
-      src: flower3,
-      title: "Apology Flowers 004",
+      src: chocolate3,
+      title: "Chocolate 003",
       price: "150000",
     },
     {
       id: 4,
-      src: flower4,
-      title: "Aqua Pack 001",
+      src: chocolate4,
+      title: "Chocolate 004",
       price: "80000",
     },
     {
       id: 5,
-      src: flower5,
-      title: "Aqua Pack 002",
+      src: chocolate5,
+      title: "Chocolate 005",
       price: "115000",
     },
     {
       id: 6,
-      src: flower6,
-      title: "Aqua Pack 003",
+      src: chocolate6,
+      title: "Chocolate 006",
       price: "50000",
     },
     {
       id: 7,
-      src: flower7,
-      title: "Aqua Pack 004",
+      src: chocolate7,
+      title: "Chocolate 007",
       price: "50000",
     },
     {
       id: 8,
-      src: flower8,
-      title: "Aqua Pack 005",
+      src: chocolate8,
+      title: "Chocolate 008",
       price: "260000",
     },
     {
       id: 9,
-      src: flower9,
-      title: "Aqua Pack 006",
+      src: chocolate9,
+      title: "Chocolate 009",
       price: "95000",
     },
     {
       id: 10,
-      src: flower10,
-      title: "Aqua Pack 007",
+      src: chocolate10,
+      title: "Chocolate 010",
       price: "70000",
     },
     {
       id: 11,
-      src: flower11,
+      src: chocolate11,
       title: "Aqua Pack 008",
       price: "115000",
     },
     {
       id: 12,
-      src: flower12,
-      title: "Aqua Pack 009",
+      src: chocolate12,
+      title: "Chocolate 012",
+      price: "130000",
+    },
+    {
+      id: 13,
+      src: chocolate13,
+      title: "Chocolate 013",
       price: "130000",
     },
   ];
