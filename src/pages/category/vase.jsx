@@ -92,13 +92,13 @@ const Vase = () => {
           id: 3,
           src: vase3,
           title: "Gold Vase",
-          price: "19000",
+          price: "40000",
         },
         {
           id: 4,
           src: vase4,
           title: "Vase 001",
-          price: "20000",
+          price: "28000",
         },
         {
           id: 5,
@@ -110,7 +110,7 @@ const Vase = () => {
           id: 6,
           src: vase6,
           title: "Vase 003",
-          price: "15000",
+          price: "28000",
         },
         {
           id: 7,
@@ -128,13 +128,13 @@ const Vase = () => {
           id: 9,
           src: vase9,
           title: "Vase 006",
-          price: "15000",
+          price: "27000",
         },
         {
           id: 10,
           src: vase10,
           title: "Vase 007",
-          price: "15000",
+          price: "35000",
         },
         {
           id: 11,
@@ -146,25 +146,25 @@ const Vase = () => {
           id: 12,
           src: vase12,
           title: "Vase 009",
-          price: "25000",
+          price: "30000",
         },
         {
           id: 13,
           src: vase13,
           title: "Vase 010",
-          price: "15000",
+          price: "25000",
         },
         {
           id: 14,
           src: vase14,
           title: "Vase 011",
-          price: "17000",
+          price: "25000",
         },
         {
           id: 15,
           src: vase15,
           title: "Vase 012",
-          price: "18000",
+          price: "28000",
         },
         {
           id: 16,
@@ -172,18 +172,18 @@ const Vase = () => {
           title: "Vase 013",
           price: "35000",
         },
-        {
-          id: 17,
-          src: vase17,
-          title: "Vase 014 (min-₦8,000 | mid-₦10,000 | max-₦15,000)",
-          price: "33000",
-        },
-        {
-          id: 18,
-          src: vase18,
-          title: "Vase 015 (min-₦28,000 | max-₦35,000)",
-          price: "63000",
-        },
+        // {
+        //   id: 17,
+        //   src: vase17,
+        //   title: "Vase 014 (min-₦20,000 | mid-₦25,000 | max-₦30,000)",
+        //   price: "33000",
+        // },
+        // {
+        //   id: 18,
+        //   src: vase18,
+        //   title: "Vase 015 (min-₦28,000 | max-₦35,000)",
+        //   price: "63000",
+        // },
       ];
 
   return (
