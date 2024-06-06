@@ -230,7 +230,7 @@ const handleSearchChange = (e) => {
     {
       id: 12,
       link: "/plants",
-      title: "PLANTS",
+      title: "HAMPERS",
     },
     {
       id: 13,

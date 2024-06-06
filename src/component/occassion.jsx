@@ -59,11 +59,9 @@ const Occassion = ({openModal, dynamic}) => {
             <p className='text-lg text-center'>Buy fresh flowers in Lagos, Nigeria for your special occasion</p>
             <a href=""
                 className='place-self-center'>
-                <a href="https://wa.me/2348060521476">
-                <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
+                <Link to='/fresh-flower-bouquets' className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
                 SHOP NOW
-                </button>
-                </a>
+                </Link>
             </a>
           </div>
         </div>
