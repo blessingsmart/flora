@@ -10,7 +10,6 @@ import flower9 from '../assets/flower9.jpg';
 import flower10 from '../assets/flower10.jpg';
 import flower11 from '../assets/flower11.jpg';
 import flower12 from '../assets/flower12.jpg';
-
 import flower25 from '../assets/flower25.jpg';
 import flower26 from '../assets/flower26.jpg';
 import flower27 from '../assets/flower27.jpg';
@@ -45,7 +44,6 @@ import flower55 from '../assets/flower55.jpg';
 import flower56 from '../assets/flower56.jpg';
 import flower57 from '../assets/flower57.jpg';
 import flower58 from '../assets/flower58.jpg';
-// import flower59 from '../assets/flower59.jpg';
 import flower60 from '../assets/flower60.jpg';
 import flower61 from '../assets/flower61.jpg';
 import flower62 from '../assets/flower62.jpg';
@@ -65,7 +63,6 @@ import flower75 from '../assets/flower75.jpg';
 import flower76 from '../assets/flower76.jpg';
 import flower77 from '../assets/flower77.jpg';
 import flower78 from '../assets/flower78.jpg';
-// import flower79 from '../assets/flower79.jpg';
 import flower80 from '../assets/flower80.jpg';
 import flower81 from '../assets/flower81.jpg';
 import flower82 from '../assets/flower82.jpg';
@@ -136,6 +133,9 @@ import chocolate10 from '../assets/chocolate10.jpg';
 import chocolate11 from '../assets/chocolate11.jpg';
 import chocolate12 from '../assets/chocolate12.jpg';
 import chocolate13 from '../assets/chocolate13.jpg';
+import chocolate14 from '../assets/chocolate14.jpg';
+import chocolate15 from '../assets/chocolate15.jpg';
+import chocolate16 from '../assets/chocolate16.jpg';
 
 
 export const occassions = [
@@ -570,6 +570,24 @@ export const funeral = [
       id: 13,
       src: chocolate13,
       title: "Chocolate 013",
+      price: "130000",
+    },
+    {
+      id: 14,
+      src: chocolate14,
+      title: "Chocolate 014",
+      price: "130000",
+    },
+    {
+      id: 15,
+      src: chocolate15,
+      title: "Chocolate 015",
+      price: "130000",
+    },
+    {
+      id: 16,
+      src: chocolate16,
+      title: "Chocolate 016",
       price: "130000",
     },
   ];
