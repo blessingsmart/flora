@@ -557,7 +557,7 @@ export const funeral = [
     {
       id: 11,
       src: chocolate11,
-      title: "Aqua Pack 008",
+      title: "Chocolate 011",
       price: "115000",
     },
     {
