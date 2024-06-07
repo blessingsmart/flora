@@ -130,12 +130,12 @@ const Home = () => {
           <ul className="splide__list ">
             <li className="splide__slide">
               <div >
-                <img src={splide1} alt="Image 1"/>
+                <img src={splide6} alt="Image 1"/>
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide2} alt="Image 2" />
+                <img src={splide13} alt="Image 2" />
               </div>
             </li>
             <li className="splide__slide">
@@ -145,237 +145,237 @@ const Home = () => {
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide4} alt="Image 3" />
+                <img src={splide4} alt="Image 4" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide5} alt="Image 3" />
+                <img src={splide5} alt="Image 5" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide6} alt="Image 3" />
+                <img src={splide1} alt="Image 6" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide7} alt="Image 3" />
+                <img src={splide7} alt="Image 7" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide8} alt="Image 3" />
+                <img src={splide8} alt="Image 8" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide9} alt="Image 3" />
+                <img src={splide9} alt="Image 9" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide10} alt="Image 3" />
+                <img src={splide10} alt="Image 10" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide11} alt="Image 3" />
+                <img src={splide11} alt="Image 11" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide12} alt="Image 3" />
+                <img src={splide12} alt="Image 12" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide13} alt="Image 3" />
+                <img src={splide2} alt="Image 13" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide14} alt="Image 3" />
+                <img src={splide14} alt="Image 14" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide15} alt="Image 3" />
+                <img src={splide50} alt="Image 15" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide16} alt="Image 3" />
+                <img src={splide16} alt="Image 16" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide17} alt="Image 3" />
+                <img src={splide17} alt="Image 17" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide18} alt="Image 3" />
+                <img src={splide18} alt="Image 18" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide19} alt="Image 3" />
+                <img src={splide19} alt="Image 19" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide20} alt="Image 3" />
+                <img src={splide20} alt="Image 20" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide21} alt="Image 3" />
+                <img src={splide21} alt="Image 21" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide22} alt="Image 3" />
+                <img src={splide22} alt="Image 22" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide23} alt="Image 3" />
+                <img src={splide23} alt="Image 23" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide24} alt="Image 3" />
+                <img src={splide24} alt="Image 24" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide25} alt="Image 3" />
+                <img src={splide25} alt="Image 25" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide26} alt="Image 3" />
+                <img src={splide26} alt="Image 26" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide27} alt="Image 3" />
+                <img src={splide27} alt="Image 27" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide28} alt="Image 3" />
+                <img src={splide28} alt="Image 28" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide29} alt="Image 3" />
+                <img src={splide29} alt="Image 29" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide30} alt="Image 3" />
+                <img src={splide30} alt="Image 30" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide31} alt="Image 3" />
+                <img src={splide31} alt="Image 31" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide32} alt="Image 3" />
+                <img src={splide32} alt="Image 32" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide33} alt="Image 3" />
+                <img src={splide33} alt="Image 33" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide34} alt="Image 3" />
+                <img src={splide34} alt="Image 34" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide35} alt="Image 3" />
+                <img src={splide35} alt="Image 35" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide36} alt="Image 3" />
+                <img src={splide36} alt="Image 36" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide37} alt="Image 3" />
+                <img src={splide37} alt="Image 37" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide38} alt="Image 3" />
+                <img src={splide38} alt="Image 38" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide39} alt="Image 3" />
+                <img src={splide39} alt="Image 39" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide40} alt="Image 3" />
+                <img src={splide40} alt="Image 40" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide41} alt="Image 3" />
+                <img src={splide41} alt="Image 41" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide42} alt="Image 3" />
+                <img src={splide42} alt="Image 42" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide43} alt="Image 3" />
+                <img src={splide43} alt="Image 43" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide44} alt="Image 3" />
+                <img src={splide44} alt="Image 44" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide45} alt="Image 3" />
+                <img src={splide45} alt="Image 45" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide46} alt="Image 3" />
+                <img src={splide46} alt="Image 46" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide47} alt="Image 3" />
+                <img src={splide47} alt="Image 47" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide48} alt="Image 3" />
+                <img src={splide48} alt="Image 48" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide49} alt="Image 3" />
+                <img src={splide49} alt="Image 49" />
               </div>
             </li>
             <li className="splide__slide">
               <div>
-                <img src={splide50} alt="Image 3" />
+                <img src={splide15} alt="Image 50" />
               </div>
             </li>
           </ul>

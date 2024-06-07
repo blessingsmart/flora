@@ -12,6 +12,10 @@ const Flutter = ({ sendersName, sendersPhone,
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const totalPrice = parseFloat(totalPrices.replace(/[^\d.-]/g, ''));
+    const FinaltotalPrices = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(FinaltotalPrice);
 
     useEffect(() => {
         const fetchKeys = async () => {
@@ -78,7 +82,7 @@ const Flutter = ({ sendersName, sendersPhone,
                                         await axios.post('http://localhost:3001/api/transaction', {
                                             transactionDetails: response,
                                             userDetails: userDetail, // Pass userDetail directly as an array
-                                            FinaltotalPrice: {FinaltotalPrice} // Move totalPrices outside userDetail
+                                            FinaltotalPrices: FinaltotalPrices // Move totalPrices outside userDetail
                                         });
                                 })
                                      // Show Preview component on successful payment
@@ -86,7 +90,7 @@ const Flutter = ({ sendersName, sendersPhone,
                                     console.error('Error sending transaction details to backend:', error);
                                 }
                             }
-                             // this will close the modal programmatically
+                            closePaymentModal() // this will close the modal programmatically
                         },
                         onClose: () => { },
                     });

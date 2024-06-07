@@ -30,19 +30,19 @@ const Gift = ({openModal, dynamic}) => {
           id: 2,
           src:flower14,
           title: "014",
-          price: '220000',
+          price: '150000',
         },
         {
           id: 3,
           src: flower15,
           title: "015",
-          price: '150000',
+          price: '120000',
         },
         {
           id: 4,
           src: flower16,
           title: "016",
-          price: '50000',
+          price: '35000',
         },
         {
           id: 5,
@@ -66,13 +66,13 @@ const Gift = ({openModal, dynamic}) => {
           id: 8,
           src: flower20,
           title: "020",
-          price: '100000',
+          price: '75000',
         },
         {
           id: 9,
           src: flower21,
           title: "021",
-          price: '90000',
+          price: '75000',
         },
         {
           id: 10,
