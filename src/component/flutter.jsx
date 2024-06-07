@@ -16,7 +16,7 @@ const Flutter = ({ sendersName, sendersPhone,
     useEffect(() => {
         const fetchKeys = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/keys');
+                const response = await axios.get('http://server.flowersimperial.com/api/keys');
                 setKeys(response.data);
             } catch (error) {
                 console.error('Error fetching keys:', error);
