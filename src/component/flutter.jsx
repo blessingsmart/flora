@@ -20,7 +20,7 @@ const Flutter = ({ sendersName, sendersPhone,
     useEffect(() => {
         const fetchKeys = async () => {
             try {
-                const response = await axios.get('http://server.flowersimperial.com/api/keys');
+                const response = await axios.get('https://server.flowersimperial.com//api/keys');
                 setKeys(response.data);
             } catch (error) {
                 console.error('Error fetching keys:', error);
@@ -79,7 +79,7 @@ const Flutter = ({ sendersName, sendersPhone,
                                     }));
                                     // Make an HTTP request to your backend endpoint
                                     userDetail.map(async user => {
-                                        await axios.post('http://server.flowersimperial.com/api/transaction', {
+                                        await axios.post('https://server.flowersimperial.com//api/transaction', {
                                             transactionDetails: response,
                                             userDetails: userDetail, // Pass userDetail directly as an array
                                             FinaltotalPrices: FinaltotalPrices // Move totalPrices outside userDetail
