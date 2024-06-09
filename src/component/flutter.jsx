@@ -79,7 +79,7 @@ const Flutter = ({ sendersName, sendersPhone,
                                     }));
                                     // Make an HTTP request to your backend endpoint
                                     userDetail.map(async user => {
-                                        await axios.post('http://localhost:3001/api/transaction', {
+                                        await axios.post('http://server.flowersimperial.com/api/transaction', {
                                             transactionDetails: response,
                                             userDetails: userDetail, // Pass userDetail directly as an array
                                             FinaltotalPrices: FinaltotalPrices // Move totalPrices outside userDetail
