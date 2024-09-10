@@ -4,11 +4,13 @@ import { Link as RouterLink } from "react-router-dom";
 import Preview from './preview';
 import Cart from '../pages/cart';
 
-const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal}) => {
+
+const Modal = ({ id, price, onClose, iconClicked, dynamic, openModal, modalData, setModalData, newData}) => {
   const [searchValue, setSearchValue] = useState('');
   const [optItem, setOptItem] = useState(0);  // initializing the checkbox
   const [increase, setIncrease] = useState(1);  // initializing the quantity increment
-  const totalPrices = price * increase + optItem; // calculating total price
+  const totalPrice = newData.price * increase + optItem; // calculating total price
+  const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
 
   // initializing customer informations 
   const [name, setName] = useState('');
@@ -17,6 +19,9 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
   const [address, setAddress] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
+  const [sendersName, setSendersName] = useState('');
+  const [sendersPhone, setSendersPhone] = useState('');
+  const [sendersEmail, setSendersEmail] = useState('');
 
   // function to handle customer information
   const onChange = (e) => {
@@ -24,28 +29,103 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
     switch (name) {
       case 'name':
         setName(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, name: value };
+          }
+          return item;
+        }));
         break;
       case 'contact':
         setContact(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, contact: value };
+          }
+          return item;
+        }));
         break;
       case 'message':
         setMessage(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, message: value };
+          }
+          return item;
+        }));
         break;
       case 'address':
         setAddress(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, address: value };
+          }
+          return item;
+        }));
         break;
       case 'date':
         setDate(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, date: value };
+          }
+          return item;
+        }));
         break;
       case 'time':
         setTime(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, time: value };
+          }
+          return item;
+        }));
+        break;
+      case 'sendersName':
+        setSendersName(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersName: value };
+          }
+          return item;
+        }));
+        break;
+      case 'sendersPhone':
+        setSendersPhone(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersPhone: value };
+          }
+          return item;
+        }));
+        break;
+      case 'sendersEmail':
+        setSendersEmail(value);
+        setModalData(prevModalData => prevModalData.map(item => {
+          if (item.id === newData.id) {
+            return { ...item, sendersEmail: value };
+          }
+          return item;
+        }));
         break;
       default:
         // Handle default case or do nothing
         break;
     }
-  }
-  
+  };
+
+
+const totalPrices = new Intl.NumberFormat('en-NG', {
+  style: 'currency',
+  currency: 'NGN'
+}).format(totalPrice);
+
+const optionItem = new Intl.NumberFormat('en-NG', {
+  style: 'currency',
+  currency: 'NGN'
+}).format(optItem);
+
+
 
   // function to handle the quantity increment
   const handleQuantityChange = (increment) => {
@@ -63,21 +143,34 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
             return prevItem - checkPrice;
         }
     });
-    setPrice(prevPrice => {
-        if (isChecked) {
-            // Checkbox is checked, add the value
-            return prevPrice + checkPrice;
-        } else {
-            // Checkbox is unchecked, subtract the value
-            return prevPrice - checkPrice;
-        }
-    })
+    
+    setModalData(prevModalData => prevModalData.map(item => {
+      if (item.id === newData.id) {
+        return { ...item, optionItem: optItem + checkPrice };
+      }
+      return item;
+    }));
 };
 
+const FinaltotalPrice = modalData.reduce((accumulator, currentItem) => {
+  return accumulator + (currentItem.totalPrices ? parseFloat(currentItem.totalPrices.replace(/[^\d.-]/g, '')) : 0);
+}, 0);
+console.log(FinaltotalPrice);
 
-  const handleSearchChange = (e) => {
-    setSearchValue(e.target.value);
-  };
+const handleSubTotal = () => {
+  setModalData(prevModalData => prevModalData.map(item => {
+    if (item.id === newData.id) {
+      return { ...item, totalPrices: totalPrices, increase: increase };
+    }
+    return item;
+  }));
+  
+  FinaltotalPrice();
+};
+
+const handleSearchChange = (e) => {
+  setSearchValue(e.target.value);
+};
 
   const links = [
     {
@@ -85,10 +178,6 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
       link: "/",
       title: "HOME PAGE",
     },
-    // {
-    //   id: 2,
-    //   title: "FALL FLOWERS",
-    // },
     {
       id: 3,
       link: "/fresh-flower-bouquets",
@@ -101,12 +190,12 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
     },
     {
       id: 5,
-      link: "/balloons",
+      // link: "/balloons",
       title: "BALLONS",
     },
     {
       id: 6,
-      link: "/wines",
+      // link: "/wines",
       title: "WINES",
     },
     {
@@ -126,23 +215,19 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
     },
     {
       id: 10,
-      link: "/cards",
-      title: "CARDS",
+      link: "/funerals",
+      title: "FUNERAL",
     },
     {
-      id: 11,
-      link: "/plants",
-      title: "PLANTS",
-    },
-    {
-      id: 12,
-      link: "ABOUT",
+      id: 13,
+      link: "/about",
       title: "ABOUT US",
     },
   ];
 
 
   return (
+    <>
     <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center ">
       <div className="text-white text-sm">
         {iconClicked === 'search' ? (
@@ -180,28 +265,51 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
             </ul> 
           </div>
         ) : iconClicked === 'preview' ? (
-          <div className="py-16 px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
-            <Preview id={id} src={src} title={title} price={price} 
+          <div className="py-16 sm:px-4 absolute left-0 top-0 bg-black/80 max-h-screen h-screen overflow-y-auto ">
+            <Preview newData={newData}
                      dynamic={dynamic} openModal={openModal} 
                      handleCheckboxClick={handleCheckboxClick} 
-                     optItem={optItem}
+                     optionItem={optionItem}
                      increase={increase}
                      handleQuantityChange={handleQuantityChange}
                      totalPrices={totalPrices}
+                     chocolates={chocolates}
+                     champagne={champagne}
+                     balloons={balloons}
+                     card={card}
+                     wine={wine}
                      name={name}
                      contact={contact}
                      message={message}
                      address={address}
                      date={date}
                      time={time}
+                     sendersName={sendersName}
+                     sendersPhone={sendersPhone}
+                     sendersEmail={sendersEmail}
                      onChange={onChange}
+                     handleSubTotal={handleSubTotal}
             />
           </div>
         ) : iconClicked === 'cart' ? (
           <div className="absolute left-0 top-0 bg-black/80 w-full max-h-screen h-screen overflow-y-auto ">
-            <Cart src={src} title={title} price={price} totalPrices={totalPrices}
-                  optItem={optItem} name={name} contact={contact} increase={increase}
-                  message={message} address={address} date={date} time={time}
+            <Cart totalPrices={totalPrices}
+                  optionItem={optionItem}
+                  customerName={name}
+                  contact={contact}
+                  increase={increase}
+                  message={message}
+                  address={address}
+                  date={date}
+                  time={time}
+                  newData={newData} 
+                  sendersName={sendersName}
+                  sendersPhone={sendersPhone}
+                  sendersEmail={sendersEmail}
+                  handleQuantityChange={handleQuantityChange}
+                  modalData={modalData}
+                  FinaltotalPrice={FinaltotalPrice}
+                  onClose={onClose}
             />
           </div>
         ) : (
@@ -214,6 +322,7 @@ const Modal = ({ id, onClose, iconClicked, src, title, price, dynamic, openModal
         </button>
       </div>
     </div>
+    </>
   );
 };
 

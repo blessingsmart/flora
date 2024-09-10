@@ -1,60 +1,88 @@
 import React, { useState } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 
 
-function Preview({id, src, title, price, openModal, 
-                handleCheckboxClick, optItem, 
+function Preview({ newData, openModal, 
+                handleCheckboxClick, optionItem, 
                 increase, handleQuantityChange,
-                totalPrices, name, contact, message, address, 
-                date, time, onChange
+                totalPrices, chocolates, champagne, balloons, card, wine,
+                name, contact, message, address, date, time,
+                sendersName, sendersPhone, sendersEmail, onChange, handleSubTotal
             }) {
-
-                
-    const [chocolates, champagne, balloons, card, wine] = [25000, 120000, 25000, 3000, 10000];
     
 
-    const handleItemClick = (id, src, title, price, prices) => {
+    // Convert each number to a formatted currency string
+    const formattedChocolates = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(chocolates);
+
+    const formattedChampagne = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(champagne);
+
+    const formattedBalloons = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(balloons);
+
+    const formattedCard = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(card);
+
+    const formattedWine = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(wine);
+
+    const handleItemClick = () => {
         openModal("cart"); // Pass src, title, and price only
-        dynamic({ src, title, price, prices }); // Pass src, title, and price only
+        handleSubTotal();
     };
+
+    // Convert the string prop to a number
+    const price = new Intl.NumberFormat('en-NG', {
+        style: 'currency',
+        currency: 'NGN'
+    }).format(newData.price);
 
   return (
     <>
-        <div className='md:mx-64 m-auto bg-white pb-24 md:flex w-[60%]'>
+        <div className='md:mx-64 bg-white pb-24 md:flex md:w-[60%]'>
             <div className='md:w-[50%]'>
-                <img src={src} className='w-full h-[400px] sm:h-[500px]' alt="" />
+                <img src={newData.src} className='w-full h-[400px] sm:h-[500px]' alt="" />
             </div>
             <div className='md:w-[50%] md:ml-10'>
-                <h1 className='md:text-3xl text-xl font-bold text-gray-500 m-5'>{title}</h1>
-                <span className='text-xl font-bold m-5 text-black'>₦{price}</span>
-                <p className='m-5 text-gray-500'>I'm Sorry</p>
+                <h1 className='md:text-3xl text-xl font-bold text-gray-500 m-5'>{newData.title}</h1>
+                <span className='text-xl font-bold m-5 text-black'>{price}</span>
                 <div>
                     <h2 className="text-sm text-gray-500 font-bold m-5">Add-ons</h2>
                     <ol className="list-decimal list-inside text-gray-700">
                         <li className="list-disc ml-[50px] mt-5">
                             <label>
-                                <input type="checkbox" onChange={(e) => handleCheckboxClick(chocolates, e.target.checked)}/> Chocolates {chocolates}
+                                <input type="checkbox" onChange={(e) => handleCheckboxClick(chocolates, e.target.checked)}/> Chocolates {formattedChocolates}
                             </label>
                         </li>
                         <li className="list-disc ml-[50px] mt-5">
                             <label>
-                                <input type="checkbox" onChange={(e) => handleCheckboxClick(champagne, e.target.checked)}/> Champagne {champagne}
+                                <input type="checkbox" onChange={(e) => handleCheckboxClick(champagne, e.target.checked)}/> Champagne {formattedChampagne}
                             </label>
                         </li>
                         <li className="list-disc ml-[50px] mt-5">
                             <label>
-                                <input type="checkbox" onChange={(e) => handleCheckboxClick(balloons, e.target.checked)}/> Balloons {balloons}
+                                <input type="checkbox" onChange={(e) => handleCheckboxClick(balloons, e.target.checked)}/> Balloons {formattedBalloons}
                             </label>
                         </li>
                         <li className="list-disc ml-[50px] mt-5">
                             <label>
-                                <input type="checkbox" onChange={(e) => handleCheckboxClick(card, e.target.checked)}/> Card {card}
+                                <input type="checkbox" onChange={(e) => handleCheckboxClick(card, e.target.checked)}/> Card {formattedCard}
                             </label>
                         </li>
                         <li className="list-disc ml-[50px] mt-5">
                             <label>
-                                <input type="checkbox" onChange={(e) => handleCheckboxClick(wine, e.target.checked)}/> Wine {wine}
+                                <input type="checkbox" onChange={(e) => handleCheckboxClick(wine, e.target.checked)}/> Wine {formattedWine}
                             </label>
                         </li>
                     </ol>
@@ -119,7 +147,7 @@ function Preview({id, src, title, price, openModal,
                                 required
                             />
                         </li>
-                        <h5 className="text-sm font-bold ml-[40px] my-10">*Time</h5>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Time of delivery</h5>
                         <li className='list-disc ml-[70px] mt-5'>
                             <input 
                                 type="time"
@@ -130,13 +158,46 @@ function Preview({id, src, title, price, openModal,
                                 required
                             />
                         </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders name</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="text"
+                                name='sendersName'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersName}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders phone</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="text"
+                                name='sendersPhone'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersPhone}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
+                        <h5 className="text-sm font-bold ml-[40px] my-10">*Senders email</h5>
+                        <li className='list-disc ml-[70px] mt-5'>
+                            <input 
+                                type="email"
+                                name='sendersEmail'
+                                className='border border-gray-200 w-[130px] sm:w-[260px] rounded-sm h-9'
+                                value={sendersEmail}
+                                onChange={onChange}
+                                required
+                            />
+                        </li>
                     </ol>
                 </div>
                 <div className='mt-[70px] mx-10'>
                     <h4 className='text-gray-900'>OPTIONS AMOUNT</h4>
-                    <span className='text-xl text-black font-bold mt-2'>₦{optItem}</span>
+                    <span className='text-xl text-black font-bold mt-2'>{optionItem}</span>
                     <h4 className='text-gray-900 mt-5'>FINAL TOTAL</h4>
-                    <span className='text-xl text-black font-bold mt-2'>₦{totalPrices}</span>
+                    <span className='text-xl text-black font-bold mt-2'>{totalPrices}</span>
                 </div>
                 <div className='flex mt-6'>
                     <div className="flex items-center sm:pl-10 pl-3 md:pl-3 mt-5">
@@ -148,7 +209,7 @@ function Preview({id, src, title, price, openModal,
                         <button className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-normal rounded-r w-[30px] h-[43px]" onClick={() => handleQuantityChange(+1)}>+</button>
                     </div>
                     <div className='bg-[#c7889d] ml-5 border mt-5 hover:bg-[#b06981] pt-3'>
-                        <button className='text-white font-bold sm:px-10 px-2' onClick={() => handleItemClick( id, src, title, price)}>ADD TO CART</button>
+                        <button className='text-white font-bold sm:px-10 px-2' onClick={() => handleItemClick()}>ADD TO CART</button>
                     </div>
                 </div>
                 <div className='bg-[#0aad66] ml-3 border mt-5 hover:bg-[#0c985b] sm:w-[280px] w-[210px]'>

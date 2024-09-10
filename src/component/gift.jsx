@@ -12,7 +12,7 @@ import flower21 from '../assets/flower21.jpg';
 import flower22 from '../assets/flower22.jpg';
 import flower23 from '../assets/flower23.jpg';
 import flower24 from '../assets/flower24.jpg';
-import shop from '../assets/shop.jpg';
+import shop from '../assets/contact.jpg';
 
 
 
@@ -23,74 +23,74 @@ const Gift = ({openModal, dynamic}) => {
         {
           id: 1,
           src: flower13 ,
-          title: "Star gazer 001",
-          price: 150000,
+          title: "013",
+          price: '150000',
         },
         {
           id: 2,
           src:flower14,
-          title: "Throw in bouquet & vase 002",
-          price: 220000,
+          title: "014",
+          price: '150000',
         },
         {
           id: 3,
           src: flower15,
-          title: "Heart shape 003",
-          price: 150000,
+          title: "015",
+          price: '120000',
         },
         {
           id: 4,
           src: flower16,
-          title: "Bouquet of mixed color roses & gypso 004",
-          price: 50000,
+          title: "016",
+          price: '35000',
         },
         {
           id: 5,
           src: flower17,
-          title: "I love you forever 005",
-          price: 500000,
+          title: "017",
+          price: '500000',
         },
         {
           id: 6,
           src: flower18,
-          title: "Red roses and gypso 006",
-          price: 35000,
+          title: "018",
+          price: '35000',
         },
         {
           id: 7,
           src: flower19,
-          title: "Pink roses & chocolate 007",
-          price: 125000,
+          title: "019",
+          price: '125000',
         },
         {
           id: 8,
           src: flower20,
-          title: "Red roses 008",
-          price: 100000,
+          title: "020",
+          price: '75000',
         },
         {
           id: 9,
           src: flower21,
-          title: "Apology bouquet 009",
-          price: 90000,
+          title: "021",
+          price: '75000',
         },
         {
           id: 10,
           src: flower22,
-          title: "Ivory 010",
-          price: 250000,
+          title: "022",
+          price: '250000',
         },
         {
           id: 11,
           src: flower23,
-          title: "Roses & gypso 011",
-          price: 35000,
+          title: "023",
+          price: '35000',
         },
         {
           id: 12,
           src: flower24,
-          title: "Heart shape with chocolate 012",
-          price: 150000,
+          title: "024",
+          price: '150000',
         },
       ];
 
@@ -110,19 +110,25 @@ const Gift = ({openModal, dynamic}) => {
                           -Just because
         </pre>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 '>
-            {
-            links.map(({ id, src, title, price}) => (
-                <div key={id} className='flex flex-col drop-shadow-xl '>
+            { links.map(({ id, src, title, price}) => {
+              const formattedPrice = new Intl.NumberFormat('en-NG', {
+                style: 'currency',
+                currency: 'NGN'
+              }).format(parseInt(price.replace(/[^\d.-]/g, ""), 10));
+
+            return(
+                <div key={id} className='flex flex-col drop-shadow-xl cursor-pointer ' onClick={() => handleItemClick(id, src, title, price)}>
                     <div className='relative'>
                         <img src={src} alt='products' className='  ' />
-                        <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' onClick={() => handleItemClick(id, src, title, price)}>Quick View</button>
+                        {/* <button className='absolute bottom-0 bg-black/90 text-white p-1 text-sm font-bold  w-full' >Quick View</button> */}
                     </div>
                     <div className='flex flex-col sm:flex-row sm:gap-3 justify-between font-semibold text-sm py-3 bg-gradient-to-t from-black/5 via-white to-white'>
                         <p className='p-2'>{title}</p >
-                        <p className='p-2'>{price}</p >
+                        <p className='p-2'>{formattedPrice}</p >
                     </div>
                 </div>
-                ))}
+                )}
+              )}
         </div>  
         <Link to="/fresh-flower-bouquets" className='bg-black text-xl text-center w-full p-3 text-white font-bold'>SEE MORE</Link> 
     </div>
@@ -135,11 +141,9 @@ const Gift = ({openModal, dynamic}) => {
             <p className='text-lg text-center'>Buy indoor and outdoor plants in Lagos, Nigeria for your home or office space</p>
             <a href=""
                 className='place-self-center'>
-                <a href="https://wa.me/2348060521476">
-                <button className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
+                <Link to='/fresh-flower-bouquets' className='w-fit flex items-center text-sm md:text-lg  bg-black px-5 py-3 rounded-lg text-white font-bold'>
                 SHOP NOW
-                </button>
-                </a>
+                </Link>
             </a>
             </div>
         </div>

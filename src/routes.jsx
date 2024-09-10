@@ -3,8 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/home"));
 const Cart = lazy(() => import("./pages/cart"));
+const Notification = lazy(() => import("./pages/notifications"));
+const Flutter = lazy(() => import("./component/flutter"));
 const Details = lazy(() => import("./pages/details"));
-const ProductCategory = lazy(() => import("./pages/ProductCategory"));
 const About = lazy(() => import("./pages/about"));
 const Fresh = lazy(() => import("./pages/category/fresh-flower-bouquets"));
 const Balloon = lazy(() => import("./pages/category/balloons"));
@@ -14,7 +15,11 @@ const Fruit = lazy(() => import("./pages/category/fruit-baskets"));
 const Plant = lazy(() => import("./pages/category/plants"));
 const Bakery = lazy(() => import("./pages/category/the-plant-based-bakery"));
 const Wine = lazy(() => import("./pages/category/wines"));
+const Vase = lazy(() => import("./pages/category/vase"));
 const Teddy = lazy(() => import("./pages/category/teddy-bears"));
+const Funeral = lazy(() => import("./pages/category/funeral"));
+const Contactus = lazy(() => import("./pages/contactus"));
+const Conditions = lazy(() => import("./pages/Conditions"));
 
 
 const BrowserRouter = createBrowserRouter([
@@ -39,14 +44,6 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Details />
-      </React.Suspense>
-    ),
-  },
-  {
-    path: "/ProductCategory",
-    element: (
-      <React.Suspense>
-        <ProductCategory />
       </React.Suspense>
     ),
   },
@@ -83,6 +80,22 @@ const BrowserRouter = createBrowserRouter([
     ),
   },
   {
+    path: "/notification",
+    element: (
+      <React.Suspense>
+        <Notification />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/flutter",
+    element: (
+      <React.Suspense>
+        <Flutter />
+      </React.Suspense>
+    ),
+  },
+  {
     path: "/chocolates-valentine-gifts",
     element: (
       <React.Suspense>
@@ -95,6 +108,14 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Fruit />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/funerals",
+    element: (
+      <React.Suspense>
+        <Funeral />
       </React.Suspense>
     ),
   },
@@ -127,6 +148,30 @@ const BrowserRouter = createBrowserRouter([
     element: (
       <React.Suspense>
         <Wine />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/vase",
+    element: (
+      <React.Suspense>
+        <Vase />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/contact",
+    element: (
+      <React.Suspense>
+        <Contactus />
+      </React.Suspense>
+    ),
+  },
+  {
+    path: "/Terms-and-Conditions",
+    element: (
+      <React.Suspense>
+        <Conditions />
       </React.Suspense>
     ),
   },
